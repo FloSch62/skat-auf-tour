@@ -145,3 +145,19 @@ DIFFICULTY = {"cozy":{"fuel":6,"pot":1.25,"second":0,"third":2,"mix":[5,4,1,0],"
 ```
 
 Run time 6.3 s.
+
+## Gemütlich: slips for the opponents (Lead, 4 Oct, late)
+
+Below depth 1 the opponents now slip now and then (`scalePlay` in src/skat/ai/persona.ts: error rate + (1 − depth) × 0.5,
+tolerance (1 − depth) × 90). Measured with the real AI (`tools/balance/tour-skat-check.ts --inn 0 --final 40`, Bahner
+Willi standing in for the player, 40 nine-game finals per difficulty, about ±8 points):
+
+| Finale | 1st | 3rd | player list/game | opponents list/game |
+|---|---|---|---|---|
+| Gemütlich, before | 38 % | 28 % | 23.3 | 19.6 |
+| Gemütlich, with slips | 38 % | 20 % | 25.6 | 19.5 |
+| Sportlich | 38 % | 35 % | 20.3 | 20.6 |
+| Scharf | 18 % | 45 % | 15.0 | 24.0 |
+
+Gemütlich is now clearly gentler (fewer last places, so less fuel lost); first places did not rise measurably. The
+stub in src/tour/sim.ts is not refitted to this yet.
