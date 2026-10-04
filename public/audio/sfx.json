@@ -1,0 +1,426 @@
+{
+ "card-deal": {
+  "files": [
+   "audio/sfx/card-deal-1.ogg",
+   "audio/sfx/card-deal-2.ogg",
+   "audio/sfx/card-deal-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "card-play": {
+  "files": [
+   "audio/sfx/card-play-1.ogg",
+   "audio/sfx/card-play-2.ogg",
+   "audio/sfx/card-play-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "card-raise": {
+  "files": [
+   "audio/sfx/card-raise-1.ogg",
+   "audio/sfx/card-raise-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "trick-take": {
+  "files": [
+   "audio/sfx/trick-take-1.ogg",
+   "audio/sfx/trick-take-2.ogg",
+   "audio/sfx/trick-take-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "shuffle": {
+  "files": [
+   "audio/sfx/shuffle-1.ogg",
+   "audio/sfx/shuffle-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "knock": {
+  "files": [
+   "audio/sfx/knock-1.ogg",
+   "audio/sfx/knock-2.ogg",
+   "audio/sfx/knock-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "bid": {
+  "files": [
+   "audio/sfx/bid-1.ogg",
+   "audio/sfx/bid-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "pass": {
+  "files": [
+   "audio/sfx/pass-1.ogg",
+   "audio/sfx/pass-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "skat-pick": {
+  "files": [
+   "audio/sfx/skat-pick-1.ogg",
+   "audio/sfx/skat-pick-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "list-write": {
+  "files": [
+   "audio/sfx/list-write-1.ogg",
+   "audio/sfx/list-write-2.ogg",
+   "audio/sfx/list-write-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "glass-clink": {
+  "files": [
+   "audio/sfx/glass-clink-1.ogg",
+   "audio/sfx/glass-clink-2.ogg",
+   "audio/sfx/glass-clink-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "bottle-open": {
+  "files": [
+   "audio/sfx/bottle-open-1.ogg",
+   "audio/sfx/bottle-open-2.ogg",
+   "audio/sfx/bottle-open-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "pour": {
+  "files": [
+   "audio/sfx/pour-1.ogg",
+   "audio/sfx/pour-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "gulp": {
+  "files": [
+   "audio/sfx/gulp-1.ogg",
+   "audio/sfx/gulp-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "cheers": {
+  "files": [
+   "audio/sfx/cheers-1.ogg",
+   "audio/sfx/cheers-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "burp": {
+  "files": [
+   "audio/sfx/burp-1.ogg",
+   "audio/sfx/burp-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "chair": {
+  "files": [
+   "audio/sfx/chair-1.ogg",
+   "audio/sfx/chair-2.ogg",
+   "audio/sfx/chair-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "inn-murmur": {
+  "files": [
+   "audio/sfx/inn-murmur.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 30.0
+ },
+ "coin": {
+  "files": [
+   "audio/sfx/coin-1.ogg",
+   "audio/sfx/coin-2.ogg",
+   "audio/sfx/coin-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "till": {
+  "files": [
+   "audio/sfx/till-1.ogg",
+   "audio/sfx/till-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "stamp": {
+  "files": [
+   "audio/sfx/stamp-1.ogg",
+   "audio/sfx/stamp-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "page-turn": {
+  "files": [
+   "audio/sfx/page-turn-1.ogg",
+   "audio/sfx/page-turn-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "van-start": {
+  "files": [
+   "audio/sfx/van-start-1.ogg",
+   "audio/sfx/van-start-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "van-drive": {
+  "files": [
+   "audio/sfx/van-drive.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 10.0
+ },
+ "van-door": {
+  "files": [
+   "audio/sfx/van-door-1.ogg",
+   "audio/sfx/van-door-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "van-horn": {
+  "files": [
+   "audio/sfx/van-horn-1.ogg",
+   "audio/sfx/van-horn-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "bike-kick": {
+  "files": [
+   "audio/sfx/bike-kick-1.ogg",
+   "audio/sfx/bike-kick-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "bike-rev": {
+  "files": [
+   "audio/sfx/bike-rev-1.ogg",
+   "audio/sfx/bike-rev-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "bike-idle": {
+  "files": [
+   "audio/sfx/bike-idle.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 8.0
+ },
+ "dog-bark-big": {
+  "files": [
+   "audio/sfx/dog-bark-big-1.ogg",
+   "audio/sfx/dog-bark-big-2.ogg",
+   "audio/sfx/dog-bark-big-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "dog-bark-small": {
+  "files": [
+   "audio/sfx/dog-bark-small-1.ogg",
+   "audio/sfx/dog-bark-small-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "dog-pant": {
+  "files": [
+   "audio/sfx/dog-pant-1.ogg",
+   "audio/sfx/dog-pant-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "dog-whine": {
+  "files": [
+   "audio/sfx/dog-whine-1.ogg",
+   "audio/sfx/dog-whine-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "chess-move": {
+  "files": [
+   "audio/sfx/chess-move-1.ogg",
+   "audio/sfx/chess-move-2.ogg",
+   "audio/sfx/chess-move-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "chess-capture": {
+  "files": [
+   "audio/sfx/chess-capture-1.ogg",
+   "audio/sfx/chess-capture-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "pencil": {
+  "files": [
+   "audio/sfx/pencil-1.ogg",
+   "audio/sfx/pencil-2.ogg",
+   "audio/sfx/pencil-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "sudoku-right": {
+  "files": [
+   "audio/sfx/sudoku-right-1.ogg",
+   "audio/sfx/sudoku-right-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "sudoku-wrong": {
+  "files": [
+   "audio/sfx/sudoku-wrong-1.ogg",
+   "audio/sfx/sudoku-wrong-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "church-bell": {
+  "files": [
+   "audio/sfx/church-bell-1.ogg",
+   "audio/sfx/church-bell-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "rain": {
+  "files": [
+   "audio/sfx/rain.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 10.0
+ },
+ "crickets": {
+  "files": [
+   "audio/sfx/crickets.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 10.0
+ },
+ "fuel": {
+  "files": [
+   "audio/sfx/fuel-1.ogg",
+   "audio/sfx/fuel-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "wrench": {
+  "files": [
+   "audio/sfx/wrench-1.ogg",
+   "audio/sfx/wrench-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "ui-click": {
+  "files": [
+   "audio/sfx/ui-click-1.ogg",
+   "audio/sfx/ui-click-2.ogg",
+   "audio/sfx/ui-click-3.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "ui-back": {
+  "files": [
+   "audio/sfx/ui-back.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "ui-open": {
+  "files": [
+   "audio/sfx/ui-open.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "win-sting": {
+  "files": [
+   "audio/sfx/win-sting-1.ogg",
+   "audio/sfx/win-sting-2.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "lose-sting": {
+  "files": [
+   "audio/sfx/lose-sting.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "trophy-fanfare": {
+  "files": [
+   "audio/sfx/trophy-fanfare.ogg"
+  ],
+  "gain": 0,
+  "loop": false
+ },
+ "inn-murmur-busy": {
+  "files": [
+   "audio/sfx/inn-murmur-busy.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 30.0
+ },
+ "beergarden": {
+  "files": [
+   "audio/sfx/beergarden.ogg"
+  ],
+  "gain": 0,
+  "loop": true,
+  "loopStart": 0,
+  "loopEnd": 30.0
+ }
+}

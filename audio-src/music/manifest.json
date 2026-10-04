@@ -1,0 +1,4151 @@
+{
+ "generator": {
+  "model": "m-a-p/YuE2-3B",
+  "vae": "m-a-p/YuE2-Vae",
+  "package": "yue2-infer 0.1.6 (faultline .venv-score)",
+  "mode": "cot=full with an external original ABC plan, lyrics empty, classifier-free guidance away from a negative [Tags] text (same instruction and ABC)",
+  "hardware": "NVIDIA RTX 4080 SUPER 16 GB (WSL2), AR offload, 12 GiB pipeline budget, 32 ODE steps",
+  "licence": "audio-src/licenses/YuE2-MODEL_LICENSE (weights CC BY-NC 4.0 + individual creator permission), YuE2-LICENSE (code, Apache-2.0)"
+ },
+ "analysis": {
+  "clap": "laion/clap-htsat-unfused (CPU)",
+  "whisper": "faster-whisper medium int8 (CPU), with and without VAD",
+  "listener": "not used: the cached Qwen2-Audio-7B snapshot is incomplete (2 of 5 shards)"
+ },
+ "rules": [
+  "No vocals: CFG away from voices, non-vocal ABC block labels, Whisper (with and without VAD) and CLAP checks.",
+  "User rule 2026-10-04: no conforming, time-stretching, pitch shifting or re-editing; simple mastering only (constant gain, 10 ms fade-in, 2 s fade-out at file end) and natural loop points with a 40 ms seam blend."
+ ],
+ "gpu_holds": [
+  {
+   "start": "2026-10-04T21:34:30",
+   "end": "2026-10-04T21:44:06",
+   "seconds": 576,
+   "exit": 0,
+   "jobs": "stammtisch:calm:1,2 stammtisch:tense:1,2 daheim:main:1,2 enztal:main:1,2 stromberg:main:1,2"
+  },
+  {
+   "start": "2026-10-04T21:45:34",
+   "end": "2026-10-04T21:55:05",
+   "seconds": 571,
+   "exit": 0,
+   "jobs": "daheim:main:3-5 schwarzwald:main:1,2 stuttgart:main:1,2 raetsel:main:1,2"
+  },
+  {
+   "start": "2026-10-04T21:56:46",
+   "end": "2026-10-04T22:06:19",
+   "seconds": 573,
+   "exit": 0,
+   "jobs": "stellplatz:main:1,2 preisskat:calm:1,2 preisskat:tense:1,2 motorradtreff:main:1,2 pokal:main:1,2 heimfahrt:main:1,2"
+  },
+  {
+   "start": "2026-10-04T22:07:19",
+   "end": "2026-10-04T22:08:04",
+   "seconds": 45,
+   "exit": 0,
+   "jobs": "heimfahrt:main:1,2"
+  },
+  {
+   "start": "2026-10-04T22:19:35",
+   "end": "2026-10-04T22:19:40",
+   "seconds": 5,
+   "exit": 1,
+   "jobs": "describe (Qwen2-Audio listener, failed at load: model snapshot incomplete, no GPU work) --picked stammtisch daheim enztal stromberg schwarzwald stuttgart raetsel stellplatz preisskat motorradtreff pokal heimfahrt"
+  },
+  {
+   "start": "2026-10-04T22:19:40",
+   "end": "2026-10-04T22:19:43",
+   "seconds": 3,
+   "exit": 1,
+   "jobs": "describe (failed at load, no GPU work) daheim"
+  }
+ ],
+ "gpu_seconds": 1773,
+ "pieces": {
+  "stammtisch": {
+   "use": "inn table (Skat); calm by default, tense when a game gets close",
+   "key": "Dm",
+   "bpm": 104,
+   "kind": "layers",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [
+    "calm t1 'sounds great' (template for the other themes)",
+    "picked calm t1 + tense t2: 'tense t2, aber sind alle gut, also genau so weiter machen'"
+   ],
+   "takes": [
+    {
+     "take": "calm/t1",
+     "path": "audio-src/music/takes/stammtisch/calm/t1/audio.flac",
+     "seed": 191536,
+     "cfg": 1.6,
+     "style": "Cosy, slightly cheeky tavern instrumental for a card game at the regulars' table of a country inn in southern Germany: an accordion plays the melody, a strummed acoustic guitar on the offbeats, a plucked upright double bass and soft brushes on a snare drum, a clarinet answering. Warm wood-panelled room, relaxed and friendly, a sly grin; 1970s, acoustic, intimate, unhurried. Purely instrumental. D minor, 104 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "adf435dabc2efc506d14f221016d3b726dbe720e1fdb0bf77e608c9b0ad8dee2",
+     "seconds": 142.84,
+     "semantic_tokens": 3571,
+     "wall_seconds": 63.6,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5615
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 104.002,
+      "key": "Dm",
+      "clap_fit": 0.478,
+      "clap_acoustic": 0.948,
+      "clap_vocal_max": 0.027,
+      "clap_intensity": 0.859,
+      "instruments": {
+       "flute": 0.289,
+       "Hammond organ": 0.179,
+       "saxophone": 0.102,
+       "clarinet": 0.068,
+       "vibraphone": 0.067,
+       "harmonica": 0.059,
+       "accordion": 0.053,
+       "trumpet": 0.035
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(23.0, 0.2, 17.1), (50.6, 0.3, 15.4), (87.5, 0.3, 16.6)]"
+      ],
+      "score": 2.439
+     },
+     "picked": true
+    },
+    {
+     "take": "calm/t2",
+     "path": "audio-src/music/takes/stammtisch/calm/t2/audio.flac",
+     "seed": 192536,
+     "cfg": 1.6,
+     "style": "Cosy, slightly cheeky tavern instrumental for a card game at the regulars' table of a country inn in southern Germany: an accordion plays the melody, a strummed acoustic guitar on the offbeats, a plucked upright double bass and soft brushes on a snare drum, a clarinet answering. Warm wood-panelled room, relaxed and friendly, a sly grin; 1970s, acoustic, intimate, unhurried. Purely instrumental. D minor, 104 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "adf435dabc2efc506d14f221016d3b726dbe720e1fdb0bf77e608c9b0ad8dee2",
+     "seconds": 141.44,
+     "semantic_tokens": 3536,
+     "wall_seconds": 60.6,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5615
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 105.466,
+      "key": "Dm",
+      "clap_fit": 0.457,
+      "clap_acoustic": 0.97,
+      "clap_vocal_max": 0.053,
+      "clap_intensity": 0.822,
+      "instruments": {
+       "Hammond organ": 0.332,
+       "saxophone": 0.174,
+       "accordion": 0.113,
+       "flute": 0.068,
+       "harmonica": 0.063,
+       "vibraphone": 0.059,
+       "clarinet": 0.039,
+       "trumpet": 0.031
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-50.0, -66.0, -80.0] ms"
+      ],
+      "score": 2.354
+     },
+     "picked": false
+    },
+    {
+     "take": "tense/t1",
+     "path": "audio-src/music/takes/stammtisch/tense/t1/audio.flac",
+     "seed": 915637,
+     "cfg": 1.6,
+     "style": "Tense, exciting tavern instrumental as a card game at the regulars' table gets close: a driving plucked upright double bass in steady eighths, staccato accordion chords, a tight snare drum with brushes and rim clicks, a clarinet with nervous trills and quick runs, a small brass section with short stabs, rising suspense. Acoustic 1970s crime-comedy tension, playful but urgent. Purely instrumental. D minor, 104 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "c4e3858b553b28d5adb123a328eb239a2e4e36563372375a26cf91ae486605d2",
+     "seconds": 142.48,
+     "semantic_tokens": 3562,
+     "wall_seconds": 62.5,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5615
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 104.63,
+      "key": "Dm",
+      "clap_fit": 0.498,
+      "clap_acoustic": 0.992,
+      "clap_vocal_max": 0.013,
+      "clap_intensity": 0.674,
+      "instruments": {
+       "Hammond organ": 0.341,
+       "flute": 0.157,
+       "accordion": 0.131,
+       "clarinet": 0.089,
+       "saxophone": 0.073,
+       "violin and strings": 0.046,
+       "trumpet": 0.033,
+       "harmonica": 0.031
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "lost plan (11 windows from bar 12)",
+       "drift [56.0, -64.0, 80.0, 34.0] ms",
+       "brief level dips to review [(9.5, 0.2, 19.2), (16.2, 0.2, 21.8), (33.8, 0.2, 15.7)]"
+      ],
+      "score": 2.767
+     },
+     "picked": false
+    },
+    {
+     "take": "tense/t2",
+     "path": "audio-src/music/takes/stammtisch/tense/t2/audio.flac",
+     "seed": 916637,
+     "cfg": 1.6,
+     "style": "Tense, exciting tavern instrumental as a card game at the regulars' table gets close: a driving plucked upright double bass in steady eighths, staccato accordion chords, a tight snare drum with brushes and rim clicks, a clarinet with nervous trills and quick runs, a small brass section with short stabs, rising suspense. Acoustic 1970s crime-comedy tension, playful but urgent. Purely instrumental. D minor, 104 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "c4e3858b553b28d5adb123a328eb239a2e4e36563372375a26cf91ae486605d2",
+     "seconds": 141.08,
+     "semantic_tokens": 3527,
+     "wall_seconds": 60.4,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5615
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 105.811,
+      "key": "Dm",
+      "clap_fit": 0.427,
+      "clap_acoustic": 0.904,
+      "clap_vocal_max": 0.018,
+      "clap_intensity": 0.912,
+      "instruments": {
+       "Hammond organ": 0.33,
+       "flute": 0.214,
+       "accordion": 0.126,
+       "saxophone": 0.08,
+       "trumpet": 0.058,
+       "clarinet": 0.05,
+       "vibraphone": 0.029,
+       "harmonica": 0.025
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(26.6, 0.2, 28.3), (27.8, 0.2, 18.9), (48.2, 0.2, 21.3)]"
+      ],
+      "score": 2.582
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "calm": "t1",
+    "tense": "t2"
+   },
+   "pick_note": "User pick after listening (2026-10-04): calm t1 ('sounds great'), tense t2 ('tense t2, aber sind alle gut'). Delivered as performed. Analysis: Whisper clean, CLAP vocal <= 0.03, both in D minor; calm 104.0 BPM, tense 105.8 BPM (separate performances, synced false). Not used: calm t2 (beat drifts up to 80 ms), tense t1 (lost the plan from bar 12, weak beat lock).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "calm": "audio/music/stammtisch-calm.ogg",
+      "tense": "audio/music/stammtisch-tense.ogg"
+     },
+     "loop": true,
+     "loopStart": 27.822104167,
+     "loopEnd": 138.595604167,
+     "bpm": 104.0,
+     "bars": 62,
+     "key": "Dm",
+     "duration": 142.838667,
+     "gainDb": -5.74,
+     "takes": {
+      "calm": "t1",
+      "tense": "t2"
+     },
+     "synced": false,
+     "layers": {
+      "calm": {
+       "loopStart": 27.822104167,
+       "loopEnd": 138.595604167,
+       "duration": 142.838667,
+       "bpm": 104.0
+      },
+      "tense": {
+       "loopStart": 27.425770833,
+       "loopEnd": 136.293270833,
+       "duration": 141.078667,
+       "bpm": 105.81
+      }
+     }
+    },
+    "versions": {
+     "calm": {
+      "take": "t1",
+      "seed": 191536,
+      "measured_bpm": 104.002,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.2084,
+       "harmony": 0.984,
+       "rhythm_corr": 0.833,
+       "shift_ms": 0.0,
+       "level_before_db": 0.6,
+       "level_jump_db": -0.1,
+       "loop_start": 27.8222,
+       "loop_end": 138.5957,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.2084,
+        "harmony": 0.984,
+        "rhythm_corr": 0.833,
+        "shift_ms": 0.0,
+        "level_before_db": 0.6,
+        "level_jump_db": -0.1,
+        "loop_start": 27.8222,
+        "loop_end": 138.5957
+       },
+       "alternatives": [
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1626,
+         "harmony": 0.988,
+         "rhythm_corr": 0.859,
+         "shift_ms": 0.0,
+         "level_before_db": 0.8,
+         "level_jump_db": -1.2,
+         "loop_start": 25.515,
+         "loop_end": 136.2827
+        },
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.1582,
+         "harmony": 0.992,
+         "rhythm_corr": 0.785,
+         "shift_ms": 0.0,
+         "level_before_db": 1.1,
+         "level_jump_db": -0.4,
+         "loop_start": 23.2031,
+         "loop_end": 133.972
+        },
+        {
+         "bars": [
+          9,
+          57
+         ],
+         "score": 1.144,
+         "harmony": 0.988,
+         "rhythm_corr": 0.832,
+         "shift_ms": 0.0,
+         "level_before_db": 1.1,
+         "level_jump_db": -1.5,
+         "loop_start": 20.896,
+         "loop_end": 131.6686
+        },
+        {
+         "bars": [
+          8,
+          56
+         ],
+         "score": 1.1404,
+         "harmony": 0.988,
+         "rhythm_corr": 0.768,
+         "shift_ms": 0.0,
+         "level_before_db": 1.3,
+         "level_jump_db": -0.7,
+         "loop_start": 18.5849,
+         "loop_end": 129.3619
+        }
+       ],
+       "loop_start_sample": 1335461,
+       "loop_end_sample": 6652589,
+       "blend_s": 0.04,
+       "codec_shift_samples": -5,
+       "decoded_step_before": 0.00697,
+       "decoded_step_after": 0.00395,
+       "decoded_natural_step": 0.00381
+      },
+      "gain_db": -5.74,
+      "delivered": {
+       "lufs": -19.74,
+       "tp": -5.6,
+       "lra": 3.5
+      },
+      "loop_level": {
+       "lufs": -13.76,
+       "tp": -0.04,
+       "lra": 2.8
+      },
+      "delivery": "public/audio/music/stammtisch-calm.ogg",
+      "delivery_sha256": "013bfad1a557f057570b4046c05c6e4925899ce52ae6549c68879ec19c6b66f5",
+      "master": "audio-src/music/masters/stammtisch-calm.flac",
+      "master_sha256": "93a51ce4f55b5954afddce6a3878fa1a4965948b563cbb96d215431fc659da45",
+      "source": "audio-src/music/takes/stammtisch/calm/t1/audio.flac",
+      "source_sha256": "007751b85a22b9d4cdc7cc8de1ff9d4ca1dfc9ffa69899b7fb97c9cfd26df73d",
+      "bytes": 1861973,
+      "samples": 6856256,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     },
+     "tense": {
+      "take": "t2",
+      "seed": 916637,
+      "measured_bpm": 105.811,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.1413,
+       "harmony": 0.989,
+       "rhythm_corr": 0.905,
+       "shift_ms": 0.0,
+       "level_before_db": 2.9,
+       "level_jump_db": -2.3,
+       "loop_start": 27.4271,
+       "loop_end": 136.2946,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1413,
+        "harmony": 0.989,
+        "rhythm_corr": 0.905,
+        "shift_ms": 0.0,
+        "level_before_db": 2.9,
+        "level_jump_db": -2.3,
+        "loop_start": 27.4271,
+        "loop_end": 136.2946
+       },
+       "alternatives": [
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1035,
+         "harmony": 0.989,
+         "rhythm_corr": 0.911,
+         "shift_ms": 0.0,
+         "level_before_db": 2.5,
+         "level_jump_db": -3.2,
+         "loop_start": 25.1588,
+         "loop_end": 134.0287
+        },
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.0923,
+         "harmony": 0.972,
+         "rhythm_corr": 0.899,
+         "shift_ms": 0.0,
+         "level_before_db": 2.4,
+         "level_jump_db": -2.8,
+         "loop_start": 22.8904,
+         "loop_end": 131.7611
+        },
+        {
+         "bars": [
+          8,
+          56
+         ],
+         "score": 1.0838,
+         "harmony": 0.973,
+         "rhythm_corr": 0.816,
+         "shift_ms": 0.0,
+         "level_before_db": 2.3,
+         "level_jump_db": -2.3,
+         "loop_start": 18.358,
+         "loop_end": 127.227
+        },
+        {
+         "bars": [
+          7,
+          55
+         ],
+         "score": 1.0826,
+         "harmony": 0.957,
+         "rhythm_corr": 0.873,
+         "shift_ms": 0.0,
+         "level_before_db": 2.5,
+         "level_jump_db": -2.2,
+         "loop_start": 16.0899,
+         "loop_end": 124.9585
+        }
+       ],
+       "loop_start_sample": 1316437,
+       "loop_end_sample": 6542077,
+       "blend_s": 0.04,
+       "codec_shift_samples": -64,
+       "decoded_step_before": 0.01771,
+       "decoded_step_after": 0.01474,
+       "decoded_natural_step": 0.01377
+      },
+      "gain_db": -5.49,
+      "delivered": {
+       "lufs": -18.85,
+       "tp": -4.66,
+       "lra": 2.9
+      },
+      "loop_level": {
+       "lufs": -13.01,
+       "tp": 0.11,
+       "lra": 2.2
+      },
+      "delivery": "public/audio/music/stammtisch-tense.ogg",
+      "delivery_sha256": "802632e4d8cc0d7b0c7e8341b25933e02f358b2e68be974d45a1fc968e507ec4",
+      "master": "audio-src/music/masters/stammtisch-tense.flac",
+      "master_sha256": "d552256f605e9b814577ff17e67fb6fd490f0dfafaa2e06b22a6e5603d31e069",
+      "source": "audio-src/music/takes/stammtisch/tense/t2/audio.flac",
+      "source_sha256": "1eec6534b44be7ffb37aa9f4de64c53848b254284c00abb7afb1ed2f6e0b590b",
+      "bytes": 2067394,
+      "samples": 6771776,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "daheim": {
+   "use": "kitchen (home), title, tour book",
+   "key": "F",
+   "bpm": 96,
+   "kind": "single",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v2 (light jazz, after user feedback)",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+   "feedback": [
+    "v1 (t1, t2) rejected: 'die daheim Musik ist nicht gut, die klingt zu sehr nach Heimatfilm' -> v2 from t3"
+   ],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/daheim/main/t1/audio.flac",
+     "seed": 337505,
+     "cfg": 1.6,
+     "style": "Warm, homely instrumental main theme of a cosy 1970s game about card players in southern Germany: a gentle accordion plays the melody over a softly strummed acoustic guitar, a round upright double bass and light brushes on a snare drum; a clarinet answers now and then. Kitchen table, coffee and a deck of cards, nostalgic, friendly and intimate, a lilting folk dance feel, analog tape warmth. Purely instrumental. G major, 92 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "2c35db1d880d89e551b3d57c9bd37938269757a4659b4ed768e657b5489be62a",
+     "seconds": 157.56,
+     "semantic_tokens": 3939,
+     "wall_seconds": 68.7,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6315
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": true,
+     "analysis": {
+      "tempo_bpm": null,
+      "key": null,
+      "clap_fit": null,
+      "clap_acoustic": null,
+      "clap_vocal_max": null,
+      "clap_intensity": null,
+      "instruments": null,
+      "whisper": null,
+      "rejects": null,
+      "advisories": null,
+      "score": null
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/daheim/main/t2/audio.flac",
+     "seed": 338505,
+     "cfg": 1.6,
+     "style": "Warm, homely instrumental main theme of a cosy 1970s game about card players in southern Germany: a gentle accordion plays the melody over a softly strummed acoustic guitar, a round upright double bass and light brushes on a snare drum; a clarinet answers now and then. Kitchen table, coffee and a deck of cards, nostalgic, friendly and intimate, a lilting folk dance feel, analog tape warmth. Purely instrumental. G major, 92 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "2c35db1d880d89e551b3d57c9bd37938269757a4659b4ed768e657b5489be62a",
+     "seconds": 159.96,
+     "semantic_tokens": 3999,
+     "wall_seconds": 69.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6315
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": true,
+     "analysis": {
+      "tempo_bpm": null,
+      "key": null,
+      "clap_fit": null,
+      "clap_acoustic": null,
+      "clap_vocal_max": null,
+      "clap_intensity": null,
+      "instruments": null,
+      "whisper": null,
+      "rejects": null,
+      "advisories": null,
+      "score": null
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t3",
+     "path": "audio-src/music/takes/daheim/main/t3/audio.flac",
+     "seed": 339505,
+     "cfg": 1.6,
+     "style": "Relaxed, warm instrumental main theme for coming home to the kitchen: laid-back 1970s acoustic easy listening with a light jazz touch. A nylon-string acoustic guitar plays the melody, a soft accordion answers with short phrases, a plucked upright double bass and soft brushes on a snare drum, a clarinet now and then. Coffee on the kitchen table, unhurried and a little cheeky, a sly grin; warm and dry small-band sound, acoustic, intimate, not sentimental. Purely instrumental. F major, 96 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+     "plan_sha256": "8c2fbbaebe264cce22d15c88b7954f59bd36773c3a3f444fe5674cec87927a40",
+     "seconds": 154.56,
+     "semantic_tokens": 3864,
+     "wall_seconds": 70.4,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6062
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 96.01,
+      "key": "F",
+      "clap_fit": 0.434,
+      "clap_acoustic": 0.898,
+      "clap_vocal_max": 0.074,
+      "clap_intensity": 0.848,
+      "instruments": {
+       "Hammond organ": 0.716,
+       "vibraphone": 0.036,
+       "drum machine": 0.029,
+       "flute": 0.028,
+       "saxophone": 0.024,
+       "accordion": 0.024,
+       "electric guitar": 0.022,
+       "harmonica": 0.02
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [],
+      "score": 2.163
+     },
+     "picked": true
+    },
+    {
+     "take": "main/t4",
+     "path": "audio-src/music/takes/daheim/main/t4/audio.flac",
+     "seed": 340505,
+     "cfg": 1.6,
+     "style": "Relaxed, warm instrumental main theme for coming home to the kitchen: laid-back 1970s acoustic easy listening with a light jazz touch. A nylon-string acoustic guitar plays the melody, a soft accordion answers with short phrases, a plucked upright double bass and soft brushes on a snare drum, a clarinet now and then. Coffee on the kitchen table, unhurried and a little cheeky, a sly grin; warm and dry small-band sound, acoustic, intimate, not sentimental. Purely instrumental. F major, 96 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+     "plan_sha256": "8c2fbbaebe264cce22d15c88b7954f59bd36773c3a3f444fe5674cec87927a40",
+     "seconds": 152.36,
+     "semantic_tokens": 3809,
+     "wall_seconds": 65.0,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6062
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 98.001,
+      "key": "F",
+      "clap_fit": 0.421,
+      "clap_acoustic": 0.78,
+      "clap_vocal_max": 0.113,
+      "clap_intensity": 0.866,
+      "instruments": {
+       "Hammond organ": 0.711,
+       "flute": 0.064,
+       "vibraphone": 0.045,
+       "acoustic guitar": 0.03,
+       "accordion": 0.028,
+       "drum machine": 0.017,
+       "clarinet": 0.015,
+       "piano": 0.015
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "tempo x1.0208",
+       "brief level dips to review [(47.4, 0.2, 15.2)]"
+      ],
+      "score": 1.937
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t5",
+     "path": "audio-src/music/takes/daheim/main/t5/audio.flac",
+     "seed": 341505,
+     "cfg": 1.6,
+     "style": "Relaxed, warm instrumental main theme for coming home to the kitchen: laid-back 1970s easy listening with a light jazz touch. A warm Rhodes electric piano and a nylon-string acoustic guitar share the melody, a plucked upright double bass, soft brushes on a snare drum, a clarinet answering now and then, a soft accordion in the background. Unhurried and a little cheeky, a sly grin; warm and dry small-band sound, intimate, not sentimental. Purely instrumental. F major, 96 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+     "plan_sha256": "8c2fbbaebe264cce22d15c88b7954f59bd36773c3a3f444fe5674cec87927a40",
+     "seconds": 152.6,
+     "semantic_tokens": 3815,
+     "wall_seconds": 65.1,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6062
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 96.579,
+      "key": "F",
+      "clap_fit": 0.435,
+      "clap_acoustic": 0.947,
+      "clap_vocal_max": 0.07,
+      "clap_intensity": 0.738,
+      "instruments": {
+       "Hammond organ": 0.619,
+       "vibraphone": 0.097,
+       "acoustic guitar": 0.046,
+       "flute": 0.036,
+       "electric guitar": 0.027,
+       "accordion": 0.025,
+       "drum machine": 0.023,
+       "saxophone": 0.021
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "lost plan (2 windows from bar 52)",
+       "drift [-72.0, -80.0] ms",
+       "brief level dips to review [(29.7, 0.4, 24.2), (108.5, 0.2, 18.8)]"
+      ],
+      "score": 2.167
+     },
+     "picked": false
+    }
+   ],
+   "picks": {
+    "main": "t3"
+   },
+   "pick_note": "v2 (new composition after the user rejected v1 as 'zu sehr Heimatfilm'). Provisional pick by analysis until the user has listened: t3 plays exactly 96.0 BPM with a steady beat (window drift <= 8 ms), F major as written, Whisper clean, CLAP vocal 0.07, flat level. Alternatives: t4 (same prompt, plays 2 % fast), t5 (Rhodes + nylon guitar variant, looser timing).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/daheim.ogg"
+     },
+     "loop": true,
+     "loopStart": 30.170854167,
+     "loopEnd": 150.148041667,
+     "bpm": 96.01,
+     "bars": 62,
+     "key": "F",
+     "duration": 154.558667,
+     "gainDb": -5.45,
+     "takes": {
+      "main": "t3"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t3",
+      "seed": 339505,
+      "measured_bpm": 96.01,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.1863,
+       "harmony": 0.981,
+       "rhythm_corr": 0.873,
+       "shift_ms": 0.0,
+       "level_before_db": 1.5,
+       "level_jump_db": -0.6,
+       "loop_start": 30.1717,
+       "loop_end": 150.1489,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1863,
+        "harmony": 0.981,
+        "rhythm_corr": 0.873,
+        "shift_ms": 0.0,
+        "level_before_db": 1.5,
+        "level_jump_db": -0.6,
+        "loop_start": 30.1717,
+        "loop_end": 150.1489
+       },
+       "alternatives": [
+        {
+         "bars": [
+          8,
+          56
+         ],
+         "score": 1.1052,
+         "harmony": 0.952,
+         "rhythm_corr": 0.891,
+         "shift_ms": 0.0,
+         "level_before_db": 2.1,
+         "level_jump_db": -1.4,
+         "loop_start": 20.1712,
+         "loop_end": 140.1496
+        },
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.1041,
+         "harmony": 0.947,
+         "rhythm_corr": 0.88,
+         "shift_ms": 0.0,
+         "level_before_db": 1.7,
+         "level_jump_db": -1.5,
+         "loop_start": 25.1744,
+         "loop_end": 145.1499
+        },
+        {
+         "bars": [
+          19,
+          60
+         ],
+         "score": 1.0944,
+         "harmony": 0.92,
+         "rhythm_corr": 0.823,
+         "shift_ms": 0.0,
+         "level_before_db": 1.5,
+         "level_jump_db": 0.1,
+         "loop_start": 47.6699,
+         "loop_end": 150.1489
+        },
+        {
+         "bars": [
+          7,
+          55
+         ],
+         "score": 1.0938,
+         "harmony": 0.949,
+         "rhythm_corr": 0.894,
+         "shift_ms": 0.0,
+         "level_before_db": 1.4,
+         "level_jump_db": -2.6,
+         "loop_start": 17.6718,
+         "loop_end": 137.6495
+        }
+       ],
+       "loop_start_sample": 1448201,
+       "loop_end_sample": 7207106,
+       "blend_s": 0.04,
+       "codec_shift_samples": -41,
+       "decoded_step_before": 0.02455,
+       "decoded_step_after": 0.00172,
+       "decoded_natural_step": 0.00146
+      },
+      "gain_db": -5.45,
+      "delivered": {
+       "lufs": -19.34,
+       "tp": -5.38,
+       "lra": 3.8
+      },
+      "loop_level": {
+       "lufs": -13.55,
+       "tp": 0.01,
+       "lra": 2.7
+      },
+      "delivery": "public/audio/music/daheim.ogg",
+      "delivery_sha256": "a440156515bfafb57e3d169fd1435d2be5934f009a2011a59c440e19f43f9d74",
+      "master": "audio-src/music/masters/daheim.flac",
+      "master_sha256": "1a6b6532550ef680a3e2337890630a512a30b92c3d82c7016a95352bbfb89865",
+      "source": "audio-src/music/takes/daheim/main/t3/audio.flac",
+      "source_sha256": "f8972dfeb052b113e8ba7627247f6ef60c4b91a7d95659c35a30731139b78a82",
+      "bytes": 2104161,
+      "samples": 7418816,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "enztal": {
+   "use": "stage map, region Enztal",
+   "key": "D",
+   "bpm": 108,
+   "kind": "single",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [
+    "'enztal und stromberg klingen auch alle gut'"
+   ],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/enztal/main/t1/audio.flac",
+     "seed": 122506,
+     "cfg": 1.6,
+     "style": "Light, sunny 1970s easy listening instrumental like from an old car radio on a country road: a bouncy strummed acoustic guitar, a cheerful accordion melody, a clarinet counter-melody, a walking upright bass, brushed drums with a gentle shuffle and a small soft brass section adding warm chords. A camper van rolling along a green river valley past vineyards and villages; relaxed, friendly and nostalgic. Purely instrumental. D major, 108 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "33dc4c6c36d8fab4cfaafa4d7185647a1b0f9f5c8d0694c35429bb08f0f37212",
+     "seconds": 137.4,
+     "semantic_tokens": 3435,
+     "wall_seconds": 59.0,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5416
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 108.002,
+      "key": "D (~-5 st)",
+      "clap_fit": 0.401,
+      "clap_acoustic": 0.941,
+      "clap_vocal_max": 0.127,
+      "clap_intensity": 0.842,
+      "instruments": {
+       "Hammond organ": 0.358,
+       "flute": 0.227,
+       "accordion": 0.087,
+       "vibraphone": 0.077,
+       "clarinet": 0.044,
+       "harmonica": 0.041,
+       "saxophone": 0.041,
+       "trumpet": 0.035
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(114.1, 0.3, 13.9)]"
+      ],
+      "score": 2.081
+     },
+     "picked": true
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/enztal/main/t2/audio.flac",
+     "seed": 123506,
+     "cfg": 1.6,
+     "style": "Light, sunny 1970s easy listening instrumental like from an old car radio on a country road: a bouncy strummed acoustic guitar, a cheerful accordion melody, a clarinet counter-melody, a walking upright bass, brushed drums with a gentle shuffle and a small soft brass section adding warm chords. A camper van rolling along a green river valley past vineyards and villages; relaxed, friendly and nostalgic. Purely instrumental. D major, 108 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "33dc4c6c36d8fab4cfaafa4d7185647a1b0f9f5c8d0694c35429bb08f0f37212",
+     "seconds": 136.88,
+     "semantic_tokens": 3422,
+     "wall_seconds": 58.7,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5416
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 108.858,
+      "key": "D",
+      "clap_fit": 0.401,
+      "clap_acoustic": 0.927,
+      "clap_vocal_max": 0.07,
+      "clap_intensity": 0.837,
+      "instruments": {
+       "Hammond organ": 0.362,
+       "accordion": 0.154,
+       "vibraphone": 0.132,
+       "flute": 0.118,
+       "harmonica": 0.04,
+       "clarinet": 0.032,
+       "saxophone": 0.031,
+       "trumpet": 0.029
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [],
+      "score": 2.045
+     },
+     "picked": false
+    }
+   ],
+   "picks": {
+    "main": "t1"
+   },
+   "pick_note": "User: 'enztal und stromberg klingen auch alle gut'. Picked t1 by analysis: exact 108.0 BPM, steady grid (window drift <= 6 ms), flat level (no level jump at the seam), Whisper clean, CLAP vocal 0.13 max, acoustic 0.94. t2 also passes (rises 2 dB over the take, seam level step 2 dB).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/enztal.ogg"
+     },
+     "loop": true,
+     "loopStart": 26.820479167,
+     "loopEnd": 133.487166667,
+     "bpm": 108.0,
+     "bars": 62,
+     "key": "D",
+     "duration": 137.398667,
+     "gainDb": -4.84,
+     "takes": {
+      "main": "t1"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t1",
+      "seed": 122506,
+      "measured_bpm": 108.002,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.1871,
+       "harmony": 0.955,
+       "rhythm_corr": 0.848,
+       "shift_ms": 0.0,
+       "level_before_db": -0.2,
+       "level_jump_db": 0.3,
+       "loop_start": 26.8211,
+       "loop_end": 133.4878,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1871,
+        "harmony": 0.955,
+        "rhythm_corr": 0.848,
+        "shift_ms": 0.0,
+        "level_before_db": -0.2,
+        "level_jump_db": 0.3,
+        "loop_start": 26.8211,
+        "loop_end": 133.4878
+       },
+       "alternatives": [
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1481,
+         "harmony": 0.952,
+         "rhythm_corr": 0.847,
+         "shift_ms": 0.0,
+         "level_before_db": 0.2,
+         "level_jump_db": -0.5,
+         "loop_start": 24.5943,
+         "loop_end": 131.2639
+        },
+        {
+         "bars": [
+          9,
+          57
+         ],
+         "score": 1.1106,
+         "harmony": 0.901,
+         "rhythm_corr": 0.849,
+         "shift_ms": 0.0,
+         "level_before_db": 0.0,
+         "level_jump_db": -0.1,
+         "loop_start": 20.1524,
+         "loop_end": 126.8206
+        },
+        {
+         "bars": [
+          6,
+          54
+         ],
+         "score": 1.0871,
+         "harmony": 0.915,
+         "rhythm_corr": 0.755,
+         "shift_ms": -10.0,
+         "level_before_db": -0.1,
+         "level_jump_db": -0.7,
+         "loop_start": 13.4845,
+         "loop_end": 120.1426
+        },
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.0838,
+         "harmony": 0.903,
+         "rhythm_corr": 0.805,
+         "shift_ms": 0.0,
+         "level_before_db": 0.5,
+         "level_jump_db": 0.5,
+         "loop_start": 22.3658,
+         "loop_end": 129.041
+        }
+       ],
+       "loop_start_sample": 1287383,
+       "loop_end_sample": 6407384,
+       "blend_s": 0.04,
+       "codec_shift_samples": -30,
+       "decoded_step_before": 0.02379,
+       "decoded_step_after": 0.01616,
+       "decoded_natural_step": 0.01511
+      },
+      "gain_db": -4.84,
+      "delivered": {
+       "lufs": -19.02,
+       "tp": -4.57,
+       "lra": 1.7
+      },
+      "loop_level": {
+       "lufs": -14.16,
+       "tp": -0.02,
+       "lra": 1.3
+      },
+      "delivery": "public/audio/music/enztal.ogg",
+      "delivery_sha256": "b83f1a9dd0e48664f29ccc123a80371874c2ba1e2b91c3e04461b7f0e9339387",
+      "master": "audio-src/music/masters/enztal.flac",
+      "master_sha256": "10ba2fae696fa79f3dfe8d8108f6c82ad17774bf12461090623e4a8901f0472b",
+      "source": "audio-src/music/takes/enztal/main/t1/audio.flac",
+      "source_sha256": "eba0a1b8bfcc8ff33652d73613d7b5bff168fa54611337606aa5b23d754426da",
+      "bytes": 1977700,
+      "samples": 6595136,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "stromberg": {
+   "use": "stage map, region M\u00fchlacker / Stromberg",
+   "key": "F",
+   "bpm": 100,
+   "kind": "single",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [
+    "'enztal und stromberg klingen auch alle gut'"
+   ],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/stromberg/main/t1/audio.flac",
+     "seed": 742478,
+     "cfg": 1.6,
+     "style": "Sunny, gently swinging 1970s instrumental: a warm woody clarinet plays the melody, an accordion and a strummed acoustic guitar accompany, a plucked upright double bass and light brushed drums, a soft muted trumpet in the background. Rolling vineyard hills in late summer, a glass of local red wine, relaxed, cheeky and friendly, nostalgic easy listening. Purely instrumental. F major, 100 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "72d8664fbd24f86a54b8222fbc55e4eca8f3e2e5c6952d4e171b5cfa4d192842",
+     "seconds": 146.64,
+     "semantic_tokens": 3666,
+     "wall_seconds": 62.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5829
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 102.199,
+      "key": "F",
+      "clap_fit": 0.428,
+      "clap_acoustic": 0.643,
+      "clap_vocal_max": 0.2,
+      "clap_intensity": 0.903,
+      "instruments": {
+       "Hammond organ": 0.755,
+       "vibraphone": 0.092,
+       "drum machine": 0.026,
+       "acoustic guitar": 0.023,
+       "accordion": 0.02,
+       "flute": 0.013,
+       "piano": 0.01,
+       "electric guitar": 0.008
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "lost plan (10 windows from bar 8)",
+       "tempo x1.0220",
+       "drift [-80.0, 78.0, 80.0] ms",
+       "electronic-leaning windows at [35.0, 40.0, 70.0, 75.0, 80.0, 110.0] s (CLAP acoustic 0.643)",
+       "brief level dips to review [(10.0, 0.2, 15.8), (28.2, 0.2, 15.6), (28.8, 0.2, 18.5)]"
+      ],
+      "score": 1.777
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t1"
+   },
+   "pick_note": "User: 'enztal und stromberg klingen auch alle gut'. Only take t1 rendered; delivered as performed. Analysis flags kept: plays at 102.2 BPM (plan 100), loses the written plan by whole bars from bar 8 and drifts up to 80 ms, CLAP hears mostly organ-like reeds (acoustic 0.64). Whisper clean, CLAP vocal 0.20 max. Loop points chosen on the take's own phrases.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/stromberg.ogg"
+     },
+     "loop": true,
+     "loopStart": 37.348333333,
+     "loopEnd": 131.710520833,
+     "bpm": 102.2,
+     "bars": 62,
+     "key": "F",
+     "duration": 146.638667,
+     "gainDb": -6.95,
+     "takes": {
+      "main": "t1"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t1",
+      "seed": 742478,
+      "measured_bpm": 102.199,
+      "seam": {
+       "bars": [
+        16,
+        56
+       ],
+       "score": 0.9857,
+       "harmony": 0.979,
+       "rhythm_corr": 0.045,
+       "shift_ms": 0.0,
+       "level_before_db": 0.2,
+       "level_jump_db": -0.1,
+       "loop_start": 37.3487,
+       "loop_end": 131.7109,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 0.8561,
+        "harmony": 0.864,
+        "rhythm_corr": -0.094,
+        "shift_ms": 0.0,
+        "level_before_db": 1.0,
+        "level_jump_db": -0.9,
+        "loop_start": 28.1313,
+        "loop_end": 140.9143
+       },
+       "alternatives": [
+        {
+         "bars": [
+          15,
+          55
+         ],
+         "score": 0.9641,
+         "harmony": 0.955,
+         "rhythm_corr": 0.066,
+         "shift_ms": 0.0,
+         "level_before_db": -0.0,
+         "level_jump_db": 0.4,
+         "loop_start": 34.9766,
+         "loop_end": 128.8212
+        },
+        {
+         "bars": [
+          18,
+          58
+         ],
+         "score": 0.9576,
+         "harmony": 0.971,
+         "rhythm_corr": 0.012,
+         "shift_ms": 0.0,
+         "level_before_db": 0.2,
+         "level_jump_db": 0.6,
+         "loop_start": 42.1057,
+         "loop_end": 136.3201
+        },
+        {
+         "bars": [
+          17,
+          57
+         ],
+         "score": 0.9519,
+         "harmony": 0.979,
+         "rhythm_corr": -0.019,
+         "shift_ms": 0.0,
+         "level_before_db": 0.2,
+         "level_jump_db": -1.1,
+         "loop_start": 39.7268,
+         "loop_end": 134.0151
+        },
+        {
+         "bars": [
+          19,
+          59
+         ],
+         "score": 0.9402,
+         "harmony": 0.942,
+         "rhythm_corr": 0.032,
+         "shift_ms": 0.0,
+         "level_before_db": 0.1,
+         "level_jump_db": 0.4,
+         "loop_start": 44.4775,
+         "loop_end": 138.6198
+        }
+       ],
+       "loop_start_sample": 1792720,
+       "loop_end_sample": 6322105,
+       "blend_s": 0.04,
+       "codec_shift_samples": -18,
+       "decoded_step_before": 0.00965,
+       "decoded_step_after": 0.00308,
+       "decoded_natural_step": 0.00271
+      },
+      "gain_db": -6.95,
+      "delivered": {
+       "lufs": -19.08,
+       "tp": -6.51,
+       "lra": 3.2
+      },
+      "loop_level": {
+       "lufs": -12.05,
+       "tp": 0.08,
+       "lra": 2.6
+      },
+      "delivery": "public/audio/music/stromberg.ogg",
+      "delivery_sha256": "d6edada65f95322173db3663e735049b4e303b0d19043d2ca27fff33b84850b1",
+      "master": "audio-src/music/masters/stromberg.flac",
+      "master_sha256": "74c58273524420a77c67b14b7bdaa3c31134dea4c93a787aeb6b4959c4a2e1c8",
+      "source": "audio-src/music/takes/stromberg/main/t1/audio.flac",
+      "source_sha256": "33e3159a768aa913c8b5abd09b51a659e20ff1be936bbbf1c6d6e376c4de0119",
+      "bytes": 2096148,
+      "samples": 7038656,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "schwarzwald": {
+   "use": "stage map, region Schwarzwald",
+   "key": "Bb",
+   "bpm": 76,
+   "kind": "single",
+   "bars": 46,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    44
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/schwarzwald/main/t1/audio.flac",
+     "seed": 710611,
+     "cfg": 1.6,
+     "style": "Calm, misty Black Forest instrumental: a warm French horn plays a slow, noble melody over a fingerpicked acoustic guitar, a soft sustained accordion, a gentle upright bass and quiet strings; no drums. Deep fir forest, mountain mist and a winding road, peaceful and a little solemn, nostalgic 1970s film music warmth. Purely instrumental. B-flat major, 76 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "0fb24344ee99ab9bb441886c5556f311d341003c9436afb0df4f281101e36322",
+     "seconds": 144.12,
+     "semantic_tokens": 3603,
+     "wall_seconds": 60.0,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5697
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 76.999,
+      "key": "Bb",
+      "clap_fit": 0.403,
+      "clap_acoustic": 0.952,
+      "clap_vocal_max": 0.056,
+      "clap_intensity": 0.825,
+      "instruments": {
+       "Hammond organ": 0.343,
+       "accordion": 0.185,
+       "flute": 0.181,
+       "vibraphone": 0.061,
+       "clarinet": 0.056,
+       "harmonica": 0.028,
+       "violin and strings": 0.02,
+       "trumpet": 0.02
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(74.7, 0.3, 14.8)]"
+      ],
+      "score": 2.083
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/schwarzwald/main/t2/audio.flac",
+     "seed": 711611,
+     "cfg": 1.6,
+     "style": "Calm, misty Black Forest instrumental: a warm French horn plays a slow, noble melody over a fingerpicked acoustic guitar, a soft sustained accordion, a gentle upright bass and quiet strings; no drums. Deep fir forest, mountain mist and a winding road, peaceful and a little solemn, nostalgic 1970s film music warmth. Purely instrumental. B-flat major, 76 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "0fb24344ee99ab9bb441886c5556f311d341003c9436afb0df4f281101e36322",
+     "seconds": 144.84,
+     "semantic_tokens": 3621,
+     "wall_seconds": 60.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5697
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 76.923,
+      "key": "Bb",
+      "clap_fit": 0.489,
+      "clap_acoustic": 0.984,
+      "clap_vocal_max": 0.042,
+      "clap_intensity": 0.407,
+      "instruments": {
+       "flute": 0.347,
+       "clarinet": 0.204,
+       "vibraphone": 0.094,
+       "Hammond organ": 0.074,
+       "accordion": 0.058,
+       "slide guitar": 0.033,
+       "harmonica": 0.03,
+       "violin and strings": 0.028
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-80.0] ms",
+       "brief level dips to review [(50.8, 0.3, 18.9), (113.1, 0.4, 14.1)]"
+      ],
+      "score": 2.38
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: the calm one the brief asks for (CLAP intensity 0.41 vs 0.82 for t1), best style fit (0.489), acoustic 0.98, Whisper clean, CLAP vocal 0.04, in B-flat as written; 76.9 BPM (plan 76). One window drifts 80 ms (bar 40); loop points on tracked beats. Its level grows over the take: about 3.5 dB softer after the loop jump.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/schwarzwald.ogg"
+     },
+     "loop": true,
+     "loopStart": 37.843270833,
+     "loopEnd": 137.603666667,
+     "bpm": 76.92,
+     "bars": 46,
+     "key": "Bb",
+     "duration": 144.838667,
+     "gainDb": -4.77,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 711611,
+      "measured_bpm": 76.923,
+      "seam": {
+       "bars": [
+        12,
+        44
+       ],
+       "score": 0.9086,
+       "harmony": 0.937,
+       "rhythm_corr": 0.346,
+       "shift_ms": 0.0,
+       "level_before_db": 3.8,
+       "level_jump_db": 3.4,
+       "loop_start": 37.8445,
+       "loop_end": 137.6049,
+       "planned_bars": [
+        12,
+        44
+       ],
+       "planned": {
+        "bars": [
+         12,
+         44
+        ],
+        "score": 0.9086,
+        "harmony": 0.937,
+        "rhythm_corr": 0.346,
+        "shift_ms": 0.0,
+        "level_before_db": 3.8,
+        "level_jump_db": 3.4,
+        "loop_start": 37.8445,
+        "loop_end": 137.6049
+       },
+       "alternatives": [
+        {
+         "bars": [
+          7,
+          39
+         ],
+         "score": 0.8751,
+         "harmony": 0.97,
+         "rhythm_corr": 0.152,
+         "shift_ms": 0.0,
+         "level_before_db": 2.1,
+         "level_jump_db": -4.5,
+         "loop_start": 22.0239,
+         "loop_end": 122.0411
+        },
+        {
+         "bars": [
+          14,
+          39
+         ],
+         "score": 0.8694,
+         "harmony": 0.825,
+         "rhythm_corr": 0.23,
+         "shift_ms": 0.0,
+         "level_before_db": 0.4,
+         "level_jump_db": 0.2,
+         "loop_start": 44.072,
+         "loop_end": 122.0411
+        },
+        {
+         "bars": [
+          9,
+          41
+         ],
+         "score": 0.809,
+         "harmony": 0.974,
+         "rhythm_corr": 0.307,
+         "shift_ms": 0.0,
+         "level_before_db": 6.5,
+         "level_jump_db": -5.6,
+         "loop_start": 28.4467,
+         "loop_end": 128.2924
+        },
+        {
+         "bars": [
+          8,
+          40
+         ],
+         "score": 0.7871,
+         "harmony": 0.969,
+         "rhythm_corr": -0.006,
+         "shift_ms": 0.0,
+         "level_before_db": 2.5,
+         "level_jump_db": -6.7,
+         "loop_start": 25.1844,
+         "loop_end": 125.1658
+        }
+       ],
+       "loop_start_sample": 1816477,
+       "loop_end_sample": 6604976,
+       "blend_s": 0.04,
+       "codec_shift_samples": -59,
+       "decoded_step_before": 0.00458,
+       "decoded_step_after": 0.00114,
+       "decoded_natural_step": 0.0011
+      },
+      "gain_db": -4.77,
+      "delivered": {
+       "lufs": -19.68,
+       "tp": -5.22,
+       "lra": 7.7
+      },
+      "loop_level": {
+       "lufs": -14.23,
+       "tp": -0.44,
+       "lra": 5.6
+      },
+      "delivery": "public/audio/music/schwarzwald.ogg",
+      "delivery_sha256": "94e363ed94f053cfd8b18e61cbd2313c7e16cfc3d937ffb3eb1868513bc58062",
+      "master": "audio-src/music/masters/schwarzwald.flac",
+      "master_sha256": "18ef94c1ed40e72acbde96e38448693837e99e827067b6f410b52e8cbb99973a",
+      "source": "audio-src/music/takes/schwarzwald/main/t2/audio.flac",
+      "source_sha256": "48ad7f7500156e66715f4be119544041446ff23ec6a2f74fb40c1f3e64f7824b",
+      "bytes": 2037577,
+      "samples": 6952256,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "stuttgart": {
+   "use": "stage map, region Stuttgart",
+   "key": "C",
+   "bpm": 116,
+   "kind": "single",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/stuttgart/main/t1/audio.flac",
+     "seed": 479236,
+     "cfg": 1.6,
+     "style": "Elegant 1970s German dance orchestra instrumental: a vibraphone plays the melody, a smooth brass section with trumpets and trombones answers, a walking upright bass, swing drums with brushes and ride cymbal, piano comping and a touch of strings. Big city lights and a ballroom evening, sophisticated, cheerful and relaxed easy listening big band. Purely instrumental. C major, 116 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "300d09190fb8b59dfd5870047ec00985feddd53d226652f84571aabfcdf1c258",
+     "seconds": 129.36,
+     "semantic_tokens": 3234,
+     "wall_seconds": 55.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5060
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 115.077,
+      "key": "+5 st",
+      "clap_fit": 0.473,
+      "clap_acoustic": 0.986,
+      "clap_vocal_max": 0.012,
+      "clap_intensity": 0.807,
+      "instruments": {
+       "Hammond organ": 0.475,
+       "accordion": 0.129,
+       "saxophone": 0.098,
+       "trumpet": 0.063,
+       "trombone": 0.041,
+       "harmonica": 0.033,
+       "clarinet": 0.032,
+       "vibraphone": 0.029
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-80.0, -80.0, -80.0] ms",
+       "brief level dips to review [(12.5, 0.3, 18.0), (17.7, 0.3, 21.1), (18.2, 0.2, 16.5)]",
+       "transposed +5 st (corr 0.55 vs 0.45)"
+      ],
+      "score": 2.349
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/stuttgart/main/t2/audio.flac",
+     "seed": 480236,
+     "cfg": 1.6,
+     "style": "Elegant 1970s German dance orchestra instrumental: a vibraphone plays the melody, a smooth brass section with trumpets and trombones answers, a walking upright bass, swing drums with brushes and ride cymbal, piano comping and a touch of strings. Big city lights and a ballroom evening, sophisticated, cheerful and relaxed easy listening big band. Purely instrumental. C major, 116 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "300d09190fb8b59dfd5870047ec00985feddd53d226652f84571aabfcdf1c258",
+     "seconds": 128.28,
+     "semantic_tokens": 3207,
+     "wall_seconds": 55.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5060
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 116.012,
+      "key": "C",
+      "clap_fit": 0.471,
+      "clap_acoustic": 0.971,
+      "clap_vocal_max": 0.012,
+      "clap_intensity": 0.843,
+      "instruments": {
+       "Hammond organ": 0.519,
+       "accordion": 0.114,
+       "saxophone": 0.056,
+       "trumpet": 0.048,
+       "vibraphone": 0.036,
+       "harmonica": 0.032,
+       "flute": 0.029,
+       "clarinet": 0.029
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(30.9, 0.3, 13.4), (36.0, 0.2, 16.2), (42.2, 0.3, 19.1)]"
+      ],
+      "score": 2.378
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: exactly 116.0 BPM, steady beat (window drift <= 14 ms), in C as written, Whisper clean, CLAP vocal 0.01, acoustic 0.97; flat level across the seam. t1 drifts up to 80 ms in the first half and reads transposed (+5 st).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/stuttgart.ogg"
+     },
+     "loop": true,
+     "loopStart": 24.9980625,
+     "loopEnd": 124.284958333,
+     "bpm": 116.01,
+     "bars": 62,
+     "key": "C",
+     "duration": 128.278667,
+     "gainDb": 0.19,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 480236,
+      "measured_bpm": 116.012,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.1389,
+       "harmony": 0.985,
+       "rhythm_corr": 0.772,
+       "shift_ms": 0.0,
+       "level_before_db": -0.7,
+       "level_jump_db": -2.7,
+       "loop_start": 25.0022,
+       "loop_end": 124.2891,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1389,
+        "harmony": 0.985,
+        "rhythm_corr": 0.772,
+        "shift_ms": 0.0,
+        "level_before_db": -0.7,
+        "level_jump_db": -2.7,
+        "loop_start": 25.0022,
+        "loop_end": 124.2891
+       },
+       "alternatives": [
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.1354,
+         "harmony": 0.985,
+         "rhythm_corr": 0.791,
+         "shift_ms": 0.0,
+         "level_before_db": -1.3,
+         "level_jump_db": 1.1,
+         "loop_start": 20.8405,
+         "loop_end": 120.1528
+        },
+        {
+         "bars": [
+          9,
+          57
+         ],
+         "score": 1.135,
+         "harmony": 0.986,
+         "rhythm_corr": 0.766,
+         "shift_ms": 0.0,
+         "level_before_db": -1.4,
+         "level_jump_db": 0.8,
+         "loop_start": 18.7818,
+         "loop_end": 118.0939
+        },
+        {
+         "bars": [
+          7,
+          55
+         ],
+         "score": 1.1192,
+         "harmony": 0.956,
+         "rhythm_corr": 0.777,
+         "shift_ms": 20.0,
+         "level_before_db": -1.1,
+         "level_jump_db": -0.4,
+         "loop_start": 14.6528,
+         "loop_end": 113.9725
+        },
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.0924,
+         "harmony": 0.985,
+         "rhythm_corr": 0.717,
+         "shift_ms": 20.0,
+         "level_before_db": -1.4,
+         "level_jump_db": 2.1,
+         "loop_start": 22.9301,
+         "loop_end": 122.2345
+        }
+       ],
+       "loop_start_sample": 1199907,
+       "loop_end_sample": 5965678,
+       "blend_s": 0.04,
+       "codec_shift_samples": -199,
+       "decoded_step_before": 0.01396,
+       "decoded_step_after": 0.00231,
+       "decoded_natural_step": 0.00216
+      },
+      "gain_db": 0.19,
+      "delivered": {
+       "lufs": -18.84,
+       "tp": -1.9,
+       "lra": 3.7
+      },
+      "loop_level": {
+       "lufs": -19.19,
+       "tp": -2.08,
+       "lra": 3.3
+      },
+      "delivery": "public/audio/music/stuttgart.ogg",
+      "delivery_sha256": "dbd31915b22c1e081b1ecd0fcad2a4b0fce23b36cc4e041ff9857c3684d795c3",
+      "master": "audio-src/music/masters/stuttgart.flac",
+      "master_sha256": "7a3a2f5bb20a756c47cc26b09a65027eb1bf4d4bb996be8558550e87db9e6b34",
+      "source": "audio-src/music/takes/stuttgart/main/t2/audio.flac",
+      "source_sha256": "b4b1dca87d6f5a890eb31feabaee52d680c205b2b7e9c02a42889395aefa5762",
+      "bytes": 1741414,
+      "samples": 6157376,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "raetsel": {
+   "use": "Skat problems, chess, sudoku",
+   "key": "C",
+   "bpm": 72,
+   "kind": "single",
+   "bars": 46,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    44
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/raetsel/main/t1/audio.flac",
+     "seed": 907885,
+     "cfg": 1.6,
+     "style": "Very calm, quiet instrumental for thinking: a soft felt piano and a nylon-string classical guitar play sparse, gentle phrases with long sustained notes and lots of space; no drums, no percussion. Peaceful, reflective, warm and unobtrusive, like a quiet afternoon over a chess board. Purely instrumental. C major, 72 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "055257c4e9b5a0fb507e0be2abfca8f824ae0e48777898fabf32f0545bc0932e",
+     "seconds": 154.16,
+     "semantic_tokens": 3854,
+     "wall_seconds": 66.5,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6000
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 72.0,
+      "key": "C",
+      "clap_fit": 0.346,
+      "clap_acoustic": 0.981,
+      "clap_vocal_max": 0.158,
+      "clap_intensity": 0.162,
+      "instruments": {
+       "acoustic guitar": 0.424,
+       "vibraphone": 0.227,
+       "electric guitar": 0.172,
+       "flute": 0.051,
+       "slide guitar": 0.026,
+       "clarinet": 0.021,
+       "piano": 0.015,
+       "Hammond organ": 0.014
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(19.7, 0.4, 12.2), (26.3, 0.5, 19.7), (76.4, 0.4, 12.0)]"
+      ],
+      "score": 1.94
+     },
+     "picked": true
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/raetsel/main/t2/audio.flac",
+     "seed": 908885,
+     "cfg": 1.6,
+     "style": "Very calm, quiet instrumental for thinking: a soft felt piano and a nylon-string classical guitar play sparse, gentle phrases with long sustained notes and lots of space; no drums, no percussion. Peaceful, reflective, warm and unobtrusive, like a quiet afternoon over a chess board. Purely instrumental. C major, 72 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "055257c4e9b5a0fb507e0be2abfca8f824ae0e48777898fabf32f0545bc0932e",
+     "seconds": 152.4,
+     "semantic_tokens": 3810,
+     "wall_seconds": 62.9,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6000
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 71.935,
+      "key": "C",
+      "clap_fit": 0.278,
+      "clap_acoustic": 0.987,
+      "clap_vocal_max": 0.037,
+      "clap_intensity": 0.371,
+      "instruments": {
+       "acoustic guitar": 0.866,
+       "electric guitar": 0.036,
+       "slide guitar": 0.035,
+       "flute": 0.019,
+       "vibraphone": 0.01,
+       "harmonica": 0.006,
+       "clarinet": 0.006,
+       "violin and strings": 0.004
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(16.5, 0.3, 15.1), (23.1, 0.4, 20.1), (26.7, 0.3, 12.1)]"
+      ],
+      "score": 1.803
+     },
+     "picked": false
+    }
+   ],
+   "picks": {
+    "main": "t1"
+   },
+   "pick_note": "Picked t1 by analysis: the calmest (CLAP intensity 0.16), best style fit (0.346), exactly 72.0 BPM, steady, in C, Whisper clean, CLAP vocal 0.16 max; CLAP hears acoustic guitar plus a mallet/keyboard timbre (piano and guitar requested). t2 is guitar-only (0.87) and a little livelier.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/raetsel.ogg"
+     },
+     "loop": true,
+     "loopStart": 36.846354167,
+     "loopEnd": 143.514354167,
+     "bpm": 72.0,
+     "bars": 46,
+     "key": "C",
+     "duration": 154.158667,
+     "gainDb": -3.34,
+     "takes": {
+      "main": "t1"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t1",
+      "seed": 907885,
+      "measured_bpm": 72.0,
+      "seam": {
+       "bars": [
+        11,
+        43
+       ],
+       "score": 1.1543,
+       "harmony": 0.985,
+       "rhythm_corr": 0.824,
+       "shift_ms": 0.0,
+       "level_before_db": 0.6,
+       "level_jump_db": -1.2,
+       "loop_start": 36.85,
+       "loop_end": 143.518,
+       "planned_bars": [
+        12,
+        44
+       ],
+       "planned": {
+        "bars": [
+         12,
+         44
+        ],
+        "score": 1.12,
+        "harmony": 0.96,
+        "rhythm_corr": 0.76,
+        "shift_ms": 120.0,
+        "level_before_db": 1.2,
+        "level_jump_db": -1.8,
+        "loop_start": 40.1827,
+        "loop_end": 146.8479
+       },
+       "alternatives": [
+        {
+         "bars": [
+          10,
+          42
+         ],
+         "score": 1.1471,
+         "harmony": 0.966,
+         "rhythm_corr": 0.868,
+         "shift_ms": 0.0,
+         "level_before_db": 0.7,
+         "level_jump_db": -1.1,
+         "loop_start": 33.5209,
+         "loop_end": 140.1839
+        },
+        {
+         "bars": [
+          9,
+          41
+         ],
+         "score": 1.1306,
+         "harmony": 0.96,
+         "rhythm_corr": 0.852,
+         "shift_ms": 0.0,
+         "level_before_db": -0.1,
+         "level_jump_db": -2.1,
+         "loop_start": 30.1835,
+         "loop_end": 136.8499
+        },
+        {
+         "bars": [
+          12,
+          44
+         ],
+         "score": 1.12,
+         "harmony": 0.96,
+         "rhythm_corr": 0.76,
+         "shift_ms": 120.0,
+         "level_before_db": 1.2,
+         "level_jump_db": -1.8,
+         "loop_start": 40.1827,
+         "loop_end": 146.8479
+        },
+        {
+         "bars": [
+          8,
+          40
+         ],
+         "score": 1.1003,
+         "harmony": 0.942,
+         "rhythm_corr": 0.752,
+         "shift_ms": 0.0,
+         "level_before_db": 0.3,
+         "level_jump_db": 1.2,
+         "loop_start": 26.8472,
+         "loop_end": 133.5157
+        }
+       ],
+       "loop_start_sample": 1768625,
+       "loop_end_sample": 6888689,
+       "blend_s": 0.04,
+       "codec_shift_samples": -175,
+       "decoded_step_before": 0.01773,
+       "decoded_step_after": 0.00075,
+       "decoded_natural_step": 0.00067
+      },
+      "gain_db": -3.34,
+      "delivered": {
+       "lufs": -19.2,
+       "tp": -4.49,
+       "lra": 3.2
+      },
+      "loop_level": {
+       "lufs": -15.66,
+       "tp": -1.23,
+       "lra": 2.9
+      },
+      "delivery": "public/audio/music/raetsel.ogg",
+      "delivery_sha256": "aeeaa38dd6c85d02734be77e71ba95f3288d8d31e34803fb455a73c21431ac4a",
+      "master": "audio-src/music/masters/raetsel.flac",
+      "master_sha256": "e7ef42d933cf222ba4579f7c7b59eeb5cc0b73617dd9e45982b5739b84e56f01",
+      "source": "audio-src/music/takes/raetsel/main/t1/audio.flac",
+      "source_sha256": "00f4874b6ead2edc79a2421794ca57c2a8e58ac358bf55ae286a8618e5cb2fb3",
+      "bytes": 2039423,
+      "samples": 7399616,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "stellplatz": {
+   "use": "pitch / campsite, dog meadow, quiet events",
+   "key": "A",
+   "bpm": 84,
+   "kind": "single",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/stellplatz/main/t1/audio.flac",
+     "seed": 132776,
+     "cfg": 1.6,
+     "style": "Evening at a campsite in the countryside: a warm fingerpicked acoustic guitar plays a gentle melody, a soft accordion breathes sustained chords, a quiet upright bass and very light brushes. Sunset over the meadow, dogs resting in the grass next to a camper van; peaceful, tender and nostalgic 1970s acoustic instrumental. Purely instrumental. A major, 84 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "e128a96165b56e204aa89ef30c170ea3966338ce8c75de48ce36c76f6813652b",
+     "seconds": 176.72,
+     "semantic_tokens": 4418,
+     "wall_seconds": 76.7,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6892
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 84.507,
+      "key": "A",
+      "clap_fit": 0.537,
+      "clap_acoustic": 0.971,
+      "clap_vocal_max": 0.041,
+      "clap_intensity": 0.446,
+      "instruments": {
+       "acoustic guitar": 0.485,
+       "flute": 0.177,
+       "slide guitar": 0.072,
+       "electric guitar": 0.061,
+       "vibraphone": 0.044,
+       "clarinet": 0.04,
+       "harmonica": 0.032,
+       "violin and strings": 0.017
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-80.0, -40.0, -66.0] ms"
+      ],
+      "score": 2.512
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/stellplatz/main/t2/audio.flac",
+     "seed": 133776,
+     "cfg": 1.6,
+     "style": "Evening at a campsite in the countryside: a warm fingerpicked acoustic guitar plays a gentle melody, a soft accordion breathes sustained chords, a quiet upright bass and very light brushes. Sunset over the meadow, dogs resting in the grass next to a camper van; peaceful, tender and nostalgic 1970s acoustic instrumental. Purely instrumental. A major, 84 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "e128a96165b56e204aa89ef30c170ea3966338ce8c75de48ce36c76f6813652b",
+     "seconds": 177.32,
+     "semantic_tokens": 4433,
+     "wall_seconds": 74.1,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 6892
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 83.998,
+      "key": "A",
+      "clap_fit": 0.503,
+      "clap_acoustic": 0.975,
+      "clap_vocal_max": 0.051,
+      "clap_intensity": 0.344,
+      "instruments": {
+       "acoustic guitar": 0.298,
+       "flute": 0.199,
+       "vibraphone": 0.169,
+       "electric guitar": 0.064,
+       "slide guitar": 0.045,
+       "clarinet": 0.044,
+       "Hammond organ": 0.042,
+       "harmonica": 0.037
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [],
+      "score": 2.458
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: exactly 84.0 BPM with a steady beat (window drift <= 6 ms), the calmer of the two (CLAP intensity 0.34 vs 0.45; evening), in A as written, acoustic 0.97, Whisper clean, CLAP vocal 0.05; CLAP hears acoustic guitar first. t1 has the slightly higher style fit but drifts up to 80 ms.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/stellplatz.ogg"
+     },
+     "loop": true,
+     "loopStart": 34.441791667,
+     "loopEnd": 171.584583333,
+     "bpm": 84.0,
+     "bars": 62,
+     "key": "A",
+     "duration": 177.318667,
+     "gainDb": -6.45,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 133776,
+      "measured_bpm": 83.998,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.1902,
+       "harmony": 0.983,
+       "rhythm_corr": 0.846,
+       "shift_ms": 0.0,
+       "level_before_db": 0.8,
+       "level_jump_db": -1.0,
+       "loop_start": 34.4426,
+       "loop_end": 171.5854,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1902,
+        "harmony": 0.983,
+        "rhythm_corr": 0.846,
+        "shift_ms": 0.0,
+        "level_before_db": 0.8,
+        "level_jump_db": -1.0,
+        "loop_start": 34.4426,
+        "loop_end": 171.5854
+       },
+       "alternatives": [
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.1327,
+         "harmony": 0.974,
+         "rhythm_corr": 0.812,
+         "shift_ms": 0.0,
+         "level_before_db": 2.1,
+         "level_jump_db": -0.1,
+         "loop_start": 28.7289,
+         "loop_end": 165.8718
+        },
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1137,
+         "harmony": 0.982,
+         "rhythm_corr": 0.835,
+         "shift_ms": 0.0,
+         "level_before_db": 1.4,
+         "level_jump_db": -2.4,
+         "loop_start": 31.5868,
+         "loop_end": 168.7285
+        },
+        {
+         "bars": [
+          8,
+          56
+         ],
+         "score": 1.112,
+         "harmony": 0.975,
+         "rhythm_corr": 0.734,
+         "shift_ms": 0.0,
+         "level_before_db": 1.9,
+         "level_jump_db": -0.4,
+         "loop_start": 23.0136,
+         "loop_end": 160.1558
+        },
+        {
+         "bars": [
+          5,
+          52
+         ],
+         "score": 1.0903,
+         "harmony": 0.931,
+         "rhythm_corr": 0.762,
+         "shift_ms": 0.0,
+         "level_before_db": 0.2,
+         "level_jump_db": -1.4,
+         "loop_start": 14.4363,
+         "loop_end": 148.7304
+        }
+       ],
+       "loop_start_sample": 1653206,
+       "loop_end_sample": 8236060,
+       "blend_s": 0.04,
+       "codec_shift_samples": -39,
+       "decoded_step_before": 0.01556,
+       "decoded_step_after": 0.00401,
+       "decoded_natural_step": 0.00316
+      },
+      "gain_db": -6.45,
+      "delivered": {
+       "lufs": -19.25,
+       "tp": -6.08,
+       "lra": 3.1
+      },
+      "loop_level": {
+       "lufs": -12.55,
+       "tp": 0.01,
+       "lra": 2.3
+      },
+      "delivery": "public/audio/music/stellplatz.ogg",
+      "delivery_sha256": "a41fd5ec8697f901a7930a4288ac20d1c6bbb9e4c8c8e1d7aad755d5f9f74c78",
+      "master": "audio-src/music/masters/stellplatz.flac",
+      "master_sha256": "a32bc94b970e21a5b9138b717181c72910ffea5b590ad48a30abafce1b43e90f",
+      "source": "audio-src/music/takes/stellplatz/main/t2/audio.flac",
+      "source_sha256": "e69458a473a27732738688dd86984ecb343cdf895629e04e3d52e9a89b0da0c2",
+      "bytes": 2309540,
+      "samples": 8511296,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "preisskat": {
+   "use": "Preisskat tournament table; calm by default, tense when a game gets close",
+   "key": "Gm",
+   "bpm": 120,
+   "kind": "layers",
+   "bars": 62,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    60
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "calm/t1",
+     "path": "audio-src/music/takes/preisskat/calm/t1/audio.flac",
+     "seed": 654929,
+     "cfg": 1.6,
+     "style": "Relaxed acoustic swing for a card tournament in a village hall: a walking upright double bass, a rhythm guitar playing four-to-the-bar chords, a clarinet melody, accordion fills and light brushed drums. Concentrated, friendly competition; 1970s, warm and acoustic, medium swing. Purely instrumental. G minor, 120 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "3a77c5b91522958b04768b0fbb32f409c8a1b7bc9032aa5b6aa277828e924cc7",
+     "seconds": 124.2,
+     "semantic_tokens": 3105,
+     "wall_seconds": 52.5,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 4900
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 120.0,
+      "key": "Gm",
+      "clap_fit": 0.543,
+      "clap_acoustic": 0.974,
+      "clap_vocal_max": 0.02,
+      "clap_intensity": 0.826,
+      "instruments": {
+       "Hammond organ": 0.401,
+       "flute": 0.19,
+       "saxophone": 0.106,
+       "accordion": 0.079,
+       "clarinet": 0.065,
+       "harmonica": 0.041,
+       "trumpet": 0.037,
+       "vibraphone": 0.028
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(14.0, 0.2, 16.5), (17.4, 0.3, 21.7), (18.0, 0.2, 20.9)]"
+      ],
+      "score": 2.68
+     },
+     "picked": false
+    },
+    {
+     "take": "calm/t2",
+     "path": "audio-src/music/takes/preisskat/calm/t2/audio.flac",
+     "seed": 655929,
+     "cfg": 1.6,
+     "style": "Relaxed acoustic swing for a card tournament in a village hall: a walking upright double bass, a rhythm guitar playing four-to-the-bar chords, a clarinet melody, accordion fills and light brushed drums. Concentrated, friendly competition; 1970s, warm and acoustic, medium swing. Purely instrumental. G minor, 120 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "3a77c5b91522958b04768b0fbb32f409c8a1b7bc9032aa5b6aa277828e924cc7",
+     "seconds": 123.96,
+     "semantic_tokens": 3099,
+     "wall_seconds": 52.2,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 4900
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 120.0,
+      "key": "Gm",
+      "clap_fit": 0.534,
+      "clap_acoustic": 0.966,
+      "clap_vocal_max": 0.029,
+      "clap_intensity": 0.825,
+      "instruments": {
+       "Hammond organ": 0.464,
+       "saxophone": 0.115,
+       "accordion": 0.103,
+       "flute": 0.085,
+       "clarinet": 0.046,
+       "harmonica": 0.043,
+       "trumpet": 0.041,
+       "vibraphone": 0.039
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(9.9, 0.2, 17.7), (17.8, 0.3, 19.1), (19.9, 0.2, 19.1)]"
+      ],
+      "score": 2.641
+     },
+     "picked": true
+    },
+    {
+     "take": "tense/t1",
+     "path": "audio-src/music/takes/preisskat/tense/t1/audio.flac",
+     "seed": 490011,
+     "cfg": 1.6,
+     "style": "Hot, driving acoustic swing as a card tournament reaches its climax: a strong walking upright double bass, a pumping rhythm guitar, an urgent clarinet melody with fast runs, accordion stabs, a small brass section punching accents, crisp brushed snare and ride cymbal. Suspenseful, competitive and energetic 1970s acoustic swing. Purely instrumental. G minor, 120 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "684793d975d4f253750214f945ab07a08f7a1a88eb927faa52b9723a57483a20",
+     "seconds": 126.4,
+     "semantic_tokens": 3160,
+     "wall_seconds": 54.3,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 4900
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 118.18,
+      "key": "Gm",
+      "clap_fit": 0.485,
+      "clap_acoustic": 0.953,
+      "clap_vocal_max": 0.022,
+      "clap_intensity": 0.859,
+      "instruments": {
+       "Hammond organ": 0.2,
+       "saxophone": 0.171,
+       "accordion": 0.169,
+       "flute": 0.124,
+       "trumpet": 0.083,
+       "clarinet": 0.062,
+       "harmonica": 0.061,
+       "French horn": 0.025
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-80.0, -38.0] ms",
+       "brief level dips to review [(20.4, 0.2, 18.3), (49.9, 0.2, 17.6), (51.9, 0.2, 17.0)]"
+      ],
+      "score": 2.776
+     },
+     "picked": false
+    },
+    {
+     "take": "tense/t2",
+     "path": "audio-src/music/takes/preisskat/tense/t2/audio.flac",
+     "seed": 491011,
+     "cfg": 1.6,
+     "style": "Hot, driving acoustic swing as a card tournament reaches its climax: a strong walking upright double bass, a pumping rhythm guitar, an urgent clarinet melody with fast runs, accordion stabs, a small brass section punching accents, crisp brushed snare and ride cymbal. Suspenseful, competitive and energetic 1970s acoustic swing. Purely instrumental. G minor, 120 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "684793d975d4f253750214f945ab07a08f7a1a88eb927faa52b9723a57483a20",
+     "seconds": 124.0,
+     "semantic_tokens": 3100,
+     "wall_seconds": 53.2,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 4900
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 120.012,
+      "key": "Gm",
+      "clap_fit": 0.461,
+      "clap_acoustic": 0.957,
+      "clap_vocal_max": 0.01,
+      "clap_intensity": 0.935,
+      "instruments": {
+       "Hammond organ": 0.175,
+       "saxophone": 0.161,
+       "trumpet": 0.137,
+       "flute": 0.131,
+       "accordion": 0.128,
+       "harmonica": 0.057,
+       "violin and strings": 0.048,
+       "clarinet": 0.032
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(94.8, 0.2, 15.6)]"
+      ],
+      "score": 2.803
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "calm": "t2",
+    "tense": "t2"
+   },
+   "pick_note": "Picked by analysis: calm t2 and tense t2 both play at 120.0 BPM (tense 120.012) and their first downbeats lie 63 ms apart, so the two separate performances stay close to each other while crossfading (still synced false: no conforming). Both in G minor, Whisper clean, CLAP vocal <= 0.03; tense t2 is the most intense take (CLAP 0.94 vs calm 0.83). calm t1 is equally clean (also 120.0 BPM, a 125 ms offset to tense t2); tense t1 plays at 118.2 BPM and drifts up to 80 ms.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "calm": "audio/music/preisskat-calm.ogg",
+      "tense": "audio/music/preisskat-tense.ogg"
+     },
+     "loop": true,
+     "loopStart": 20.102208333,
+     "loopEnd": 116.101416667,
+     "bpm": 120.0,
+     "bars": 62,
+     "key": "Gm",
+     "duration": 123.958667,
+     "gainDb": -6.17,
+     "takes": {
+      "calm": "t2",
+      "tense": "t2"
+     },
+     "synced": false,
+     "layers": {
+      "calm": {
+       "loopStart": 20.102208333,
+       "loopEnd": 116.101416667,
+       "duration": 123.958667,
+       "bpm": 120.0
+      },
+      "tense": {
+       "loopStart": 24.029458333,
+       "loopEnd": 120.010645833,
+       "duration": 123.998667,
+       "bpm": 120.01
+      }
+     }
+    },
+    "versions": {
+     "calm": {
+      "take": "t2",
+      "seed": 655929,
+      "measured_bpm": 120.0,
+      "seam": {
+       "bars": [
+        10,
+        58
+       ],
+       "score": 1.1793,
+       "harmony": 0.988,
+       "rhythm_corr": 0.865,
+       "shift_ms": 0.0,
+       "level_before_db": 1.1,
+       "level_jump_db": 0.2,
+       "loop_start": 20.1023,
+       "loop_end": 116.1015,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.1729,
+        "harmony": 0.974,
+        "rhythm_corr": 0.811,
+        "shift_ms": -45.0,
+        "level_before_db": 0.4,
+        "level_jump_db": -1.3,
+        "loop_start": 24.1036,
+        "loop_end": 120.0997
+       },
+       "alternatives": [
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1757,
+         "harmony": 0.993,
+         "rhythm_corr": 0.851,
+         "shift_ms": 0.0,
+         "level_before_db": 0.9,
+         "level_jump_db": -0.6,
+         "loop_start": 22.1057,
+         "loop_end": 118.1042
+        },
+        {
+         "bars": [
+          12,
+          60
+         ],
+         "score": 1.1729,
+         "harmony": 0.974,
+         "rhythm_corr": 0.811,
+         "shift_ms": -45.0,
+         "level_before_db": 0.4,
+         "level_jump_db": -1.3,
+         "loop_start": 24.1036,
+         "loop_end": 120.0997
+        },
+        {
+         "bars": [
+          9,
+          57
+         ],
+         "score": 1.156,
+         "harmony": 0.982,
+         "rhythm_corr": 0.853,
+         "shift_ms": 0.0,
+         "level_before_db": 1.0,
+         "level_jump_db": -0.9,
+         "loop_start": 18.1054,
+         "loop_end": 114.1013
+        },
+        {
+         "bars": [
+          7,
+          55
+         ],
+         "score": 1.1321,
+         "harmony": 0.939,
+         "rhythm_corr": 0.855,
+         "shift_ms": 0.0,
+         "level_before_db": 0.7,
+         "level_jump_db": 0.4,
+         "loop_start": 14.0996,
+         "loop_end": 110.1018
+        }
+       ],
+       "loop_start_sample": 964906,
+       "loop_end_sample": 5572868,
+       "blend_s": 0.04,
+       "codec_shift_samples": -4,
+       "decoded_step_before": 0.01024,
+       "decoded_step_after": 0.00767,
+       "decoded_natural_step": 0.00816
+      },
+      "gain_db": -6.17,
+      "delivered": {
+       "lufs": -19.81,
+       "tp": -5.56,
+       "lra": 3.1
+      },
+      "loop_level": {
+       "lufs": -13.33,
+       "tp": 0.16,
+       "lra": 2.2
+      },
+      "delivery": "public/audio/music/preisskat-calm.ogg",
+      "delivery_sha256": "5448dd1ebe23742a9b9bce8480e309038ea3436d166c45da4a1c655618743fde",
+      "master": "audio-src/music/masters/preisskat-calm.flac",
+      "master_sha256": "8f8a82b3e820e3b31a22dcb864e395b6f3ad0cd071ab841eab325deedd5f2a0b",
+      "source": "audio-src/music/takes/preisskat/calm/t2/audio.flac",
+      "source_sha256": "fed75f0d0e971319012f0d2d666629b1919d1ad22613faaeff540945666d21c3",
+      "bytes": 1711775,
+      "samples": 5950016,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     },
+     "tense": {
+      "take": "t2",
+      "seed": 491011,
+      "measured_bpm": 120.012,
+      "seam": {
+       "bars": [
+        12,
+        60
+       ],
+       "score": 1.2057,
+       "harmony": 0.98,
+       "rhythm_corr": 0.796,
+       "shift_ms": -15.0,
+       "level_before_db": 0.2,
+       "level_jump_db": -0.0,
+       "loop_start": 24.0297,
+       "loop_end": 120.0109,
+       "planned_bars": [
+        12,
+        60
+       ],
+       "planned": {
+        "bars": [
+         12,
+         60
+        ],
+        "score": 1.2057,
+        "harmony": 0.98,
+        "rhythm_corr": 0.796,
+        "shift_ms": -15.0,
+        "level_before_db": 0.2,
+        "level_jump_db": -0.0,
+        "loop_start": 24.0297,
+        "loop_end": 120.0109
+       },
+       "alternatives": [
+        {
+         "bars": [
+          11,
+          59
+         ],
+         "score": 1.1771,
+         "harmony": 0.972,
+         "rhythm_corr": 0.836,
+         "shift_ms": 0.0,
+         "level_before_db": 0.1,
+         "level_jump_db": 0.0,
+         "loop_start": 22.0599,
+         "loop_end": 118.0341
+        },
+        {
+         "bars": [
+          10,
+          58
+         ],
+         "score": 1.1718,
+         "harmony": 0.968,
+         "rhythm_corr": 0.835,
+         "shift_ms": 0.0,
+         "level_before_db": -0.0,
+         "level_jump_db": -0.2,
+         "loop_start": 20.0536,
+         "loop_end": 116.0333
+        },
+        {
+         "bars": [
+          9,
+          57
+         ],
+         "score": 1.142,
+         "harmony": 0.966,
+         "rhythm_corr": 0.741,
+         "shift_ms": 0.0,
+         "level_before_db": 0.1,
+         "level_jump_db": 0.4,
+         "loop_start": 18.0544,
+         "loop_end": 114.0337
+        },
+        {
+         "bars": [
+          8,
+          56
+         ],
+         "score": 1.1319,
+         "harmony": 0.967,
+         "rhythm_corr": 0.683,
+         "shift_ms": 0.0,
+         "level_before_db": 0.3,
+         "level_jump_db": 0.0,
+         "loop_start": 16.0319,
+         "loop_end": 112.0261
+        }
+       ],
+       "loop_start_sample": 1153414,
+       "loop_end_sample": 5760511,
+       "blend_s": 0.04,
+       "codec_shift_samples": -12,
+       "decoded_step_before": 0.05225,
+       "decoded_step_after": 0.01451,
+       "decoded_natural_step": 0.01223
+      },
+      "gain_db": -4.77,
+      "delivered": {
+       "lufs": -18.56,
+       "tp": -4.67,
+       "lra": 1.8
+      },
+      "loop_level": {
+       "lufs": -13.73,
+       "tp": -0.21,
+       "lra": 1.4
+      },
+      "delivery": "public/audio/music/preisskat-tense.ogg",
+      "delivery_sha256": "3edf3c38e03c9033ab9cf4fc9e46b0605c16d7d6fbeaf3f510deab23f3b8d421",
+      "master": "audio-src/music/masters/preisskat-tense.flac",
+      "master_sha256": "9c7669194d310ecbda488ee3d6ccfb5c5a0384b55a23350f3a38db71677676c9",
+      "source": "audio-src/music/takes/preisskat/tense/t2/audio.flac",
+      "source_sha256": "477a40b6d7546895c1c6d4ddfa0955457afe975047d8d217e35628290a8054fe",
+      "bytes": 1888512,
+      "samples": 5951936,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "motorradtreff": {
+   "use": "bikers' meeting, motorcycle detours",
+   "key": "E",
+   "bpm": 96,
+   "kind": "single",
+   "bars": 54,
+   "intro_bars": 4,
+   "loop_bars": [
+    16,
+    52
+   ],
+   "loops": true,
+   "form": [
+    "I",
+    "S1",
+    "S2",
+    "S3",
+    "S1",
+    "S2",
+    "S3",
+    "R1",
+    "R2",
+    "R3",
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, EDM, techno, club beat, drum machine, modern pop production, autotune, dubstep, trap hi-hats, heavy metal screaming.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/motorradtreff/main/t1/audio.flac",
+     "seed": 709383,
+     "cfg": 1.6,
+     "style": "Gritty 1970s blues rock instrumental at a bikers' meeting: a bottleneck slide guitar plays the lead, a Hammond organ with a rotating speaker, a dry punchy rock drum kit, a round electric bass and a crunchy rhythm guitar. Twelve-bar blues shuffle, laid-back and warm, leather jackets and chrome, analog tape. Purely instrumental. E major, 96 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, EDM, techno, club beat, drum machine, modern pop production, autotune, dubstep, trap hi-hats, heavy metal screaming.",
+     "plan_sha256": "03b088c826c79b2c1747a7e02e76ef99e269e62e178463db1b297ea1ed7530c2",
+     "seconds": 133.88,
+     "semantic_tokens": 3347,
+     "wall_seconds": 59.3,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5312
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 97.403,
+      "key": "E",
+      "clap_fit": 0.68,
+      "clap_acoustic": 0.981,
+      "clap_vocal_max": 0.048,
+      "clap_intensity": 0.898,
+      "instruments": {
+       "slide guitar": 0.222,
+       "saxophone": 0.167,
+       "Hammond organ": 0.096,
+       "harmonica": 0.093,
+       "electric guitar": 0.075,
+       "flute": 0.055,
+       "acoustic guitar": 0.042,
+       "trumpet": 0.038
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [80.0, -50.0, 62.0] ms"
+      ],
+      "score": 2.947
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/motorradtreff/main/t2/audio.flac",
+     "seed": 710383,
+     "cfg": 1.6,
+     "style": "Gritty 1970s blues rock instrumental at a bikers' meeting: a bottleneck slide guitar plays the lead, a Hammond organ with a rotating speaker, a dry punchy rock drum kit, a round electric bass and a crunchy rhythm guitar. Twelve-bar blues shuffle, laid-back and warm, leather jackets and chrome, analog tape. Purely instrumental. E major, 96 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, EDM, techno, club beat, drum machine, modern pop production, autotune, dubstep, trap hi-hats, heavy metal screaming.",
+     "plan_sha256": "03b088c826c79b2c1747a7e02e76ef99e269e62e178463db1b297ea1ed7530c2",
+     "seconds": 135.24,
+     "semantic_tokens": 3381,
+     "wall_seconds": 57.8,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 5312
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 95.96,
+      "key": "E",
+      "clap_fit": 0.658,
+      "clap_acoustic": 0.966,
+      "clap_vocal_max": 0.134,
+      "clap_intensity": 0.907,
+      "instruments": {
+       "slide guitar": 0.263,
+       "electric guitar": 0.217,
+       "harmonica": 0.089,
+       "saxophone": 0.071,
+       "Hammond organ": 0.063,
+       "flute": 0.046,
+       "trumpet": 0.041,
+       "acoustic guitar": 0.032
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [],
+      "score": 2.873
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: steady 96.0 BPM shuffle (window drift <= 28 ms, only in the intro), in E as written, Whisper clean, CLAP vocal 0.13 max, style fit 0.66; CLAP hears slide guitar and electric guitar first. t1 has a slightly higher style fit (0.68) but its beat swings up to 80 ms against its own grid.",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/motorradtreff.ogg"
+     },
+     "loop": true,
+     "loopStart": 40.2238125,
+     "loopEnd": 130.256520833,
+     "bpm": 95.96,
+     "bars": 54,
+     "key": "E",
+     "duration": 135.238667,
+     "gainDb": -4.32,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 710383,
+      "measured_bpm": 95.96,
+      "seam": {
+       "bars": [
+        16,
+        52
+       ],
+       "score": 1.1881,
+       "harmony": 0.968,
+       "rhythm_corr": 0.844,
+       "shift_ms": 0.0,
+       "level_before_db": 0.4,
+       "level_jump_db": -0.7,
+       "loop_start": 40.2239,
+       "loop_end": 130.2566,
+       "planned_bars": [
+        16,
+        52
+       ],
+       "planned": {
+        "bars": [
+         16,
+         52
+        ],
+        "score": 1.1881,
+        "harmony": 0.968,
+        "rhythm_corr": 0.844,
+        "shift_ms": 0.0,
+        "level_before_db": 0.4,
+        "level_jump_db": -0.7,
+        "loop_start": 40.2239,
+        "loop_end": 130.2566
+       },
+       "alternatives": [
+        {
+         "bars": [
+          12,
+          48
+         ],
+         "score": 1.1668,
+         "harmony": 0.967,
+         "rhythm_corr": 0.844,
+         "shift_ms": 0.0,
+         "level_before_db": 0.1,
+         "level_jump_db": -0.5,
+         "loop_start": 30.2225,
+         "loop_end": 120.2543
+        },
+        {
+         "bars": [
+          15,
+          51
+         ],
+         "score": 1.1615,
+         "harmony": 0.97,
+         "rhythm_corr": 0.863,
+         "shift_ms": 0.0,
+         "level_before_db": 0.7,
+         "level_jump_db": -0.5,
+         "loop_start": 37.7267,
+         "loop_end": 127.7533
+        },
+        {
+         "bars": [
+          13,
+          49
+         ],
+         "score": 1.1587,
+         "harmony": 0.957,
+         "rhythm_corr": 0.839,
+         "shift_ms": 0.0,
+         "level_before_db": 0.3,
+         "level_jump_db": 0.1,
+         "loop_start": 32.7235,
+         "loop_end": 122.7552
+        },
+        {
+         "bars": [
+          11,
+          47
+         ],
+         "score": 1.1574,
+         "harmony": 0.958,
+         "rhythm_corr": 0.842,
+         "shift_ms": 0.0,
+         "level_before_db": 0.3,
+         "level_jump_db": 0.3,
+         "loop_start": 27.7206,
+         "loop_end": 117.7512
+        }
+       ],
+       "loop_start_sample": 1930743,
+       "loop_end_sample": 6252313,
+       "blend_s": 0.04,
+       "codec_shift_samples": -4,
+       "decoded_step_before": 0.02384,
+       "decoded_step_after": 0.00836,
+       "decoded_natural_step": 0.00801
+      },
+      "gain_db": -4.32,
+      "delivered": {
+       "lufs": -19.32,
+       "tp": -4.89,
+       "lra": 1.8
+      },
+      "loop_level": {
+       "lufs": -14.68,
+       "tp": -1.68,
+       "lra": 1.3
+      },
+      "delivery": "public/audio/music/motorradtreff.ogg",
+      "delivery_sha256": "47794e6315ac4d02a2dcdd561d20eef45b9f625f605cfc7b9743f5eb62241a05",
+      "master": "audio-src/music/masters/motorradtreff.flac",
+      "master_sha256": "2e0780515b335095914b90a571eaeeab09ba299b9aea55e5bc9aa177e626eb47",
+      "source": "audio-src/music/takes/motorradtreff/main/t2/audio.flac",
+      "source_sha256": "6d63f910a74ce248a181344c10b3d119f8767bf5a9beb08b59e0d2fd5e0dc44e",
+      "bytes": 2035385,
+      "samples": 6491456,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end; 40 ms equal-power blend before loopEnd"
+     }
+    }
+   }
+  },
+  "pokal": {
+   "use": "victory (tour won, tournament won)",
+   "key": "Bb",
+   "bpm": 112,
+   "kind": "single",
+   "bars": 22,
+   "intro_bars": 4,
+   "loop_bars": [
+    4,
+    20
+   ],
+   "loops": false,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/pokal/main/t1/audio.flac",
+     "seed": 539668,
+     "cfg": 1.6,
+     "style": "Festive southern German brass band march for a victory: trumpets and flugelhorns play a bright fanfare melody, tenor horns and baritone in harmony, a tuba bass on the beats, snare drum, bass drum and cymbals. Proud, triumphant and cheerful, a village festival celebrating the champion with a trophy. Purely instrumental. B-flat major, 112 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "b99c1a810c0aa3724d760e2b3b65b9b94413d0bd30165e432b2e548ff810b7e3",
+     "seconds": 42.92,
+     "semantic_tokens": 1073,
+     "wall_seconds": 24.5,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 2017
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 111.83,
+      "key": "Bb",
+      "clap_fit": 0.456,
+      "clap_acoustic": 0.985,
+      "clap_vocal_max": 0.006,
+      "clap_intensity": 0.943,
+      "instruments": {
+       "Hammond organ": 0.244,
+       "saxophone": 0.171,
+       "accordion": 0.17,
+       "trumpet": 0.138,
+       "trombone": 0.131,
+       "French horn": 0.023,
+       "harmonica": 0.02,
+       "tuba": 0.017
+      },
+      "whisper": "clean",
+      "rejects": [
+       "tail -0.3 s"
+      ],
+      "advisories": [
+       "lost plan (3 windows from bar 8)",
+       "brief level dips to review [(39.5, 0.5, 17.3)]"
+      ],
+      "score": 2.35
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/pokal/main/t2/audio.flac",
+     "seed": 540668,
+     "cfg": 1.6,
+     "style": "Festive southern German brass band march for a victory: trumpets and flugelhorns play a bright fanfare melody, tenor horns and baritone in harmony, a tuba bass on the beats, snare drum, bass drum and cymbals. Proud, triumphant and cheerful, a village festival celebrating the champion with a trophy. Purely instrumental. B-flat major, 112 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars.",
+     "plan_sha256": "b99c1a810c0aa3724d760e2b3b65b9b94413d0bd30165e432b2e548ff810b7e3",
+     "seconds": 46.4,
+     "semantic_tokens": 1160,
+     "wall_seconds": 24.4,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 2017
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 113.475,
+      "key": "Bb",
+      "clap_fit": 0.431,
+      "clap_acoustic": 0.95,
+      "clap_vocal_max": 0.007,
+      "clap_intensity": 0.969,
+      "instruments": {
+       "Hammond organ": 0.287,
+       "accordion": 0.252,
+       "saxophone": 0.139,
+       "trumpet": 0.134,
+       "trombone": 0.064,
+       "violin and strings": 0.028,
+       "harmonica": 0.017,
+       "French horn": 0.016
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "drift [-32.0] ms"
+      ],
+      "score": 2.19
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: plays the whole march with a 4.3 s ring-out after the last bar (t1 stops right on its last bar, no ring-out, and loses the written plan from bar 8). B-flat as written, 113.5 BPM, Whisper clean, CLAP vocal 0.01, intensity 0.97; CLAP hears brass (trumpet, trombone) with organ-like reeds. Plays once (loop false).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/pokal.ogg"
+     },
+     "loop": false,
+     "loopStart": 0.0,
+     "loopEnd": 46.398666667,
+     "bpm": 113.47,
+     "bars": 22,
+     "key": "Bb",
+     "duration": 46.398667,
+     "gainDb": -3.33,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 540668,
+      "measured_bpm": 113.475,
+      "seam": null,
+      "gain_db": -3.33,
+      "delivered": {
+       "lufs": -19.06,
+       "tp": -4.53,
+       "lra": 4.1
+      },
+      "loop_level": {
+       "lufs": -15.67,
+       "tp": -1.25,
+       "lra": 4.2
+      },
+      "delivery": "public/audio/music/pokal.ogg",
+      "delivery_sha256": "07f05b1c89433c9e2c3c3ec07f093999275cf07c758d611cc620f935afca585e",
+      "master": "audio-src/music/masters/pokal.flac",
+      "master_sha256": "2700be4ea5a2f9ef05d6d3a345bb0a1de3021e2bbc0da6a99f2f643a1ed12ec1",
+      "source": "audio-src/music/takes/pokal/main/t2/audio.flac",
+      "source_sha256": "bc0e451d513132cd06de85f651431fe14d8a214e95645dc2e7213a7b198b8467",
+      "bytes": 688693,
+      "samples": 2227136,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end"
+     }
+    }
+   }
+  },
+  "heimfahrt": {
+   "use": "end of a tour (journey home)",
+   "key": "F",
+   "bpm": 84,
+   "kind": "single",
+   "bars": 30,
+   "intro_bars": 4,
+   "loop_bars": [
+    12,
+    28
+   ],
+   "loops": false,
+   "form": [
+    "I",
+    "A1",
+    "A2",
+    "C1",
+    "C2",
+    "A1",
+    "A2"
+   ],
+   "revision": "v1",
+   "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+   "feedback": [],
+   "takes": [
+    {
+     "take": "main/t1",
+     "path": "audio-src/music/takes/heimfahrt/main/t1/audio.flac",
+     "seed": 362266,
+     "cfg": 1.6,
+     "style": "Gentle, warm closing music for the drive home at the end of a trip: a nylon-string acoustic guitar plays the relaxed main melody slowly, a soft accordion answers with short phrases, a plucked upright double bass, very soft brushes. Evening light on the road home, content and calm, a quiet smile; laid-back 1970s acoustic easy listening with a light jazz touch, warm and dry, intimate, not sentimental, ending softly. Purely instrumental. F major, 84 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+     "plan_sha256": "6b6a52bf0648d9fafcaa590d8be7f58a6b90686453457318c8e31a8ff4699391",
+     "seconds": 84.96,
+     "semantic_tokens": 2124,
+     "wall_seconds": 36.6,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 3464
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 85.137,
+      "key": "F",
+      "clap_fit": 0.417,
+      "clap_acoustic": 0.956,
+      "clap_vocal_max": 0.012,
+      "clap_intensity": 0.853,
+      "instruments": {
+       "Hammond organ": 0.389,
+       "flute": 0.094,
+       "acoustic guitar": 0.084,
+       "accordion": 0.049,
+       "drum machine": 0.043,
+       "clarinet": 0.041,
+       "harmonica": 0.036,
+       "vibraphone": 0.035
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [
+       "brief level dips to review [(11.5, 0.3, 12.2), (32.5, 0.2, 16.2)]"
+      ],
+      "score": 2.151
+     },
+     "picked": false
+    },
+    {
+     "take": "main/t2",
+     "path": "audio-src/music/takes/heimfahrt/main/t2/audio.flac",
+     "seed": 363266,
+     "cfg": 1.6,
+     "style": "Gentle, warm closing music for the drive home at the end of a trip: a nylon-string acoustic guitar plays the relaxed main melody slowly, a soft accordion answers with short phrases, a plucked upright double bass, very soft brushes. Evening light on the road home, content and calm, a quiet smile; laid-back 1970s acoustic easy listening with a light jazz touch, warm and dry, intimate, not sentimental, ending softly. Purely instrumental. F major, 84 BPM.",
+     "negative": "Vocals, a singer singing lyrics, sung words, spoken words, speech, narration, voice-over, rap, whispering, a choir, wordless choir aahs, vocal pads, humming, yodeling, a crowd singing along, a solo voice, pop song with a lead vocalist, schlager singer. Electronic synthesizer music, synth pads, EDM, techno, club beat, drum machine, four-on-the-floor kick, modern pop production, autotune, dubstep, trap hi-hats, heavy metal, distorted electric guitars. Sentimental 1950s homeland film music, syrupy lush strings, zither, alpine folk music, yodel, oompah, schunkel sing-along, sentimental waltz, marching band.",
+     "plan_sha256": "6b6a52bf0648d9fafcaa590d8be7f58a6b90686453457318c8e31a8ff4699391",
+     "seconds": 84.72,
+     "semantic_tokens": 2118,
+     "wall_seconds": 39.0,
+     "generation": {
+      "abc": {
+       "temperature": 0.7,
+       "top_p": 0.9,
+       "top_k": 30,
+       "repetition_penalty": 1.005,
+       "penalty_window": 100,
+       "min_tokens": 32,
+       "max_tokens": 4096
+      },
+      "semantic": {
+       "temperature": 1.0,
+       "top_p": 0.95,
+       "top_k": 100,
+       "repetition_penalty": 1.2,
+       "penalty_window": 50,
+       "min_tokens": 200,
+       "max_tokens": 3464
+      },
+      "ode_steps": 32,
+      "ode_method": "midpoint",
+      "context": 24576,
+      "version": "yue2-native-v1"
+     },
+     "superseded": false,
+     "analysis": {
+      "tempo_bpm": 85.286,
+      "key": "F",
+      "clap_fit": 0.431,
+      "clap_acoustic": 0.978,
+      "clap_vocal_max": 0.038,
+      "clap_intensity": 0.585,
+      "instruments": {
+       "Hammond organ": 0.306,
+       "harmonica": 0.106,
+       "saxophone": 0.099,
+       "vibraphone": 0.095,
+       "acoustic guitar": 0.09,
+       "clarinet": 0.079,
+       "accordion": 0.068,
+       "flute": 0.067
+      },
+      "whisper": "clean",
+      "rejects": [],
+      "advisories": [],
+      "score": 2.202
+     },
+     "picked": true
+    }
+   ],
+   "picks": {
+    "main": "t2"
+   },
+   "pick_note": "Picked t2 by analysis: the gentler take (CLAP intensity 0.58 vs 0.85), better style fit (0.431), 5.6 s natural ending, F major as written, 85.3 BPM, Whisper clean, CLAP vocal 0.04. Reprises the daheim v2 theme. Plays once (loop false).",
+   "delivery": {
+    "entry": {
+     "files": {
+      "main": "audio/music/heimfahrt.ogg"
+     },
+     "loop": false,
+     "loopStart": 0.0,
+     "loopEnd": 84.718666667,
+     "bpm": 85.29,
+     "bars": 30,
+     "key": "F",
+     "duration": 84.718667,
+     "gainDb": -3.56,
+     "takes": {
+      "main": "t2"
+     }
+    },
+    "versions": {
+     "main": {
+      "take": "t2",
+      "seed": 363266,
+      "measured_bpm": 85.286,
+      "seam": null,
+      "gain_db": -3.56,
+      "delivered": {
+       "lufs": -18.99,
+       "tp": -3.21,
+       "lra": 4.0
+      },
+      "loop_level": {
+       "lufs": -15.44,
+       "tp": 0.01,
+       "lra": 3.9
+      },
+      "delivery": "public/audio/music/heimfahrt.ogg",
+      "delivery_sha256": "09e6df27e3051017593ad6683b517c40634d73fbe31360fd3b9e9b35b6838564",
+      "master": "audio-src/music/masters/heimfahrt.flac",
+      "master_sha256": "6a08f1ba32a0330b23a8433beffeda81204aef5da79e4ffdb43b9e31ed4d03dc",
+      "source": "audio-src/music/takes/heimfahrt/main/t2/audio.flac",
+      "source_sha256": "f2a0f2caf643fae45d9158c6482a66ba0f538b6b47ef406e40d72110b9eaa1a4",
+      "bytes": 1247244,
+      "samples": 4066496,
+      "processing": "native take; constant gain; 10 ms fade-in, 2 s fade-out at file end"
+     }
+    }
+   }
+  }
+ }
+}

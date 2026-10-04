@@ -1,0 +1,2745 @@
+{
+ "_about": {
+  "what": "Provenance of every SFX file (contract §0.12). Procedural synthesis, numpy only, no models.",
+  "how": "audio-src/sfx/synth.py renders generator(rng=np.random.default_rng(seed), **params), then DC-block, trim/fade (one-shots), loudness normalisation per category, OGG Vorbis.",
+  "categories": {
+   "ui": {
+    "target": -26.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "card": {
+    "target": -23.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "table": {
+    "target": -23.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "feedback": {
+    "target": -24.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "drink": {
+    "target": -24.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "mild": {
+    "target": -27.0,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "foley": {
+    "target": -22.0,
+    "measure": "M200max",
+    "quality": 0.5
+   },
+   "vehicle": {
+    "target": -21.0,
+    "measure": "M200max",
+    "quality": 0.5
+   },
+   "dog": {
+    "target": -22.5,
+    "measure": "M200max",
+    "quality": 0.45
+   },
+   "bell": {
+    "target": -23.0,
+    "measure": "M200max",
+    "quality": 0.5
+   },
+   "sting": {
+    "target": -18.0,
+    "measure": "M200max",
+    "quality": 0.4
+   },
+   "ambience": {
+    "target": -30.0,
+    "measure": "integrated",
+    "quality": 0.6
+   },
+   "room": {
+    "target": -36.0,
+    "measure": "integrated",
+    "quality": 0.45
+   },
+   "engine": {
+    "target": -26.0,
+    "measure": "integrated",
+    "quality": 0.6
+   }
+  },
+  "peak_ceiling_true_db": -1.5,
+  "sample_rate": 44100,
+  "numpy": "2.5.3",
+  "soundfile": "0.14.0",
+  "libsndfile": "1.2.2"
+ },
+ "card-deal": {
+  "category": "card",
+  "description": "thumb snick, swish through the air, light landing",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/card-deal-1.ogg",
+    "generator": "gen_table.card_deal",
+    "seed": 34670,
+    "params": {},
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -14.75,
+    "gain_db": -8.25,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.34,
+    "decoded_peak_dbfs": -9.52,
+    "seconds": 0.2944,
+    "samples": 12983,
+    "channels": 1,
+    "bytes": 6148,
+    "sha256": "b7a3ea5a26f749c8",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/card-deal-2.ogg",
+    "generator": "gen_table.card_deal",
+    "seed": 34671,
+    "params": {
+     "dur": 0.11,
+     "band": 3600,
+     "end": 0.8
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -14.92,
+    "gain_db": -8.08,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.17,
+    "decoded_peak_dbfs": -9.7,
+    "seconds": 0.2969,
+    "samples": 13095,
+    "channels": 1,
+    "bytes": 6045,
+    "sha256": "c1a1a4b3ad54e335",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/card-deal-3.ogg",
+    "generator": "gen_table.card_deal",
+    "seed": 34672,
+    "params": {
+     "dur": 0.15,
+     "band": 2900,
+     "end": 0.7
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -12.14,
+    "gain_db": -10.86,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.38,
+    "decoded_peak_dbfs": -11.03,
+    "seconds": 0.3378,
+    "samples": 14899,
+    "channels": 1,
+    "bytes": 6373,
+    "sha256": "fff7dd64880db79b",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "card-play": {
+  "category": "card",
+  "description": "soft 'tock' of a card on the felt mat",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/card-play-1.ogg",
+    "generator": "gen_table.card_play",
+    "seed": 22310,
+    "params": {},
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -21.0,
+    "gain_db": -2.0,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.99,
+    "decoded_peak_dbfs": -2.7,
+    "seconds": 0.2903,
+    "samples": 12801,
+    "channels": 1,
+    "bytes": 5846,
+    "sha256": "a7581b058827a8b3",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/card-play-2.ogg",
+    "generator": "gen_table.card_play",
+    "seed": 22311,
+    "params": {
+     "tock": 230,
+     "slap": 0.6,
+     "bright": 2000
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -19.64,
+    "gain_db": -3.36,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.04,
+    "decoded_peak_dbfs": -2.65,
+    "seconds": 0.2988,
+    "samples": 13175,
+    "channels": 1,
+    "bytes": 5721,
+    "sha256": "e715f0d1d1b3b966",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/card-play-3.ogg",
+    "generator": "gen_table.card_play",
+    "seed": 22312,
+    "params": {
+     "tock": 290,
+     "slap": 0.4,
+     "puff": 0.7
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -19.74,
+    "gain_db": -3.26,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.04,
+    "decoded_peak_dbfs": -4.03,
+    "seconds": 0.2919,
+    "samples": 12872,
+    "channels": 1,
+    "bytes": 5725,
+    "sha256": "e23039294b23bd5b",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "card-raise": {
+  "category": "ui",
+  "description": "tiny lift swish of one hand card",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/card-raise-1.ogg",
+    "generator": "gen_table.card_raise",
+    "seed": 82290,
+    "params": {},
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -15.82,
+    "gain_db": -10.18,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.36,
+    "decoded_peak_dbfs": -10.42,
+    "seconds": 0.1624,
+    "samples": 7160,
+    "channels": 1,
+    "bytes": 5193,
+    "sha256": "1b97d2b6c8595b85",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/card-raise-2.ogg",
+    "generator": "gen_table.card_raise",
+    "seed": 82291,
+    "params": {
+     "dur": 0.065,
+     "tick": 0.1
+    },
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -18.03,
+    "gain_db": -7.97,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.23,
+    "decoded_peak_dbfs": -8.97,
+    "seconds": 0.1471,
+    "samples": 6487,
+    "channels": 1,
+    "bytes": 5126,
+    "sha256": "595d4b65b925e76f",
+    "render_s": 0.01
+   }
+  ]
+ },
+ "trick-take": {
+  "category": "card",
+  "description": "three cards gathered, edge ticks, squaring tap",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/trick-take-1.ogg",
+    "generator": "gen_table.trick_take",
+    "seed": 14920,
+    "params": {},
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -10.88,
+    "gain_db": -12.12,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.26,
+    "decoded_peak_dbfs": -11.22,
+    "seconds": 0.533,
+    "samples": 23504,
+    "channels": 1,
+    "bytes": 7931,
+    "sha256": "0ddd2cb54f7463dd",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/trick-take-2.ogg",
+    "generator": "gen_table.trick_take",
+    "seed": 14921,
+    "params": {
+     "slides": 3,
+     "spacing": 0.06
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -11.79,
+    "gain_db": -11.21,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.38,
+    "decoded_peak_dbfs": -13.57,
+    "seconds": 0.5712,
+    "samples": 25192,
+    "channels": 1,
+    "bytes": 8105,
+    "sha256": "65b43a4b599b5b3d",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/trick-take-3.ogg",
+    "generator": "gen_table.trick_take",
+    "seed": 14922,
+    "params": {
+     "slides": 2,
+     "spacing": 0.08,
+     "taps": 2
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -14.58,
+    "gain_db": -8.42,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.28,
+    "decoded_peak_dbfs": -12.03,
+    "seconds": 0.6245,
+    "samples": 27540,
+    "channels": 1,
+    "bytes": 8408,
+    "sha256": "eae35a949cb07e29",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "shuffle": {
+  "category": "card",
+  "description": "riffle 'brrrt' in stereo, bridge cascade, deck squared twice",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/shuffle-1.ogg",
+    "generator": "gen_table.shuffle",
+    "seed": 70570,
+    "params": {},
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -14.1,
+    "gain_db": -8.9,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.14,
+    "decoded_peak_dbfs": -7.61,
+    "seconds": 1.3466,
+    "samples": 59385,
+    "channels": 2,
+    "bytes": 30144,
+    "sha256": "74b1293b46706f24",
+    "render_s": 0.15
+   },
+   {
+    "file": "audio/sfx/shuffle-2.ogg",
+    "generator": "gen_table.shuffle",
+    "seed": 70571,
+    "params": {
+     "riffle": 0.55,
+     "bridge": 0.32,
+     "taps": 1
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -15.59,
+    "gain_db": -7.41,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.36,
+    "decoded_peak_dbfs": -6.87,
+    "seconds": 1.3557,
+    "samples": 59785,
+    "channels": 2,
+    "bytes": 31693,
+    "sha256": "a3bf5d5ed168e36f",
+    "render_s": 0.13
+   }
+  ]
+ },
+ "knock": {
+  "category": "table",
+  "description": "knuckles on the heavy wooden Stammtisch (tock-tock)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/knock-1.ogg",
+    "generator": "gen_table.knock",
+    "seed": 66800,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.57,
+    "gain_db": -6.43,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.98,
+    "decoded_peak_dbfs": -5.27,
+    "seconds": 0.5273,
+    "samples": 23254,
+    "channels": 1,
+    "bytes": 7074,
+    "sha256": "7d2a9a976fa37c0e",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/knock-2.ogg",
+    "generator": "gen_table.knock",
+    "seed": 66801,
+    "params": {
+     "count": 3,
+     "gap": 0.14,
+     "f1": 160
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.28,
+    "gain_db": -6.72,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.96,
+    "decoded_peak_dbfs": -6.37,
+    "seconds": 0.6368,
+    "samples": 28085,
+    "channels": 1,
+    "bytes": 8361,
+    "sha256": "a8704181e3b86abc",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/knock-3.ogg",
+    "generator": "gen_table.knock",
+    "seed": 66802,
+    "params": {
+     "count": 2,
+     "gap": 0.19,
+     "f1": 140,
+     "q": 18
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -17.48,
+    "gain_db": -5.52,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.97,
+    "decoded_peak_dbfs": -4.86,
+    "seconds": 0.54,
+    "samples": 23814,
+    "channels": 1,
+    "bytes": 7373,
+    "sha256": "4e03fccedefc96c8",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "bid": {
+  "category": "table",
+  "description": "two light fingertip taps (tok-tok) under a bid bubble",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/bid-1.ogg",
+    "generator": "gen_table.bid",
+    "seed": 97630,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.77,
+    "gain_db": -6.23,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.98,
+    "decoded_peak_dbfs": -6.73,
+    "seconds": 0.392,
+    "samples": 17285,
+    "channels": 1,
+    "bytes": 6239,
+    "sha256": "59de9e183b539abb",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/bid-2.ogg",
+    "generator": "gen_table.bid",
+    "seed": 97631,
+    "params": {
+     "gap": 0.105,
+     "f1": 350
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -17.71,
+    "gain_db": -5.29,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.98,
+    "decoded_peak_dbfs": -5.65,
+    "seconds": 0.3528,
+    "samples": 15557,
+    "channels": 1,
+    "bytes": 6013,
+    "sha256": "89a4321fd8a23fcf",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "pass": {
+  "category": "table",
+  "description": "soft thumb flick over the fanned cards ('frrp')",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/pass-1.ogg",
+    "generator": "gen_table.pass_flick",
+    "seed": 8360,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -23.54,
+    "gain_db": 0.54,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.18,
+    "decoded_peak_dbfs": -4.94,
+    "seconds": 0.2178,
+    "samples": 9606,
+    "channels": 1,
+    "bytes": 5729,
+    "sha256": "ff73457e772ecbed",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/pass-2.ogg",
+    "generator": "gen_table.pass_flick",
+    "seed": 8361,
+    "params": {
+     "clicks": 3,
+     "span": 0.04
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -23.66,
+    "gain_db": 0.66,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.23,
+    "decoded_peak_dbfs": -4.77,
+    "seconds": 0.215,
+    "samples": 9483,
+    "channels": 1,
+    "bytes": 5675,
+    "sha256": "05f36e7799c92180",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "skat-pick": {
+  "category": "card",
+  "description": "two cards slid off the table, one after the other",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/skat-pick-1.ogg",
+    "generator": "gen_table.skat_pick",
+    "seed": 23910,
+    "params": {},
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -15.09,
+    "gain_db": -7.91,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.22,
+    "decoded_peak_dbfs": -9.93,
+    "seconds": 0.4718,
+    "samples": 20808,
+    "channels": 1,
+    "bytes": 7962,
+    "sha256": "692b16cf2471c54a",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/skat-pick-2.ogg",
+    "generator": "gen_table.skat_pick",
+    "seed": 23911,
+    "params": {
+     "gap": 0.08
+    },
+    "category": "card",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -15.38,
+    "gain_db": -7.62,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.12,
+    "decoded_peak_dbfs": -9.08,
+    "seconds": 0.4567,
+    "samples": 20141,
+    "channels": 1,
+    "bytes": 7989,
+    "sha256": "7ae069164132cb6e",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "list-write": {
+  "category": "table",
+  "description": "pencil writes a game into the list: strokes + touch-downs",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/list-write-1.ogg",
+    "generator": "gen_table.list_write",
+    "seed": 75100,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.46,
+    "gain_db": -6.54,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.26,
+    "decoded_peak_dbfs": -6.45,
+    "seconds": 1.1948,
+    "samples": 52689,
+    "channels": 1,
+    "bytes": 16838,
+    "sha256": "9f0e60443601ea2d",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/list-write-2.ogg",
+    "generator": "gen_table.list_write",
+    "seed": 75101,
+    "params": {
+     "strokes": 5,
+     "speed": 1.1
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.38,
+    "gain_db": -6.62,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.32,
+    "decoded_peak_dbfs": -7.7,
+    "seconds": 1.0689,
+    "samples": 47137,
+    "channels": 1,
+    "bytes": 14971,
+    "sha256": "8b37e3c864a50b5d",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/list-write-3.ogg",
+    "generator": "gen_table.list_write",
+    "seed": 75102,
+    "params": {
+     "strokes": 7,
+     "speed": 0.95
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -15.71,
+    "gain_db": -7.29,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.32,
+    "decoded_peak_dbfs": -8.22,
+    "seconds": 1.3796,
+    "samples": 60841,
+    "channels": 1,
+    "bytes": 18547,
+    "sha256": "0950538771904fd9",
+    "render_s": 0.04
+   }
+  ]
+ },
+ "glass-clink": {
+  "category": "drink",
+  "description": "two glasses touch: beer mugs / Viertele glasses",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/glass-clink-1.ogg",
+    "generator": "gen_inn.glass_clink",
+    "seed": 13790,
+    "params": {},
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -10.35,
+    "gain_db": -13.65,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.02,
+    "decoded_peak_dbfs": -11.03,
+    "seconds": 0.5568,
+    "samples": 24555,
+    "channels": 1,
+    "bytes": 6733,
+    "sha256": "512b0d6ad7887642",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/glass-clink-2.ogg",
+    "generator": "gen_inn.glass_clink",
+    "seed": 13791,
+    "params": {
+     "kind": "wine"
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -5.28,
+    "gain_db": -18.72,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.01,
+    "decoded_peak_dbfs": -14.91,
+    "seconds": 1.6059,
+    "samples": 70818,
+    "channels": 1,
+    "bytes": 9282,
+    "sha256": "356469aaef759bb3",
+    "render_s": 0.05
+   },
+   {
+    "file": "audio/sfx/glass-clink-3.ogg",
+    "generator": "gen_inn.glass_clink",
+    "seed": 13792,
+    "params": {
+     "kind": "mixed"
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -8.2,
+    "gain_db": -15.8,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.98,
+    "decoded_peak_dbfs": -12.5,
+    "seconds": 1.3004,
+    "samples": 57349,
+    "channels": 1,
+    "bytes": 8712,
+    "sha256": "f55b8daf799dd6fc",
+    "render_s": 0.04
+   }
+  ]
+ },
+ "bottle-open": {
+  "category": "drink",
+  "description": "crown cap: opener, pop, hiss, cap tinkles / swing-top 'plopp'",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/bottle-open-1.ogg",
+    "generator": "gen_inn.bottle_open",
+    "seed": 30700,
+    "params": {},
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -16.97,
+    "gain_db": -7.03,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.14,
+    "decoded_peak_dbfs": -5.55,
+    "seconds": 0.8428,
+    "samples": 37168,
+    "channels": 1,
+    "bytes": 12003,
+    "sha256": "fc2bbb00ad2136dc",
+    "render_s": 0.05
+   },
+   {
+    "file": "audio/sfx/bottle-open-2.ogg",
+    "generator": "gen_inn.bottle_open",
+    "seed": 30701,
+    "params": {
+     "kind": "swing"
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -16.17,
+    "gain_db": -7.83,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.9,
+    "decoded_peak_dbfs": -5.29,
+    "seconds": 0.5758,
+    "samples": 25394,
+    "channels": 1,
+    "bytes": 9338,
+    "sha256": "35225bb8ac87f772",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/bottle-open-3.ogg",
+    "generator": "gen_inn.bottle_open",
+    "seed": 30702,
+    "params": {
+     "kind": "crown",
+     "tinkle": false
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -16.98,
+    "gain_db": -7.02,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.21,
+    "decoded_peak_dbfs": -9.77,
+    "seconds": 0.8568,
+    "samples": 37787,
+    "channels": 1,
+    "bytes": 11945,
+    "sha256": "1f041302f8b594ed",
+    "render_s": 0.05
+   }
+  ]
+ },
+ "pour": {
+  "category": "drink",
+  "description": "gentle pour into a glass, pitch of the glass rising as it fills",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/pour-1.ogg",
+    "generator": "gen_inn.pour",
+    "seed": 16300,
+    "params": {},
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -13.64,
+    "gain_db": -10.36,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.16,
+    "decoded_peak_dbfs": -13.04,
+    "seconds": 2.6115,
+    "samples": 115168,
+    "channels": 1,
+    "bytes": 27618,
+    "sha256": "8f4258ab98db4b8a",
+    "render_s": 0.14
+   },
+   {
+    "file": "audio/sfx/pour-2.ogg",
+    "generator": "gen_inn.pour",
+    "seed": 16301,
+    "params": {
+     "kind": "wine"
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -15.19,
+    "gain_db": -8.81,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.18,
+    "decoded_peak_dbfs": -9.94,
+    "seconds": 1.7515,
+    "samples": 77239,
+    "channels": 1,
+    "bytes": 18301,
+    "sha256": "c30e563de6adcde2",
+    "render_s": 0.06
+   }
+  ]
+ },
+ "gulp": {
+  "category": "drink",
+  "description": "two or three soft swallows (GLUCK), not wet",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/gulp-1.ogg",
+    "generator": "gen_inn.gulp",
+    "seed": 37220,
+    "params": {},
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -13.6,
+    "gain_db": -10.4,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.98,
+    "decoded_peak_dbfs": -8.44,
+    "seconds": 0.6616,
+    "samples": 29176,
+    "channels": 1,
+    "bytes": 6437,
+    "sha256": "fdc810e4abc22cb7",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/gulp-2.ogg",
+    "generator": "gen_inn.gulp",
+    "seed": 37221,
+    "params": {
+     "count": 3
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -13.49,
+    "gain_db": -10.51,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.97,
+    "decoded_peak_dbfs": -9.09,
+    "seconds": 1.091,
+    "samples": 48111,
+    "channels": 1,
+    "bytes": 7950,
+    "sha256": "51bbec526c80debc",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "cheers": {
+  "category": "drink",
+  "description": "several glasses clink around the table (stereo)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/cheers-1.ogg",
+    "generator": "gen_inn.cheers",
+    "seed": 2750,
+    "params": {},
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -4.39,
+    "gain_db": -19.61,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.05,
+    "decoded_peak_dbfs": -13.47,
+    "seconds": 2.696,
+    "samples": 118893,
+    "channels": 2,
+    "bytes": 26020,
+    "sha256": "c468e3c9544651e8",
+    "render_s": 0.15
+   },
+   {
+    "file": "audio/sfx/cheers-2.ogg",
+    "generator": "gen_inn.cheers",
+    "seed": 2751,
+    "params": {
+     "count": 4
+    },
+    "category": "drink",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -3.58,
+    "gain_db": -20.42,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.0,
+    "decoded_peak_dbfs": -15.53,
+    "seconds": 1.975,
+    "samples": 87099,
+    "channels": 2,
+    "bytes": 19528,
+    "sha256": "c223cc69a316a791",
+    "render_s": 0.12
+   }
+  ]
+ },
+ "burp": {
+  "category": "mild",
+  "description": "tiny, muffled 'örp' / a polite throat clear (kept mild on purpose)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/burp-1.ogg",
+    "generator": "gen_inn.burp",
+    "seed": 59430,
+    "params": {},
+    "category": "mild",
+    "measure": "M200max",
+    "target_lufs": -27.0,
+    "raw_lufs": -13.7,
+    "gain_db": -13.3,
+    "peak_limited_db": 0.0,
+    "final_lufs": -27.05,
+    "decoded_peak_dbfs": -11.78,
+    "seconds": 0.3609,
+    "samples": 15917,
+    "channels": 1,
+    "bytes": 4965,
+    "sha256": "b171f13c440ff7db",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/burp-2.ogg",
+    "generator": "gen_inn.burp",
+    "seed": 59431,
+    "params": {
+     "kind": "clear"
+    },
+    "category": "mild",
+    "measure": "M200max",
+    "target_lufs": -27.0,
+    "raw_lufs": -12.95,
+    "gain_db": -14.05,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.97,
+    "decoded_peak_dbfs": -11.84,
+    "seconds": 0.5618,
+    "samples": 24775,
+    "channels": 1,
+    "bytes": 5844,
+    "sha256": "8fcb199a88b9cbbf",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "chair": {
+  "category": "foley",
+  "description": "wooden chair scraped over floorboards, settles",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/chair-1.ogg",
+    "generator": "gen_inn.chair",
+    "seed": 47890,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -9.85,
+    "gain_db": -12.15,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.02,
+    "decoded_peak_dbfs": -11.11,
+    "seconds": 0.8578,
+    "samples": 37830,
+    "channels": 1,
+    "bytes": 10874,
+    "sha256": "e1f1c296f062365b",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/chair-2.ogg",
+    "generator": "gen_inn.chair",
+    "seed": 47891,
+    "params": {
+     "dur": 0.4,
+     "rate": [
+      90,
+      150
+     ]
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -12.83,
+    "gain_db": -9.17,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.05,
+    "decoded_peak_dbfs": -9.25,
+    "seconds": 0.7567,
+    "samples": 33371,
+    "channels": 1,
+    "bytes": 9843,
+    "sha256": "07aa702debe97466",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/chair-3.ogg",
+    "generator": "gen_inn.chair",
+    "seed": 47892,
+    "params": {
+     "dur": 0.7,
+     "rate": [
+      60,
+      120
+     ]
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -11.57,
+    "gain_db": -10.43,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.01,
+    "decoded_peak_dbfs": -10.17,
+    "seconds": 1.0492,
+    "samples": 46271,
+    "channels": 1,
+    "bytes": 12511,
+    "sha256": "c7f60fd2681fc3b3",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "inn-murmur": {
+  "category": "room",
+  "description": "calm Gasthaus Stube: distant indistinct German chatter, soft plates and glasses; no music",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/inn-murmur.ogg",
+    "generator": "rec.room_loop",
+    "seed": 52190,
+    "params": {
+     "source": "fs334140",
+     "start": 18.0,
+     "length": 30.0
+    },
+    "category": "room",
+    "measure": "integrated",
+    "target_lufs": -36.0,
+    "raw_lufs": -21.13,
+    "gain_db": -14.87,
+    "peak_limited_db": 0.0,
+    "final_lufs": -36.09,
+    "decoded_peak_dbfs": -21.35,
+    "seconds": 30.0,
+    "samples": 1323000,
+    "channels": 2,
+    "bytes": 272838,
+    "sha256": "a395620a114c2d6d",
+    "render_s": 5.75,
+    "model": "none (field recording, processed)",
+    "sources": [
+     {
+      "freesound_id": 334140,
+      "title": "German restaurant with a crowd.wav",
+      "author": "BonnyOrbit",
+      "url": "https://freesound.org/people/BonnyOrbit/sounds/334140/",
+      "preview": "https://cdn.freesound.org/previews/334/334140_5902878-hq.ogg",
+      "sha256": "161b970c2a7b09c716f8704a26c4d3858501053366832093762aaf14d284a7c5",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Berlin restaurant: people eating, drinking, chatting; glasses and plates, a chair (Zoom H1).",
+      "key": "fs334140"
+     }
+    ],
+    "processing": "segment start/length from params; slow leveller on bursts; high-pass 110 Hz; low-pass 2200 Hz (12 dB/oct, words blur); presence shelf; stereo width 0.5; equal-power loop crossfade 3.0 s; loudness to the room target; OGG Vorbis",
+    "seam_score": 0.33
+   }
+  ]
+ },
+ "coin": {
+  "category": "foley",
+  "description": "Mark coin drops and settles / two coins on the saucer / one coin set down",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/coin-1.ogg",
+    "generator": "gen_inn.coin",
+    "seed": 33890,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -7.24,
+    "gain_db": -14.76,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.0,
+    "decoded_peak_dbfs": -13.52,
+    "seconds": 1.0842,
+    "samples": 47812,
+    "channels": 1,
+    "bytes": 10682,
+    "sha256": "84ef494e4f2a0bbb",
+    "render_s": 0.05
+   },
+   {
+    "file": "audio/sfx/coin-2.ogg",
+    "generator": "gen_inn.coin",
+    "seed": 33891,
+    "params": {
+     "kind": "saucer"
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -5.94,
+    "gain_db": -16.06,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.03,
+    "decoded_peak_dbfs": -13.4,
+    "seconds": 1.2032,
+    "samples": 53059,
+    "channels": 1,
+    "bytes": 10248,
+    "sha256": "542304577c13d156",
+    "render_s": 0.04
+   },
+   {
+    "file": "audio/sfx/coin-3.ogg",
+    "generator": "gen_inn.coin",
+    "seed": 33892,
+    "params": {
+     "kind": "place"
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -8.34,
+    "gain_db": -13.66,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.95,
+    "decoded_peak_dbfs": -11.69,
+    "seconds": 0.6383,
+    "samples": 28151,
+    "channels": 1,
+    "bytes": 6887,
+    "sha256": "7f0f9bcc5232946b",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "till": {
+  "category": "foley",
+  "description": "old cash register: keys, crank, bell 'ching', drawer with coins",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/till-1.ogg",
+    "generator": "gen_inn.till",
+    "seed": 22400,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -10.1,
+    "gain_db": -11.9,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.98,
+    "decoded_peak_dbfs": -13.74,
+    "seconds": 4.5429,
+    "samples": 200340,
+    "channels": 1,
+    "bytes": 22792,
+    "sha256": "b5967dd5d7ac0b42",
+    "render_s": 0.1
+   },
+   {
+    "file": "audio/sfx/till-2.ogg",
+    "generator": "gen_inn.till",
+    "seed": 22401,
+    "params": {
+     "keys": 3,
+     "bell": 1600
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -9.48,
+    "gain_db": -12.52,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.02,
+    "decoded_peak_dbfs": -13.78,
+    "seconds": 4.674,
+    "samples": 206124,
+    "channels": 1,
+    "bytes": 23572,
+    "sha256": "75ea463940d78237",
+    "render_s": 0.09
+   }
+  ]
+ },
+ "stamp": {
+  "category": "table",
+  "description": "rubber stamp thump on paper over a counter (with ink-pad dab)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/stamp-1.ogg",
+    "generator": "gen_table.stamp",
+    "seed": 58800,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -13.79,
+    "gain_db": -9.21,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.99,
+    "decoded_peak_dbfs": -6.07,
+    "seconds": 0.2959,
+    "samples": 13051,
+    "channels": 1,
+    "bytes": 5395,
+    "sha256": "9d4811522c7d4859",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/stamp-2.ogg",
+    "generator": "gen_table.stamp",
+    "seed": 58801,
+    "params": {
+     "dab": true
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -13.75,
+    "gain_db": -9.25,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.97,
+    "decoded_peak_dbfs": -5.58,
+    "seconds": 0.6211,
+    "samples": 27391,
+    "channels": 1,
+    "bytes": 7019,
+    "sha256": "67719d91a68a979d",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "page-turn": {
+  "category": "table",
+  "description": "newspaper page turned: swoosh, crackle, soft flap",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/page-turn-1.ogg",
+    "generator": "gen_table.page_turn",
+    "seed": 92980,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -14.82,
+    "gain_db": -8.18,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.21,
+    "decoded_peak_dbfs": -9.74,
+    "seconds": 0.7675,
+    "samples": 33845,
+    "channels": 1,
+    "bytes": 12158,
+    "sha256": "4548aef54c924bc6",
+    "render_s": 0.05
+   },
+   {
+    "file": "audio/sfx/page-turn-2.ogg",
+    "generator": "gen_table.page_turn",
+    "seed": 92981,
+    "params": {
+     "dur": 0.5,
+     "crackle": 320
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -12.11,
+    "gain_db": -10.89,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.23,
+    "decoded_peak_dbfs": -3.1,
+    "seconds": 0.6057,
+    "samples": 26712,
+    "channels": 1,
+    "bytes": 10472,
+    "sha256": "f146f9dee13077dc",
+    "render_s": 0.05
+   }
+  ]
+ },
+ "van-start": {
+  "category": "vehicle",
+  "description": "key, starter cranking (rur-rur), petrol engine catches, idles",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/van-start-1.ogg",
+    "generator": "gen_road.van_start",
+    "seed": 20540,
+    "params": {},
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -21.0,
+    "raw_lufs": 1.92,
+    "gain_db": -22.92,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.06,
+    "decoded_peak_dbfs": -6.51,
+    "seconds": 3.9275,
+    "samples": 173203,
+    "channels": 1,
+    "bytes": 45262,
+    "sha256": "6f9ce6aefd0205e1",
+    "render_s": 0.16
+   },
+   {
+    "file": "audio/sfx/van-start-2.ogg",
+    "generator": "gen_road.van_start",
+    "seed": 20541,
+    "params": {
+     "stubborn": true
+    },
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -21.0,
+    "raw_lufs": 3.25,
+    "gain_db": -24.25,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.02,
+    "decoded_peak_dbfs": -6.73,
+    "seconds": 4.8837,
+    "samples": 215373,
+    "channels": 1,
+    "bytes": 51509,
+    "sha256": "4dec735889f02ee4",
+    "render_s": 0.2
+   }
+  ]
+ },
+ "van-drive": {
+  "category": "engine",
+  "description": "inside the van: engine hum, road roar; seamless loop",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/van-drive.ogg",
+    "generator": "gen_road.van_drive",
+    "seed": 97820,
+    "params": {},
+    "category": "engine",
+    "measure": "integrated",
+    "target_lufs": -26.0,
+    "raw_lufs": 0.6,
+    "gain_db": -26.6,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.04,
+    "decoded_peak_dbfs": -12.21,
+    "seconds": 10.0,
+    "samples": 441000,
+    "channels": 1,
+    "bytes": 109521,
+    "sha256": "d485ec95b1365372",
+    "render_s": 0.53,
+    "seam_score": 0.47
+   }
+  ]
+ },
+ "van-door": {
+  "category": "foley",
+  "description": "sliding door rolls and shuts with a heavy ka-chunk",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/van-door-1.ogg",
+    "generator": "gen_road.van_door",
+    "seed": 43530,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -12.86,
+    "gain_db": -9.14,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.97,
+    "decoded_peak_dbfs": -6.58,
+    "seconds": 0.8731,
+    "samples": 38504,
+    "channels": 1,
+    "bytes": 11432,
+    "sha256": "51b9bdbc1b8ae4c3",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/van-door-2.ogg",
+    "generator": "gen_road.van_door",
+    "seed": 43531,
+    "params": {
+     "slide": 0.3,
+     "slam": 0.8
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -14.39,
+    "gain_db": -7.61,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.99,
+    "decoded_peak_dbfs": -6.6,
+    "seconds": 0.7414,
+    "samples": 32697,
+    "channels": 1,
+    "bytes": 10549,
+    "sha256": "dffc31a42ae2e46e",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "van-horn": {
+  "category": "vehicle",
+  "description": "old two-tone horn, slightly comic (hup-hup / tired hööp)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/van-horn-1.ogg",
+    "generator": "gen_road.van_horn",
+    "seed": 69700,
+    "params": {},
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -3.06,
+    "gain_db": -19.94,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.98,
+    "decoded_peak_dbfs": -12.29,
+    "seconds": 0.9529,
+    "samples": 42024,
+    "channels": 1,
+    "bytes": 11281,
+    "sha256": "b938d0db7428581d",
+    "render_s": 0.04
+   },
+   {
+    "file": "audio/sfx/van-horn-2.ogg",
+    "generator": "gen_road.van_horn",
+    "seed": 69701,
+    "params": {
+     "pattern": "long"
+    },
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -3.71,
+    "gain_db": -19.29,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.97,
+    "decoded_peak_dbfs": -12.01,
+    "seconds": 0.9008,
+    "samples": 39727,
+    "channels": 1,
+    "bytes": 11340,
+    "sha256": "16000e5b49582335",
+    "render_s": 0.04
+   }
+  ]
+ },
+ "bike-kick": {
+  "category": "vehicle",
+  "description": "kick-start, big twin catches: RÖÖÖHR, settles to lumpy idle",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/bike-kick-1.ogg",
+    "generator": "gen_road.bike_kick",
+    "seed": 77340,
+    "params": {},
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -21.0,
+    "raw_lufs": 5.86,
+    "gain_db": -26.86,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.03,
+    "decoded_peak_dbfs": -1.56,
+    "seconds": 3.0355,
+    "samples": 133867,
+    "channels": 1,
+    "bytes": 37604,
+    "sha256": "063494edadf6ffeb",
+    "render_s": 0.1
+   },
+   {
+    "file": "audio/sfx/bike-kick-2.ogg",
+    "generator": "gen_road.bike_kick",
+    "seed": 77341,
+    "params": {
+     "peak": 2300,
+     "kicks": 2
+    },
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -21.0,
+    "raw_lufs": 6.57,
+    "gain_db": -27.57,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.01,
+    "decoded_peak_dbfs": -3.91,
+    "seconds": 4.0615,
+    "samples": 179112,
+    "channels": 1,
+    "bytes": 44073,
+    "sha256": "1357d80893a0464c",
+    "render_s": 0.12
+   }
+  ]
+ },
+ "bike-rev": {
+  "category": "vehicle",
+  "description": "throttle blip(s) of the twin from idle",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/bike-rev-1.ogg",
+    "generator": "gen_road.bike_rev",
+    "seed": 33390,
+    "params": {},
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": 6.04,
+    "gain_db": -28.04,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.05,
+    "decoded_peak_dbfs": -5.89,
+    "seconds": 2.2642,
+    "samples": 99852,
+    "channels": 1,
+    "bytes": 29936,
+    "sha256": "e00d406764a95e80",
+    "render_s": 0.07
+   },
+   {
+    "file": "audio/sfx/bike-rev-2.ogg",
+    "generator": "gen_road.bike_rev",
+    "seed": 33391,
+    "params": {
+     "blips": 2
+    },
+    "category": "vehicle",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": 6.25,
+    "gain_db": -28.25,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.01,
+    "decoded_peak_dbfs": -4.67,
+    "seconds": 2.9824,
+    "samples": 131524,
+    "channels": 1,
+    "bytes": 40079,
+    "sha256": "e9f507f469bbe432",
+    "render_s": 0.09
+   }
+  ]
+ },
+ "bike-idle": {
+  "category": "engine",
+  "description": "lumpy twin idle (potato-potato); seamless loop",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/bike-idle.ogg",
+    "generator": "gen_road.bike_idle",
+    "seed": 73340,
+    "params": {},
+    "category": "engine",
+    "measure": "integrated",
+    "target_lufs": -26.0,
+    "raw_lufs": -1.41,
+    "gain_db": -24.59,
+    "peak_limited_db": 0.0,
+    "final_lufs": -25.96,
+    "decoded_peak_dbfs": -3.63,
+    "seconds": 8.0,
+    "samples": 352800,
+    "channels": 1,
+    "bytes": 119704,
+    "sha256": "152b4882b3703050",
+    "render_s": 0.22,
+    "seam_score": 0.14
+   }
+  ]
+ },
+ "dog-bark-big": {
+  "category": "dog",
+  "description": "deep friendly woof (single / double)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/dog-bark-big-1.ogg",
+    "generator": "gen_nature.dog_bark_big",
+    "seed": 2100,
+    "params": {},
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 2.31,
+    "gain_db": -24.81,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.56,
+    "decoded_peak_dbfs": -10.2,
+    "seconds": 0.5653,
+    "samples": 24928,
+    "channels": 1,
+    "bytes": 5878,
+    "sha256": "db5c50420ee3d379",
+    "render_s": 0.05
+   },
+   {
+    "file": "audio/sfx/dog-bark-big-2.ogg",
+    "generator": "gen_nature.dog_bark_big",
+    "seed": 2101,
+    "params": {
+     "count": 2
+    },
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 2.55,
+    "gain_db": -25.05,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.53,
+    "decoded_peak_dbfs": -10.14,
+    "seconds": 0.8851,
+    "samples": 39033,
+    "channels": 1,
+    "bytes": 7228,
+    "sha256": "c1a9f6c3a3e6881e",
+    "render_s": 0.09
+   },
+   {
+    "file": "audio/sfx/dog-bark-big-3.ogg",
+    "generator": "gen_nature.dog_bark_big",
+    "seed": 2102,
+    "params": {
+     "count": 1,
+     "f0": 230,
+     "dur": 0.26
+    },
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 2.91,
+    "gain_db": -25.41,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.55,
+    "decoded_peak_dbfs": -7.97,
+    "seconds": 0.5497,
+    "samples": 24240,
+    "channels": 1,
+    "bytes": 5876,
+    "sha256": "7d601c8f9bd92449",
+    "render_s": 0.06
+   }
+  ]
+ },
+ "dog-bark-small": {
+  "category": "dog",
+  "description": "small friendly yaps",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/dog-bark-small-1.ogg",
+    "generator": "gen_nature.dog_bark_small",
+    "seed": 88710,
+    "params": {},
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 1.52,
+    "gain_db": -24.02,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.54,
+    "decoded_peak_dbfs": -8.96,
+    "seconds": 0.572,
+    "samples": 25226,
+    "channels": 1,
+    "bytes": 6631,
+    "sha256": "7cfd06a68dbf3711",
+    "render_s": 0.04
+   },
+   {
+    "file": "audio/sfx/dog-bark-small-2.ogg",
+    "generator": "gen_nature.dog_bark_small",
+    "seed": 88711,
+    "params": {
+     "count": 3,
+     "f0": 760
+    },
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 0.57,
+    "gain_db": -23.07,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.46,
+    "decoded_peak_dbfs": -8.98,
+    "seconds": 0.7918,
+    "samples": 34917,
+    "channels": 1,
+    "bytes": 7795,
+    "sha256": "6a351ee61be8e684",
+    "render_s": 0.05
+   }
+  ]
+ },
+ "dog-pant": {
+  "category": "dog",
+  "description": "happy panting, hah-hah-hah",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/dog-pant-1.ogg",
+    "generator": "gen_nature.dog_pant",
+    "seed": 6440,
+    "params": {},
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": -0.28,
+    "gain_db": -22.22,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.67,
+    "decoded_peak_dbfs": -8.18,
+    "seconds": 2.0042,
+    "samples": 88385,
+    "channels": 1,
+    "bytes": 13945,
+    "sha256": "00d59d618bca911f",
+    "render_s": 0.04
+   },
+   {
+    "file": "audio/sfx/dog-pant-2.ogg",
+    "generator": "gen_nature.dog_pant",
+    "seed": 6441,
+    "params": {
+     "rate": 3.6,
+     "dur": 1.4
+    },
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": -1.02,
+    "gain_db": -21.48,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.77,
+    "decoded_peak_dbfs": -6.03,
+    "seconds": 1.5577,
+    "samples": 68694,
+    "channels": 1,
+    "bytes": 11759,
+    "sha256": "d15a3f2619e188bf",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "dog-whine": {
+  "category": "dog",
+  "description": "soft begging whine, rising at the end",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/dog-whine-1.ogg",
+    "generator": "gen_nature.dog_whine",
+    "seed": 64160,
+    "params": {},
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 2.33,
+    "gain_db": -24.83,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.46,
+    "decoded_peak_dbfs": -14.78,
+    "seconds": 1.0845,
+    "samples": 47825,
+    "channels": 1,
+    "bytes": 12664,
+    "sha256": "c44b06c5b3b3772e",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/dog-whine-2.ogg",
+    "generator": "gen_nature.dog_whine",
+    "seed": 64161,
+    "params": {
+     "kind": "double"
+    },
+    "category": "dog",
+    "measure": "M200max",
+    "target_lufs": -22.5,
+    "raw_lufs": 1.35,
+    "gain_db": -23.85,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.46,
+    "decoded_peak_dbfs": -14.06,
+    "seconds": 1.0931,
+    "samples": 48205,
+    "channels": 1,
+    "bytes": 12614,
+    "sha256": "2c1c8b3d7b30be62",
+    "render_s": 0.04
+   }
+  ]
+ },
+ "chess-move": {
+  "category": "table",
+  "description": "wooden piece set on the board: tock",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/chess-move-1.ogg",
+    "generator": "gen_table.chess_move",
+    "seed": 51340,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -20.95,
+    "gain_db": -2.05,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.09,
+    "decoded_peak_dbfs": -3.07,
+    "seconds": 0.2732,
+    "samples": 12049,
+    "channels": 1,
+    "bytes": 5526,
+    "sha256": "21787993710d094a",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/chess-move-2.ogg",
+    "generator": "gen_table.chess_move",
+    "seed": 51341,
+    "params": {
+     "slide": true,
+     "f_board": 450
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -20.57,
+    "gain_db": -2.43,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.02,
+    "decoded_peak_dbfs": -3.94,
+    "seconds": 0.3606,
+    "samples": 15901,
+    "channels": 1,
+    "bytes": 6276,
+    "sha256": "493efeed4b62be2b",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/chess-move-3.ogg",
+    "generator": "gen_table.chess_move",
+    "seed": 51342,
+    "params": {
+     "f_board": 510,
+     "f_piece": 2600,
+     "felt": 0.25
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -20.72,
+    "gain_db": -2.28,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.03,
+    "decoded_peak_dbfs": -3.51,
+    "seconds": 0.2717,
+    "samples": 11984,
+    "channels": 1,
+    "bytes": 5445,
+    "sha256": "c1aa9b9a90bad825",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "chess-capture": {
+  "category": "table",
+  "description": "tik (piece hits piece), piece set aside, firm tock",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/chess-capture-1.ogg",
+    "generator": "gen_table.chess_capture",
+    "seed": 77370,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -20.02,
+    "gain_db": -2.98,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.17,
+    "decoded_peak_dbfs": -3.52,
+    "seconds": 0.7086,
+    "samples": 31248,
+    "channels": 1,
+    "bytes": 8684,
+    "sha256": "68ef76427aa5657c",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/chess-capture-2.ogg",
+    "generator": "gen_table.chess_capture",
+    "seed": 77371,
+    "params": {
+     "f_board": 500
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -21.01,
+    "gain_db": -1.99,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.07,
+    "decoded_peak_dbfs": -2.66,
+    "seconds": 0.6682,
+    "samples": 29467,
+    "channels": 1,
+    "bytes": 8407,
+    "sha256": "86cc40d4ab0e3180",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "pencil": {
+  "category": "table",
+  "description": "one pencil mark (digit / letter)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/pencil-1.ogg",
+    "generator": "gen_table.pencil",
+    "seed": 64910,
+    "params": {},
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -21.05,
+    "gain_db": -1.95,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.25,
+    "decoded_peak_dbfs": -4.47,
+    "seconds": 0.431,
+    "samples": 19006,
+    "channels": 1,
+    "bytes": 8383,
+    "sha256": "f6976452f8d15e79",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/pencil-2.ogg",
+    "generator": "gen_table.pencil",
+    "seed": 64911,
+    "params": {
+     "strokes": 1,
+     "speed": 1.1
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -17.21,
+    "gain_db": -5.79,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.25,
+    "decoded_peak_dbfs": -7.4,
+    "seconds": 0.2524,
+    "samples": 11132,
+    "channels": 1,
+    "bytes": 6068,
+    "sha256": "3a25f376429d392b",
+    "render_s": 0.01
+   },
+   {
+    "file": "audio/sfx/pencil-3.ogg",
+    "generator": "gen_table.pencil",
+    "seed": 64912,
+    "params": {
+     "strokes": 3,
+     "speed": 1.0
+    },
+    "category": "table",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -16.88,
+    "gain_db": -6.12,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.18,
+    "decoded_peak_dbfs": -7.05,
+    "seconds": 0.5565,
+    "samples": 24543,
+    "channels": 1,
+    "bytes": 9380,
+    "sha256": "6767e2b2c693090b",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "sudoku-right": {
+  "category": "feedback",
+  "description": "soft warm wooden 'tock' with a pitch (E6)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/sudoku-right-1.ogg",
+    "generator": "gen_table.sudoku_right",
+    "seed": 9330,
+    "params": {},
+    "category": "feedback",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -5.12,
+    "gain_db": -18.88,
+    "peak_limited_db": 0.0,
+    "final_lufs": -24.08,
+    "decoded_peak_dbfs": -16.46,
+    "seconds": 0.596,
+    "samples": 26283,
+    "channels": 1,
+    "bytes": 4973,
+    "sha256": "82e8dd73727ec9c9",
+    "render_s": 0.02
+   },
+   {
+    "file": "audio/sfx/sudoku-right-2.ogg",
+    "generator": "gen_table.sudoku_right",
+    "seed": 9331,
+    "params": {
+     "mallet": 0.8
+    },
+    "category": "feedback",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -6.22,
+    "gain_db": -17.78,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.98,
+    "decoded_peak_dbfs": -15.49,
+    "seconds": 0.5893,
+    "samples": 25987,
+    "channels": 1,
+    "bytes": 4996,
+    "sha256": "fd249b6e7badea6e",
+    "render_s": 0.02
+   }
+  ]
+ },
+ "sudoku-wrong": {
+  "category": "feedback",
+  "description": "gentle low hummed 'hm', falling; no buzzer",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/sudoku-wrong-1.ogg",
+    "generator": "gen_table.sudoku_wrong",
+    "seed": 28430,
+    "params": {},
+    "category": "feedback",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -4.96,
+    "gain_db": -19.04,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.95,
+    "decoded_peak_dbfs": -17.42,
+    "seconds": 0.5178,
+    "samples": 22836,
+    "channels": 1,
+    "bytes": 5663,
+    "sha256": "749dd664ec343714",
+    "render_s": 0.03
+   },
+   {
+    "file": "audio/sfx/sudoku-wrong-2.ogg",
+    "generator": "gen_table.sudoku_wrong",
+    "seed": 28431,
+    "params": {
+     "f0": 160,
+     "dur": 0.34
+    },
+    "category": "feedback",
+    "measure": "M200max",
+    "target_lufs": -24.0,
+    "raw_lufs": -6.13,
+    "gain_db": -17.87,
+    "peak_limited_db": 0.0,
+    "final_lufs": -23.94,
+    "decoded_peak_dbfs": -17.64,
+    "seconds": 0.5142,
+    "samples": 22677,
+    "channels": 1,
+    "bytes": 5612,
+    "sha256": "65fa292ce69ba05b",
+    "render_s": 0.03
+   }
+  ]
+ },
+ "church-bell": {
+  "category": "bell",
+  "description": "distant village church bell over the valley",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/church-bell-1.ogg",
+    "generator": "gen_nature.church_bell",
+    "seed": 12710,
+    "params": {},
+    "category": "bell",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -6.71,
+    "gain_db": -16.29,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.96,
+    "decoded_peak_dbfs": -16.0,
+    "seconds": 9.3055,
+    "samples": 410371,
+    "channels": 2,
+    "bytes": 65662,
+    "sha256": "a550debcae667689",
+    "render_s": 0.56
+   },
+   {
+    "file": "audio/sfx/church-bell-2.ogg",
+    "generator": "gen_nature.church_bell",
+    "seed": 12711,
+    "params": {
+     "strokes": 1
+    },
+    "category": "bell",
+    "measure": "M200max",
+    "target_lufs": -23.0,
+    "raw_lufs": -7.91,
+    "gain_db": -15.09,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.96,
+    "decoded_peak_dbfs": -15.47,
+    "seconds": 5.9875,
+    "samples": 264048,
+    "channels": 2,
+    "bytes": 35846,
+    "sha256": "75064587dc047211",
+    "render_s": 0.25
+   }
+  ]
+ },
+ "rain": {
+  "category": "ambience",
+  "description": "steady soft rain with drips; seamless loop",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/rain.ogg",
+    "generator": "gen_nature.rain",
+    "seed": 99810,
+    "params": {},
+    "category": "ambience",
+    "measure": "integrated",
+    "target_lufs": -30.0,
+    "raw_lufs": 1.96,
+    "gain_db": -31.96,
+    "peak_limited_db": 0.0,
+    "final_lufs": -30.22,
+    "decoded_peak_dbfs": -16.57,
+    "seconds": 10.0,
+    "samples": 441000,
+    "channels": 2,
+    "bytes": 301084,
+    "sha256": "f3aa565c91417e93",
+    "render_s": 0.55,
+    "seam_score": 0.34
+   }
+  ]
+ },
+ "crickets": {
+  "category": "ambience",
+  "description": "summer night field crickets near and far; seamless loop",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/crickets.ogg",
+    "generator": "gen_nature.crickets",
+    "seed": 10570,
+    "params": {},
+    "category": "ambience",
+    "measure": "integrated",
+    "target_lufs": -30.0,
+    "raw_lufs": -8.38,
+    "gain_db": -21.62,
+    "peak_limited_db": 0.0,
+    "final_lufs": -30.03,
+    "decoded_peak_dbfs": -15.48,
+    "seconds": 10.0,
+    "samples": 441000,
+    "channels": 2,
+    "bytes": 131852,
+    "sha256": "fa9209d573e5f386",
+    "render_s": 0.4,
+    "seam_score": 0.07
+   }
+  ]
+ },
+ "fuel": {
+  "category": "foley",
+  "description": "pump nozzle click, fuel glugging into the tank, shut-off clack",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/fuel-1.ogg",
+    "generator": "gen_road.fuel",
+    "seed": 85370,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -16.89,
+    "gain_db": -5.11,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.18,
+    "decoded_peak_dbfs": -6.58,
+    "seconds": 2.6187,
+    "samples": 115485,
+    "channels": 1,
+    "bytes": 27312,
+    "sha256": "ac5a88cc33f9f0c4",
+    "render_s": 0.11
+   },
+   {
+    "file": "audio/sfx/fuel-2.ogg",
+    "generator": "gen_road.fuel",
+    "seed": 85371,
+    "params": {
+     "dur": 1.4
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -16.91,
+    "gain_db": -5.09,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.14,
+    "decoded_peak_dbfs": -5.78,
+    "seconds": 2.0209,
+    "samples": 89122,
+    "channels": 1,
+    "bytes": 21544,
+    "sha256": "882747f7eae12c03",
+    "render_s": 0.08
+   }
+  ]
+ },
+ "wrench": {
+  "category": "foley",
+  "description": "ratchet strokes, then the spanner put down on the bench (clank)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/wrench-1.ogg",
+    "generator": "gen_road.wrench",
+    "seed": 29600,
+    "params": {},
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -8.87,
+    "gain_db": -13.13,
+    "peak_limited_db": 0.0,
+    "final_lufs": -22.01,
+    "decoded_peak_dbfs": -12.57,
+    "seconds": 3.2049,
+    "samples": 141338,
+    "channels": 1,
+    "bytes": 23018,
+    "sha256": "a37b520ec8bb89f8",
+    "render_s": 0.08
+   },
+   {
+    "file": "audio/sfx/wrench-2.ogg",
+    "generator": "gen_road.wrench",
+    "seed": 29601,
+    "params": {
+     "strokes": 1,
+     "f1": 1150
+    },
+    "category": "foley",
+    "measure": "M200max",
+    "target_lufs": -22.0,
+    "raw_lufs": -9.19,
+    "gain_db": -12.81,
+    "peak_limited_db": 0.0,
+    "final_lufs": -21.98,
+    "decoded_peak_dbfs": -11.78,
+    "seconds": 2.64,
+    "samples": 116423,
+    "channels": 1,
+    "bytes": 16667,
+    "sha256": "6c115cb12faed660",
+    "render_s": 0.07
+   }
+  ]
+ },
+ "ui-click": {
+  "category": "ui",
+  "description": "soft wooden click (every button)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/ui-click-1.ogg",
+    "generator": "gen_table.ui_click",
+    "seed": 5100,
+    "params": {},
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -22.25,
+    "gain_db": -3.75,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.11,
+    "decoded_peak_dbfs": -4.01,
+    "seconds": 0.1686,
+    "samples": 7437,
+    "channels": 1,
+    "bytes": 4764,
+    "sha256": "440d74ad88d62ec3",
+    "render_s": 0.01
+   },
+   {
+    "file": "audio/sfx/ui-click-2.ogg",
+    "generator": "gen_table.ui_click",
+    "seed": 5101,
+    "params": {
+     "f": 1940
+    },
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -22.37,
+    "gain_db": -3.63,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.27,
+    "decoded_peak_dbfs": -4.22,
+    "seconds": 0.1707,
+    "samples": 7529,
+    "channels": 1,
+    "bytes": 4805,
+    "sha256": "8663abf67ec41130",
+    "render_s": 0.01
+   },
+   {
+    "file": "audio/sfx/ui-click-3.ogg",
+    "generator": "gen_table.ui_click",
+    "seed": 5102,
+    "params": {
+     "f": 2060
+    },
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -22.11,
+    "gain_db": -3.89,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.32,
+    "decoded_peak_dbfs": -4.88,
+    "seconds": 0.1649,
+    "samples": 7274,
+    "channels": 1,
+    "bytes": 4774,
+    "sha256": "16847f8262094258",
+    "render_s": 0.01
+   }
+  ]
+ },
+ "ui-back": {
+  "category": "ui",
+  "description": "two soft wooden ticks, falling",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/ui-back.ogg",
+    "generator": "gen_table.ui_back",
+    "seed": 39820,
+    "params": {},
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -20.67,
+    "gain_db": -5.33,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.24,
+    "decoded_peak_dbfs": -5.67,
+    "seconds": 0.2124,
+    "samples": 9367,
+    "channels": 1,
+    "bytes": 5212,
+    "sha256": "c82db1cdd5393c17",
+    "render_s": 0.01
+   }
+  ]
+ },
+ "ui-open": {
+  "category": "ui",
+  "description": "short rising paper flap and a light tick",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/ui-open.ogg",
+    "generator": "gen_table.ui_open",
+    "seed": 84130,
+    "params": {},
+    "category": "ui",
+    "measure": "M200max",
+    "target_lufs": -26.0,
+    "raw_lufs": -20.73,
+    "gain_db": -5.27,
+    "peak_limited_db": 0.0,
+    "final_lufs": -26.29,
+    "decoded_peak_dbfs": -6.38,
+    "seconds": 0.2054,
+    "samples": 9056,
+    "channels": 1,
+    "bytes": 5364,
+    "sha256": "8b1e06dd63ce23f1",
+    "render_s": 0.01
+   }
+  ]
+ },
+ "win-sting": {
+  "category": "sting",
+  "description": "happy little accordion phrase (musette)",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/win-sting-1.ogg",
+    "generator": "gen_stings.win_sting",
+    "seed": 78830,
+    "params": {},
+    "category": "sting",
+    "measure": "M200max",
+    "target_lufs": -18.0,
+    "raw_lufs": 9.65,
+    "gain_db": -27.65,
+    "peak_limited_db": 0.0,
+    "final_lufs": -18.02,
+    "decoded_peak_dbfs": -5.91,
+    "seconds": 2.2677,
+    "samples": 100004,
+    "channels": 2,
+    "bytes": 33375,
+    "sha256": "be6397bd311b8e8d",
+    "render_s": 0.56
+   },
+   {
+    "file": "audio/sfx/win-sting-2.ogg",
+    "generator": "gen_stings.win_sting",
+    "seed": 78831,
+    "params": {
+     "tune": 2
+    },
+    "category": "sting",
+    "measure": "M200max",
+    "target_lufs": -18.0,
+    "raw_lufs": 10.72,
+    "gain_db": -28.72,
+    "peak_limited_db": 0.0,
+    "final_lufs": -18.01,
+    "decoded_peak_dbfs": -6.91,
+    "seconds": 2.4223,
+    "samples": 106822,
+    "channels": 2,
+    "bytes": 34553,
+    "sha256": "a949935b31e74356",
+    "render_s": 0.52
+   }
+  ]
+ },
+ "lose-sting": {
+  "category": "sting",
+  "description": "good-natured muted trombone 'wah wah wah waaah'",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/lose-sting.ogg",
+    "generator": "gen_stings.lose_sting",
+    "seed": 61090,
+    "params": {},
+    "category": "sting",
+    "measure": "M200max",
+    "target_lufs": -18.0,
+    "raw_lufs": 7.17,
+    "gain_db": -25.17,
+    "peak_limited_db": 0.0,
+    "final_lufs": -18.01,
+    "decoded_peak_dbfs": -8.72,
+    "seconds": 2.6985,
+    "samples": 119005,
+    "channels": 2,
+    "bytes": 36452,
+    "sha256": "330d14202566735c",
+    "render_s": 0.19
+   }
+  ]
+ },
+ "trophy-fanfare": {
+  "category": "sting",
+  "description": "small brass-band fanfare with tuba, horns, cymbal",
+  "loop": false,
+  "variants": [
+   {
+    "file": "audio/sfx/trophy-fanfare.ogg",
+    "generator": "gen_stings.trophy_fanfare",
+    "seed": 27100,
+    "params": {},
+    "category": "sting",
+    "measure": "M200max",
+    "target_lufs": -18.0,
+    "raw_lufs": 8.78,
+    "gain_db": -26.78,
+    "peak_limited_db": 0.0,
+    "final_lufs": -18.02,
+    "decoded_peak_dbfs": -9.64,
+    "seconds": 3.8026,
+    "samples": 167693,
+    "channels": 2,
+    "bytes": 53920,
+    "sha256": "b20c98827eca7eae",
+    "render_s": 0.8
+   }
+  ]
+ },
+ "inn-murmur-busy": {
+  "category": "room",
+  "description": "livelier: a big hall full of talking people (Festzelt/Wasen feel), no music",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/inn-murmur-busy.ogg",
+    "generator": "rec.room_loop",
+    "seed": 53890,
+    "params": {
+     "source": "fs641303",
+     "start": 35.0,
+     "length": 30.0,
+     "highcut": 2400.0
+    },
+    "category": "room",
+    "measure": "integrated",
+    "target_lufs": -35.0,
+    "raw_lufs": -30.37,
+    "gain_db": -4.63,
+    "peak_limited_db": 0.0,
+    "final_lufs": -35.14,
+    "decoded_peak_dbfs": -21.51,
+    "seconds": 30.0,
+    "samples": 1323000,
+    "channels": 2,
+    "bytes": 312922,
+    "sha256": "dd9cc70364aeb2dc",
+    "render_s": 1.43,
+    "model": "none (field recording, processed)",
+    "sources": [
+     {
+      "freesound_id": 641303,
+      "title": "big crowd in a hall talking",
+      "author": "Garuda1982",
+      "url": "https://freesound.org/people/Garuda1982/sounds/641303/",
+      "preview": "https://cdn.freesound.org/previews/641/641303_2061858-hq.ogg",
+      "sha256": "7ba6ec6588235e0c4b066eec6880c0a44c940efb04e3d5a71b1d2c75de03a6ad",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Big crowd talking in a hall, Gewandhaus Leipzig (Olympus LS-P4, two EM272, AB stereo).",
+      "key": "fs641303"
+     }
+    ],
+    "processing": "segment start/length from params; slow leveller on bursts; high-pass 110 Hz; low-pass 2400.0 Hz (12 dB/oct, words blur); presence shelf; stereo width 0.5; equal-power loop crossfade 3.0 s; loudness to the room target; OGG Vorbis",
+    "seam_score": 0.43
+   }
+  ]
+ },
+ "beergarden": {
+  "category": "room",
+  "description": "outdoor beer garden by the river: distant voices, birds, a little air",
+  "loop": true,
+  "variants": [
+   {
+    "file": "audio/sfx/beergarden.ogg",
+    "generator": "rec.room_loop",
+    "seed": 12360,
+    "params": {
+     "source": "fs735593",
+     "start": 35.0,
+     "length": 30.0,
+     "highcut": 5500.0,
+     "lowcut": 160.0,
+     "presence_db": -2.0,
+     "stereo_width": 0.6
+    },
+    "category": "room",
+    "measure": "integrated",
+    "target_lufs": -36.0,
+    "raw_lufs": -41.53,
+    "gain_db": 5.53,
+    "peak_limited_db": 0.0,
+    "final_lufs": -36.12,
+    "decoded_peak_dbfs": -22.5,
+    "seconds": 30.0,
+    "samples": 1323000,
+    "channels": 2,
+    "bytes": 395961,
+    "sha256": "be728686032e3355",
+    "render_s": 35.15,
+    "model": "none (field recording, processed)",
+    "sources": [
+     {
+      "freesound_id": 735593,
+      "title": "Restaurant outside by the river atmosphere with people talking",
+      "author": "Garuda1982",
+      "url": "https://freesound.org/people/Garuda1982/sounds/735593/",
+      "preview": "https://cdn.freesound.org/previews/735/735593_2061858-hq.ogg",
+      "sha256": "fcd318b0a5d389e7308c1ea2d90cb4e04b9de965d2d3e26d5cacd70ab4902884",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Outdoor restaurant by the river, Leipzig, 15 April 2024, evening; voices and birds (Sony PCM-M10).",
+      "key": "fs735593"
+     }
+    ],
+    "processing": "segment start/length from params; slow leveller on bursts; high-pass 160.0 Hz; low-pass 5500.0 Hz (12 dB/oct, words blur); presence shelf; stereo width 0.6; equal-power loop crossfade 3.0 s; loudness to the room target; OGG Vorbis",
+    "seam_score": 0.12
+   }
+  ]
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "image": "van.png",
+ "scale": 2,
+ "size": {"w":742,"h":384},
+ "frames": {
+  "marker-camper": {"x":0,"y":0,"w":80,"h":48,"ax":40,"ay":47},
+  "marker-bike": {"x":82,"y":0,"w":80,"h":48,"ax":40,"ay":39},
+  "marker-rig": {"x":164,"y":0,"w":80,"h":48,"ax":40,"ay":38},
+  "wheel-0": {"x":0,"y":50,"w":48,"h":48,"ax":24,"ay":24},
+  "wheel-1": {"x":50,"y":50,"w":48,"h":48,"ax":24,"ay":24},
+  "wheel-2": {"x":100,"y":50,"w":48,"h":48,"ax":24,"ay":24},
+  "wheel-3": {"x":150,"y":50,"w":48,"h":48,"ax":24,"ay":24},
+  "wheel-sm-0": {"x":200,"y":50,"w":18,"h":18,"ax":9,"ay":9},
+  "wheel-sm-1": {"x":220,"y":50,"w":18,"h":18,"ax":9,"ay":9},
+  "wheel-sm-2": {"x":240,"y":50,"w":18,"h":18,"ax":9,"ay":9},
+  "wheel-sm-3": {"x":260,"y":50,"w":18,"h":18,"ax":9,"ay":9},
+  "puff-0": {"x":280,"y":50,"w":40,"h":40,"ax":20,"ay":24},
+  "puff-1": {"x":322,"y":50,"w":40,"h":40,"ax":20,"ay":24},
+  "puff-2": {"x":364,"y":50,"w":40,"h":40,"ax":20,"ay":24},
+  "puff-3": {"x":406,"y":50,"w":40,"h":40,"ax":20,"ay":24},
+  "puff-4": {"x":448,"y":50,"w":40,"h":40,"ax":20,"ay":24},
+  "camper": {"x":0,"y":100,"w":360,"h":200,"ax":180,"ay":194,"wheels":[[128,170,24],[312,170,24]],"exhaust":[72,164],"dogWindow":[288,98],"namePlate":[88,132,60,14],"roofBox":[180,32],"awning":[164,50],"auxTank":[242,146],"radio":[320,76],"fridge":[260,98]},
+  "bike": {"x":362,"y":100,"w":159,"h":109,"ax":79,"ay":107,"exhaust":[16,67]},
+  "rig": {"x":523,"y":100,"w":219,"h":116,"ax":79,"ay":114},
+  "aux-tank": {"x":0,"y":302,"w":52,"h":36,"ax":-36,"ay":66,"anchoredTo":"camper"},
+  "roof-box": {"x":54,"y":302,"w":168,"h":37,"ax":85,"ay":189,"anchoredTo":"camper"},
+  "awning": {"x":224,"y":302,"w":168,"h":30,"ax":100,"ay":150,"anchoredTo":"camper"},
+  "radio": {"x":394,"y":302,"w":17,"h":68,"ax":-134,"ay":185,"anchoredTo":"camper"},
+  "fridge": {"x":413,"y":302,"w":24,"h":20,"ax":-68,"ay":106,"anchoredTo":"camper"},
+  "dog-bed": {"x":439,"y":302,"w":25,"h":29,"ax":-102,"ay":115,"anchoredTo":"camper"},
+  "sidecar": {"x":466,"y":302,"w":135,"h":82,"ax":-3,"ay":112,"anchoredTo":"bike","drawBefore":true}
+ },
+ "anims": {
+  "wheel": {"frames":["wheel-0","wheel-1","wheel-2","wheel-3"],"fps":12,"loop":true},
+  "wheel-sm": {"frames":["wheel-sm-0","wheel-sm-1","wheel-sm-2","wheel-sm-3"],"fps":12,"loop":true},
+  "puff": {"frames":["puff-0","puff-1","puff-2","puff-3","puff-4"],"fps":8,"loop":false}
+ },
+ "groups": {
+  "markers": {"x":0,"y":0,"w":244,"h":48},
+  "anims": {"x":0,"y":50,"w":488,"h":48},
+  "vehicles": {"x":0,"y":100,"w":742,"h":200},
+  "overlays": {"x":0,"y":302,"w":601,"h":82}
+ }
+}

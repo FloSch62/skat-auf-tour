@@ -1,0 +1,929 @@
+{
+ "inns/village": {
+  "cand": "village-fix-1195093456.png",
+  "note": "masked repaint: clock with tick marks only",
+  "params": {}
+ },
+ "inns/besen": {
+  "cand": "besen-p-179762243.png"
+ },
+ "inns/bikers": {
+  "cand": "bikers-p-1338364945.png",
+  "note": "pL drew a flat orange wall across the middle"
+ },
+ "inns/campsite": {
+  "cand": "campsite-p-1751223232.png",
+  "note": "pL kept the layout's flat blue cloth as a blank lower half"
+ },
+ "inns/station": {
+  "cand": "station-fix-981199469.png",
+  "note": "masked repaint (clock numerals gone); a new plaque and a notice still softened",
+  "params": {
+   "retouch": [
+    [
+     700,
+     360,
+     155,
+     162
+    ],
+    [
+     1820,
+     505,
+     98,
+     136
+    ]
+   ]
+  }
+ },
+ "inns/tent": {
+  "cand": "tent-fix-227798846.png",
+  "params": {
+   "retouch": [
+    [
+     372,
+     525,
+     58,
+     92
+    ],
+    [
+     562,
+     525,
+     40,
+     64
+    ],
+    [
+     1782,
+     595,
+     40,
+     44
+    ],
+    [
+     1953,
+     595,
+     40,
+     44
+    ],
+    [
+     2195,
+     588,
+     40,
+     50
+    ],
+    [
+     2446,
+     566,
+     56,
+     66
+    ],
+    [
+     2520,
+     580,
+     40,
+     75
+    ]
+   ]
+  },
+  "note": "masked repaint of the wall notices, then softened"
+ },
+ "inns/beergarden": {
+  "cand": "beergarden-pL-224728159.png",
+  "note": "calmer lower half than p"
+ },
+ "inns/canteen": {
+  "cand": "canteen-fix-1529898623.png",
+  "params": {
+   "retouch": [
+    [
+     1846,
+     535,
+     40,
+     56
+    ]
+   ]
+  },
+  "note": "masked repaint (clock, pin board); door notice softened"
+ },
+ "inns/clubhouse": {
+  "cand": "clubhouse-fix-264510703.png",
+  "note": "masked repaint; pennant inscriptions still softened",
+  "params": {
+   "retouch": [
+    [
+     1020,
+     500,
+     320,
+     280,
+     3.5
+    ],
+    [
+     1355,
+     495,
+     165,
+     210,
+     3
+    ]
+   ]
+  }
+ },
+ "portraits/grandspieler": {
+  "cand": "grandspieler-p-193996075.png",
+  "note": "red braces as in the brief"
+ },
+ "portraits/lehrer": {
+  "cand": "lehrer-p-1384132670.png"
+ },
+ "portraits/maurer": {
+  "cand": "maurer-p-1631895558.png",
+  "note": "plain cap reads cleaner than the study's tweed"
+ },
+ "portraits/neuling": {
+  "cand": "neuling-p-1832420628.png"
+ },
+ "portraits/nullfuchs": {
+  "cand": "nullfuchs-p-231123110.png",
+  "note": "the fox-like pointed nose"
+ },
+ "portraits/rechnerin": {
+  "cand": "rechnerin-p-269102472.png"
+ },
+ "portraits/schlitzohr": {
+  "cand": "schlitzohr-p-1580343182.png",
+  "note": "the wink"
+ },
+ "portraits/schwaetzer": {
+  "cand": "schwaetzer-p-1571414023.png"
+ },
+ "portraits/zocker": {
+  "cand": "zocker-p-1288983868.png",
+  "note": "the other seed has a green key speck in the hair"
+ },
+ "portraits/wengerter": {
+  "cand": "wengerter-p-1834269269.png"
+ },
+ "portraits/muellerin": {
+  "cand": "muellerin-p-58571466.png"
+ },
+ "portraits/bahner": {
+  "cand": "bahner-p-1128281949.png"
+ },
+ "portraits/klosterwirt": {
+  "cand": "klosterwirt-p-904766600.png"
+ },
+ "portraits/floesser": {
+  "cand": "floesser-p-471443699.png"
+ },
+ "portraits/brenner": {
+  "cand": "brenner-p-1867216890.png"
+ },
+ "portraits/wasenwirt": {
+  "cand": "wasenwirt-p-221000071.png"
+ },
+ "portraits/schaffnerin": {
+  "cand": "schaffnerin-p-151742565.png"
+ },
+ "portraits/schultes": {
+  "cand": "schultes-p-612633365.png"
+ },
+ "portraits/amtsbote": {
+  "cand": "amtsbote-p-1994836090.png"
+ },
+ "portraits/kommandant": {
+  "cand": "kommandant-p-370706035.png"
+ },
+ "portraits/wirtin": {
+  "cand": "wirtin-p-1636621649.png"
+ },
+ "portraits/altmeister": {
+  "cand": "altmeister-p-1376415276.png"
+ },
+ "portraits/wachtmeister": {
+  "cand": "wachtmeister-p-1089575108.png"
+ },
+ "portraits/anwaerter": {
+  "cand": "anwaerter-p-1894157407.png"
+ },
+ "portraits/biker-manne": {
+  "cand": "biker-manne-p-595141220.png"
+ },
+ "portraits/biker-uschi": {
+  "cand": "biker-uschi-p-293965885.png"
+ },
+ "portraits/meister": {
+  "cand": "meister-p-924323385.png"
+ },
+ "portraits/lehrling": {
+  "cand": "lehrling-p-1219524726.png"
+ },
+ "portraits/flohmarkt": {
+  "cand": "flohmarkt-p-1395454306.png"
+ },
+ "bg/kitchen": {
+  "cand": "kitchen-erase2-294799175.png",
+  "params": {
+   "camper": {
+    "x": 560,
+    "ground": 726,
+    "width": 470
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from kitchen-pL-75265909.png by a seam-free masked repaint (erase2: the whole window pane [178, 165, 690, 573], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/title": {
+  "cand": "title-erase2-1041907312.png",
+  "params": {
+   "camper": {
+    "x": 1560,
+    "ground": 1352,
+    "width": 430,
+    "tint": [
+     1.0,
+     0.93,
+     0.82
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from title-pL-73438453.png by a seam-free masked repaint (erase2: prefilled box [1320, 1050, 470, 330], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/pitch-enztal": {
+  "cand": "pitch-enztal-erase2-1324860108.png",
+  "params": {
+   "camper": {
+    "x": 560,
+    "ground": 1250,
+    "width": 660,
+    "tint": [
+     1.0,
+     0.94,
+     0.84
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from pitch-enztal-p-640336723.png by a seam-free masked repaint (erase2: prefilled box [160, 650, 870, 540], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/pitch-muehlacker": {
+  "cand": "pitch-muehlacker-erase2-1369627968.png",
+  "params": {
+   "camper": {
+    "x": 520,
+    "ground": 1250,
+    "width": 760,
+    "tint": [
+     1.0,
+     0.95,
+     0.86
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from pitch-muehlacker-p-1194835312.png by a seam-free masked repaint (erase2: prefilled box [55, 660, 860, 510], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/pitch-schwarzwald": {
+  "cand": "pitch-schwarzwald-erase2-1329093203.png",
+  "params": {
+   "camper": {
+    "x": 470,
+    "ground": 1200,
+    "width": 780,
+    "tint": [
+     0.84,
+     0.84,
+     0.88
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from pitch-schwarzwald-p-744030148.png by a seam-free masked repaint (erase2: prefilled box [50, 720, 850, 570], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/pitch-stuttgart": {
+  "cand": "pitch-stuttgart-erase2-285599589.png",
+  "params": {
+   "camper": {
+    "x": 615,
+    "ground": 1240,
+    "width": 940,
+    "tint": [
+     0.66,
+     0.64,
+     0.7
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from pitch-stuttgart-pL-713941297.png by a seam-free masked repaint (erase2: prefilled box [195, 830, 880, 460], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/homecoming": {
+  "cand": "homecoming-erase2-1058654632.png",
+  "params": {
+   "camper": {
+    "x": 520,
+    "ground": 1250,
+    "width": 880,
+    "tint": [
+     0.66,
+     0.64,
+     0.7
+    ]
+   }
+  },
+  "note": "Krea's stand-in vehicle removed from homecoming-p-153567595.png by a seam-free masked repaint (erase2: prefilled box [0, 715, 1030, 575], soft mask, tools/art/erase.py), then the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "bg/kiosk": {
+  "cand": "kiosk-fix-1855722724.png",
+  "erase": [
+   [
+    500,
+    400,
+    1380,
+    330
+   ]
+  ],
+  "erase_prompt": "Two shelves in a small street kiosk filled with big glass jars of colourful sweets, small tin boxes, wooden toys, rubber balls and paper bags, no magazines, no books, no newspapers, no labels.",
+  "params": {
+   "retouch": [
+    [
+     520,
+     365,
+     1360,
+     55,
+     6
+    ]
+   ]
+  },
+  "note": "magazine shelves repainted as sweet jars (masked repaint); shelf labels softened"
+ },
+ "bg/bikers": {
+  "cand": "bikers-p-93194536.png"
+ },
+ "bg/park": {
+  "cand": "park-p-1594873770.png"
+ },
+ "bg/trophy": {
+  "cand": "trophy-pL-906823537.png",
+  "note": "p has a lettered poster"
+ },
+ "bg/dogs": {
+  "cand": "dogs-pL-655254109.png"
+ },
+ "bg/market": {
+  "cand": "market-pL-14808843.png"
+ },
+ "bg/garage": {
+  "cand": "garage-p-1182829812.png",
+  "params": {
+   "retouch": [
+    [
+     878,
+     515,
+     95,
+     135
+    ],
+    [
+     1455,
+     355,
+     160,
+     95
+    ]
+   ]
+  },
+  "note": "wall note and framed notice softened"
+ },
+ "dogs/shepherd": {
+  "cand": "shepherd-p-1249562180.png"
+ },
+ "dogs/wolfhound-a": {
+  "cand": "wolfhound-a-p-267746951.png"
+ },
+ "dogs/wolfhound-b": {
+  "cand": "wolfhound-b-p-168514411.png"
+ },
+ "dogs/airedale": {
+  "cand": "airedale-p-907081566.png"
+ },
+ "dogs/schnauzer-a": {
+  "cand": "schnauzer-a-p-454154301.png"
+ },
+ "dogs/schnauzer-b": {
+  "cand": "schnauzer-b-p-190028375.png"
+ },
+ "van/van": {
+  "cand": "van-p-52536927.png"
+ },
+ "van/bike": {
+  "cand": "bike-p-1552449094.png"
+ },
+ "van/rig": {
+  "cand": "rig-p-773852610.png"
+ },
+ "events/vineyard": {
+  "cand": "vineyard-p-954159923.png"
+ },
+ "events/besen": {
+  "cand": "besen-p-1340354071.png"
+ },
+ "events/cellar": {
+  "cand": "cellar-p-1246756036.png"
+ },
+ "events/hocketse": {
+  "cand": "hocketse-p-1836120409.png"
+ },
+ "events/pitch-rain": {
+  "cand": "pitch-rain-p-454768396.png"
+ },
+ "events/kehrwoche": {
+  "cand": "kehrwoche-p-491912852.png"
+ },
+ "events/traffic-jam": {
+  "cand": "traffic-jam-p-239168747.png"
+ },
+ "events/rathaus": {
+  "cand": "rathaus-p-771373528.png"
+ },
+ "events/exhaust": {
+  "cand": "exhaust-p-200873189.png"
+ },
+ "events/petrol-station": {
+  "cand": "petrol-station-p-164159666.png",
+  "params": {
+   "retouch": [
+    [
+     1960,
+     520,
+     80,
+     100,
+     5
+    ]
+   ]
+  },
+  "note": "pseudo-lettering softened"
+ },
+ "events/bike-curves": {
+  "cand": "bike-curves-p-1481386766.png"
+ },
+ "events/bike-meet": {
+  "cand": "bike-meet-p-1015450478.png"
+ },
+ "events/bike-roadside": {
+  "cand": "bike-roadside-p-480214600.png"
+ },
+ "events/phone-booth": {
+  "cand": "phone-booth-p-379812880.png"
+ },
+ "events/shelter": {
+  "cand": "shelter-p-1593244238.png"
+ },
+ "events/dog-meadow": {
+  "cand": "dog-meadow-p-603839569.png"
+ },
+ "events/dog-thief": {
+  "cand": "dog-thief-p-1051951327.png",
+  "params": {
+   "retouch": [
+    [
+     230,
+     40,
+     180,
+     170,
+     6
+    ],
+    [
+     1360,
+     40,
+     110,
+     130,
+     6
+    ]
+   ]
+  },
+  "note": "pseudo-lettering softened"
+ },
+ "events/visit": {
+  "cand": "visit-p-1639982379.png"
+ },
+ "events/hitchhiker": {
+  "cand": "hitchhiker-p-138706202.png"
+ },
+ "events/kiosk": {
+  "cand": "kiosk-p-1648572420.png",
+  "params": {
+   "retouch": [
+    [
+     290,
+     135,
+     300,
+     140,
+     6
+    ],
+    [
+     1580,
+     280,
+     250,
+     90,
+     6
+    ]
+   ]
+  },
+  "note": "pseudo-lettering softened"
+ },
+ "events/inn-stube": {
+  "cand": "inn-stube-p-572411302.png"
+ },
+ "events/monastery": {
+  "cand": "monastery-p-1295414746.png"
+ },
+ "events/railway": {
+  "cand": "railway-p-339923052.png"
+ },
+ "events/orchard": {
+  "cand": "orchard-p-304649124.png"
+ },
+ "events/distillery": {
+  "cand": "distillery-p-149752655.png",
+  "params": {
+   "retouch": [
+    [
+     840,
+     0,
+     140,
+     80,
+     5
+    ]
+   ]
+  },
+  "note": "pseudo-lettering softened"
+ },
+ "events/raft": {
+  "cand": "raft-p-1093756319.png"
+ },
+ "events/spa": {
+  "cand": "spa-p-272438727.png"
+ },
+ "events/wasen": {
+  "cand": "wasen-p-168023148.png"
+ },
+ "events/factory-gate": {
+  "cand": "factory-gate-p-1749658493.png"
+ },
+ "events/flea-market": {
+  "cand": "flea-market-p-1165830828.png"
+ },
+ "items/reading-glasses": {
+  "cand": "reading-glasses-p-210771471.png"
+ },
+ "items/notepad": {
+  "cand": "notepad-p-631855922.png"
+ },
+ "items/lucky-penny": {
+  "cand": "lucky-penny-p-1461754162.png"
+ },
+ "items/thermos": {
+  "cand": "thermos-p-558579812.png"
+ },
+ "items/road-atlas": {
+  "cand": "road-atlas-p-1610198243.png"
+ },
+ "items/piggy-bank": {
+  "cand": "piggy-bank-p-435749779.png"
+ },
+ "items/pennant": {
+  "cand": "pennant-p-1064876236.png"
+ },
+ "items/chess-clock": {
+  "cand": "chess-clock-p-44870296.png"
+ },
+ "items/pencil": {
+  "cand": "pencil-p-610977449.png"
+ },
+ "items/snack-board": {
+  "cand": "snack-board-p-1118652759.png"
+ },
+ "items/dog-whistle": {
+  "cand": "dog-whistle-p-410664239.png"
+ },
+ "items/postcard": {
+  "cand": "postcard-p-84982843.png"
+ },
+ "items/oil-can": {
+  "cand": "oil-can-p-68147344.png"
+ },
+ "items/magnifier": {
+  "cand": "magnifier-p-252141174.png"
+ },
+ "items/grand-bonus": {
+  "cand": "grand-bonus-p-1204574350.png"
+ },
+ "items/null-bonus": {
+  "cand": "null-bonus-p-401859314.png"
+ },
+ "items/hand-bonus": {
+  "cand": "hand-bonus-p-253763549.png"
+ },
+ "items/schneider-bonus": {
+  "cand": "schneider-bonus-p-1493402982.png"
+ },
+ "items/redeal": {
+  "cand": "redeal-p-1487387134.png"
+ },
+ "items/extra-game": {
+  "cand": "extra-game-p-1279840970.png"
+ },
+ "items/forehand": {
+  "cand": "forehand-p-1857436881.png"
+ },
+ "items/double-pot": {
+  "cand": "double-pot-p-1671614006.png"
+ },
+ "items/aux-tank": {
+  "cand": "aux-tank-p-617475351.png"
+ },
+ "items/roof-box": {
+  "cand": "roof-box-p-426825122.png"
+ },
+ "items/dog-bed": {
+  "cand": "dog-bed-p-533780133.png"
+ },
+ "items/awning": {
+  "cand": "awning-p-1084778763.png"
+ },
+ "items/fridge": {
+  "cand": "fridge-p-776899504.png"
+ },
+ "items/radio": {
+  "cand": "radio-p-460835411.png"
+ },
+ "items/sidecar": {
+  "cand": "sidecar-p-1482389409.png"
+ },
+ "trophies/enztal": {
+  "cand": "enztal-p-25943690.png"
+ },
+ "trophies/muehlacker": {
+  "cand": "muehlacker-p-961715294.png"
+ },
+ "trophies/schwarzwald": {
+  "cand": "schwarzwald-p-453496602.png"
+ },
+ "trophies/stuttgart": {
+  "cand": "stuttgart-p-219501891.png"
+ },
+ "trophies/wander": {
+  "cand": "wander-p-831507182.png"
+ },
+ "events/road-enz": {
+  "cand": "road-enz-pn-642763915.png",
+  "params": {
+   "camper": {
+    "x": 1230,
+    "ground": 900,
+    "width": 1020
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/village-square": {
+  "cand": "village-square-pn-211078817.png",
+  "params": {
+   "camper": {
+    "x": 1950,
+    "ground": 1000,
+    "width": 900
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/pitch-evening": {
+  "cand": "pitch-evening-pn-537165535.png",
+  "params": {
+   "camper": {
+    "x": 720,
+    "ground": 900,
+    "width": 1180,
+    "tint": [
+     0.8,
+     0.78,
+     0.74
+    ]
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/sheep": {
+  "cand": "sheep-pn-1650402567.png",
+  "params": {
+   "camper": {
+    "x": 1900,
+    "ground": 900,
+    "width": 900
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/police": {
+  "cand": "police-pn-52379972.png",
+  "params": {
+   "camper": {
+    "x": 680,
+    "ground": 860,
+    "width": 900
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/hungary-road": {
+  "cand": "hungary-road-pn-751809632.png",
+  "params": {
+   "camper": {
+    "x": 1750,
+    "ground": 1050,
+    "width": 860
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/van-breakdown": {
+  "cand": "van-breakdown-pn-545392785.png",
+  "params": {
+   "camper": {
+    "x": 1000,
+    "ground": 780,
+    "width": 800
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/forest-road": {
+  "cand": "forest-road-pn-1517276722.png",
+  "params": {
+   "camper": {
+    "x": 1280,
+    "ground": 1010,
+    "width": 860
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/staeffele": {
+  "cand": "staeffele-pn-173409636.png",
+  "params": {
+   "camper": {
+    "x": 1260,
+    "ground": 1000,
+    "width": 900
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "events/city": {
+  "cand": "city-pn-382316264.png",
+  "params": {
+   "camper": {
+    "x": 1450,
+    "ground": 900,
+    "width": 760
+   }
+  },
+  "note": "rendered without vehicles (pn), the composed camper (crosswise rear carrier, bike head-on) pasted by tools/art/compose.py"
+ },
+ "items/defence-bonus": {
+  "cand": "defence-bonus-pb-287748195.png",
+  "note": "blue key (the green coaster vanished on the green key)"
+ },
+ "dogs/shepherd-sit": {
+  "cand": "shepherd-sit-p-1920218493.png"
+ },
+ "dogs/shepherd-lie": {
+  "cand": "shepherd-lie-pr-1790579409.png"
+ },
+ "dogs/shepherd-ears": {
+  "cand": "shepherd-ears-p-271264378.png"
+ },
+ "dogs/shepherd-bark": {
+  "cand": "shepherd-bark-p-327586197.png"
+ },
+ "dogs/shepherd-sleep": {
+  "cand": "shepherd-sleep-pr-1497828953.png"
+ },
+ "dogs/shepherd-window": {
+  "cand": "shepherd-window-pr-1800156153.png"
+ },
+ "dogs/wolfhound-a-sit": {
+  "cand": "wolfhound-a-sit-pr-1718098696.png"
+ },
+ "dogs/wolfhound-a-lie": {
+  "cand": "wolfhound-a-lie-p-1279092026.png"
+ },
+ "dogs/wolfhound-a-ears": {
+  "cand": "wolfhound-a-ears-p-825664464.png"
+ },
+ "dogs/wolfhound-a-bark": {
+  "cand": "wolfhound-a-bark-pr-1232362112.png"
+ },
+ "dogs/wolfhound-a-sleep": {
+  "cand": "wolfhound-a-sleep-pr-401470499.png"
+ },
+ "dogs/wolfhound-a-window": {
+  "cand": "wolfhound-a-window-pr-958288091.png"
+ },
+ "dogs/wolfhound-b-sit": {
+  "cand": "wolfhound-b-sit-pr-1372109.png"
+ },
+ "dogs/wolfhound-b-lie": {
+  "cand": "wolfhound-b-lie-pr-388964629.png"
+ },
+ "dogs/wolfhound-b-ears": {
+  "cand": "wolfhound-b-ears-pr-133123299.png"
+ },
+ "dogs/wolfhound-b-bark": {
+  "cand": "wolfhound-b-bark-pr-1258957462.png"
+ },
+ "dogs/wolfhound-b-sleep": {
+  "cand": "wolfhound-b-sleep-pr-1842993429.png"
+ },
+ "dogs/wolfhound-b-window": {
+  "cand": "wolfhound-b-window-pr-802113738.png"
+ },
+ "dogs/airedale-sit": {
+  "cand": "airedale-sit-pr-1112136825.png"
+ },
+ "dogs/airedale-lie": {
+  "cand": "airedale-lie-pr-1093214690.png"
+ },
+ "dogs/airedale-ears": {
+  "cand": "airedale-ears-pr-1811852767.png"
+ },
+ "dogs/airedale-bark": {
+  "cand": "airedale-bark-pr-131197222.png"
+ },
+ "dogs/airedale-sleep": {
+  "cand": "airedale-sleep-pr-1081791237.png"
+ },
+ "dogs/airedale-window": {
+  "cand": "airedale-window-pr-1279475086.png"
+ },
+ "dogs/schnauzer-a-sit": {
+  "cand": "schnauzer-a-sit-p-1977722759.png"
+ },
+ "dogs/schnauzer-a-lie": {
+  "cand": "schnauzer-a-lie-pr-913239589.png"
+ },
+ "dogs/schnauzer-a-ears": {
+  "cand": "schnauzer-a-ears-pr-1348407834.png"
+ },
+ "dogs/schnauzer-a-bark": {
+  "cand": "schnauzer-a-bark-pr-326660336.png"
+ },
+ "dogs/schnauzer-a-window": {
+  "cand": "schnauzer-a-window-pr-939544451.png"
+ },
+ "dogs/schnauzer-b-sit": {
+  "cand": "schnauzer-b-sit-pr-1559824414.png"
+ },
+ "dogs/schnauzer-b-lie": {
+  "cand": "schnauzer-b-lie-pr-1204686608.png"
+ },
+ "dogs/schnauzer-b-ears": {
+  "cand": "schnauzer-b-ears-pr-691677216.png"
+ },
+ "dogs/schnauzer-b-bark": {
+  "cand": "schnauzer-b-bark-pr-1835510139.png"
+ },
+ "dogs/schnauzer-b-window": {
+  "cand": "schnauzer-b-window-pr-279949239.png"
+ },
+ "maps/enztal": {
+  "cand": "enztal-pL-1453799653.png",
+  "params": {
+   "harmonize": 0.0
+  },
+  "note": "atlas sheet: landscape only (rivers, forests, vineyards, hills), no roads, no settlements, no lettering"
+ },
+ "maps/muehlacker": {
+  "cand": "muehlacker-pL-1213825030.png",
+  "params": {
+   "harmonize": 0.0
+  },
+  "note": "atlas sheet: landscape only (rivers, forests, vineyards, hills), no roads, no settlements, no lettering"
+ },
+ "maps/schwarzwald": {
+  "cand": "schwarzwald-pL-880777397.png",
+  "params": {
+   "harmonize": 0.0
+  },
+  "note": "atlas sheet: landscape only (rivers, forests, vineyards, hills), no roads, no settlements, no lettering"
+ },
+ "maps/stuttgart": {
+  "cand": "stuttgart-pL-1922556612.png",
+  "params": {
+   "harmonize": 0.0
+  },
+  "note": "atlas sheet: landscape only (rivers, forests, vineyards, hills), no roads, no settlements, no lettering"
+ },
+ "dogs/schnauzer-a-sleep": {
+  "cand": "schnauzer-a-sleep-px-745085682.png",
+  "note": "EXCEPTION to the 2-candidate cap, approved by the user on 4 Oct 2026 (\"Ja du darfst die fehlenden 2 Bilder nachholen\"): third candidate (version px, strong sleep wording + the dog's portrait as reference); the first two candidates showed a sitting dog / a portrait close-up"
+ },
+ "dogs/schnauzer-b-sleep": {
+  "cand": "schnauzer-b-sleep-px-318377177.png",
+  "note": "EXCEPTION to the 2-candidate cap, approved by the user on 4 Oct 2026 (\"Ja du darfst die fehlenden 2 Bilder nachholen\"): third candidate (version px, strong sleep wording + the dog's portrait as reference); the first two candidates showed a sitting dog / a portrait close-up"
+ },
+ "van/bike-front": {
+  "cand": "bike-front-pr-1941185023.png",
+  "note": "the van/bike pick seen head-on (pr: with the side-view pick as reference), for the crosswise rear carrier"
+ }
+}

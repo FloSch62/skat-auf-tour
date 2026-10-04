@@ -1,0 +1,84 @@
+{
+ "kitchen": {
+  "source": "kitchen-pL-75265909.png",
+  "box": [
+   178,
+   165,
+   690,
+   573
+  ],
+  "clip": [
+   178,
+   165,
+   690,
+   573
+  ],
+  "prompt": "The view through a kitchen window onto an empty cobbled village street on a summer evening under a blue sky: the houses opposite with red tiled roofs, cream plaster and wooden doors, a big tree on the left, cobblestones in the sunlight."
+ },
+ "title": {
+  "source": "title-pL-73438453.png",
+  "box": [
+   1320,
+   1050,
+   470,
+   330
+  ],
+  "clip": null,
+  "prompt": "An empty country road winding down between vineyards in the warm sunset light, grass and wildflowers at the roadside, long shadows."
+ },
+ "pitch-enztal": {
+  "source": "pitch-enztal-p-640336723.png",
+  "box": [
+   160,
+   650,
+   870,
+   540
+  ],
+  "clip": null,
+  "prompt": "An empty gravel camper pitch by the river Enz on a warm evening: gravel, tufts of grass and wildflowers, the glittering river and a wooden fence behind, the low sun on the left."
+ },
+ "pitch-muehlacker": {
+  "source": "pitch-muehlacker-p-1194835312.png",
+  "box": [
+   55,
+   660,
+   860,
+   510
+  ],
+  "clip": null,
+  "prompt": "An empty gravel camper pitch on an orchard meadow on a warm evening: gravel, grass, wildflowers, the trunks of old apple trees behind."
+ },
+ "pitch-schwarzwald": {
+  "source": "pitch-schwarzwald-p-744030148.png",
+  "box": [
+   50,
+   720,
+   850,
+   570
+  ],
+  "clip": null,
+  "prompt": "An empty gravel camper pitch at the foot of a steep slope with dark fir trees in a Black Forest valley in the evening: gravel, grass, mossy stones, ferns."
+ },
+ "pitch-stuttgart": {
+  "source": "pitch-stuttgart-pL-713941297.png",
+  "box": [
+   195,
+   830,
+   880,
+   460
+  ],
+  "clip": null,
+  "prompt": "An empty quiet paved parking place at the edge of the hills above Stuttgart at night: a low wall, grass at its edge, the lit city roofs in the valley behind."
+ },
+ "homecoming": {
+  "source": "homecoming-p-153567595.png",
+  "box": [
+   0,
+   715,
+   1030,
+   575
+  ],
+  "clip": null,
+  "prompt": "An empty cobbled driveway in front of a garage and a half-timbered house at night, a low hedge and garden flowers at the left edge, warm light on the cobbles."
+ }
+}

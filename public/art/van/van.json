@@ -1,0 +1,40 @@
+{
+ "about": "Painted vehicles (2x density: 2 image px per layout unit), side view facing right. `camper` is the composed camper with the motorcycle on its crosswise rear carrier: draw it with its ground line on the road; `van` is the camper alone (its van offset inside `camper` is camper.van). ground = the y of the wheels' contact line in image px.",
+ "density": 2,
+ "van": {
+  "file": "van/van.webp",
+  "w": 360,
+  "h": 189,
+  "ground": 187
+ },
+ "bike": {
+  "file": "van/bike.webp",
+  "w": 160,
+  "h": 86,
+  "ground": 84
+ },
+ "rig": {
+  "file": "van/rig.webp",
+  "w": 220,
+  "h": 104,
+  "ground": 102
+ },
+ "rack": {
+  "x": 18,
+  "y": 150,
+  "bikeScale": 0.8,
+  "over": true,
+  "retired": "4 Oct 2026: the side-view bike over the rear wall was not a real carrier; use camper"
+ },
+ "camper": {
+  "file": "van/camper.webp",
+  "w": 395,
+  "h": 187,
+  "ground": 187,
+  "van": [
+   35,
+   0
+  ],
+  "note": "camper + crosswise rear carrier + the motorcycle seen head-on; draw this instead of van + rack (the rack anchor below is retired)"
+ }
+}

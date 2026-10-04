@@ -1,0 +1,17 @@
+{
+ "home": "enzweihingen",
+ "partner": "",
+ "child": "",
+ "van": "",
+ "bike": "",
+ "deck": "french",
+ "dogs": {
+  "shepherd": "Hasso",
+  "wolfhound-a": "Finn",
+  "wolfhound-b": "Bran",
+  "airedale": "Lumpi",
+  "schnauzer-a": "Bella",
+  "schnauzer-b": "Bruno"
+ },
+ "notes": {}
+}

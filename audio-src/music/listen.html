@@ -1,0 +1,128 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Musik audition</title>
+<style>
+body{font:15px system-ui;margin:24px;max-width:980px;background:#f6f1e7;color:#222}
+h1{margin:0 0 6px}h2{margin:28px 0 8px;font-size:18px}
+.card{background:#fffaf0;border:1px solid #d8cfbd;border-radius:6px;padding:10px 12px;margin:8px 0}
+.id{font-weight:700;font-size:16px}.use{color:#776;font-size:13px;margin-left:8px}
+.meta{color:#555;font-size:13px;margin:4px 0}.pos{font-variant-numeric:tabular-nums;color:#555;font-size:13px;margin-left:8px}
+button{margin:2px 4px 2px 0;padding:3px 10px;cursor:pointer}button.on{background:#2f6b4f;color:#fff;border-color:#2f6b4f}
+.take{border-top:1px dashed #ddd;padding:5px 0;font-size:13px}.pick{color:#2f6b4f;font-weight:700}
+.bad{color:#a33}.note{color:#555;font-size:13px;max-width:75ch}.desc{color:#666;font-style:italic;margin:2px 0 0 18px}
+#err{color:#a33}
+</style>
+<h1>SKAT AUF TOUR · Musik</h1>
+<p class=note>Dev page (not shipped): <code>npm run dev</code>, then <code>http://127.0.0.1:5191/audio-src/music/listen.html</code>.
+Top: the delivered files exactly as the game plays them (loop on the recorded points; layered pieces run both
+layers together and crossfade like <code>music.setLayer</code>). „Naht“ starts 4 s before the loop end, so you
+hear the jump back. Below: every candidate take (native YuE2 recording) with the analysis.
+Sound effects: <a href="../sfx/listen.html">SFX audition</a>.</p>
+<p id=err></p>
+<h2>Geliefert</h2><div id=delivered></div>
+<h2>Alle Takes</h2><div id=takes></div>
+<script>
+let ctx = null, cur = null, req = 0;
+const cache = {};
+const audioCtx = () => (ctx ??= new AudioContext());
+async function buf(path) {
+  cache[path] ??= fetch(path).then(r => { if (!r.ok) throw new Error(`cannot load ${path}`); return r.arrayBuffer(); })
+    .then(a => audioCtx().decodeAudioData(a));
+  return cache[path];
+}
+function stop() {
+  req++;
+  if (!cur) return;
+  for (const s of cur.srcs) { try { s.stop(); } catch (e) {} s.disconnect(); }
+  cur.btn?.classList.remove("on"); cur = null;
+}
+// layers: [{name, path, loop:{start,end}|null}], offset in seconds of the first layer
+async function play(layers, offset, btn, posEl, layer) {
+  stop(); const my = req; await audioCtx().resume();
+  const bufs = await Promise.all(layers.map(l => buf(l.path)));
+  if (my !== req) return;
+  const t0 = ctx.currentTime + 0.08, srcs = [], gains = {};
+  layers.forEach((l, i) => {
+    const s = ctx.createBufferSource(); s.buffer = bufs[i];
+    if (l.loop) { s.loop = true; s.loopStart = l.loop.start; s.loopEnd = l.loop.end; }
+    const g = ctx.createGain(); g.gain.value = layers.length === 1 || l.name === layer ? 1 : 0;
+    s.connect(g).connect(ctx.destination);
+    const off = layers.length > 1 && l.loop && offset > layers[0].loop?.start ? offset - layers[0].loop.end + l.loop.end : offset;
+    s.start(t0, Math.max(0, Math.min(off, bufs[i].duration - 0.1))); srcs.push(s); gains[l.name] = g;
+  });
+  btn?.classList.add("on");
+  cur = { srcs, gains, btn, posEl, t0, offset, loop: layers[0].loop, dur: bufs[0].duration };
+}
+function setLayer(name, fade = 3) {
+  if (!cur) return;
+  const t = ctx.currentTime;
+  for (const [k, g] of Object.entries(cur.gains)) {
+    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t);
+    g.gain.linearRampToValueAtTime(k === name ? 1 : 0, t + fade);
+  }
+}
+setInterval(() => {
+  if (!cur || !cur.posEl) return;
+  let t = ctx.currentTime - cur.t0 + cur.offset;
+  if (cur.loop && t > cur.loop.end) t = cur.loop.start + (t - cur.loop.start) % (cur.loop.end - cur.loop.start);
+  cur.posEl.textContent = `${t.toFixed(1)} s` + (cur.loop ? ` (Schleife ${cur.loop.start.toFixed(1)}–${cur.loop.end.toFixed(1)})` : "");
+}, 100);
+const fmt = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(0).padStart(2, "0")}`;
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+function button(label, fn) { const b = el("button", null, label); b.onclick = () => Promise.resolve(fn(b)).catch(e => { document.getElementById("err").textContent = e.message; }); return b; }
+
+Promise.all([fetch("/audio/music.json", { cache: "no-store" }).then(r => r.json()),
+             fetch("manifest.json", { cache: "no-store" }).then(r => r.ok ? r.json() : { pieces: {} })]).then(([music, man]) => {
+  const root = document.getElementById("delivered");
+  for (const [id, m] of Object.entries(music)) {
+    const info = man.pieces?.[id] ?? {};
+    const card = el("div", "card");
+    card.appendChild(el("span", "id", id)); card.appendChild(el("span", "use", info.use ?? ""));
+    const names = Object.keys(m.files);
+    const layers = names.map(n => {
+      const lp = (m.layers && m.layers[n]) || m;
+      return { name: n, path: "/" + m.files[n], loop: m.loop === false ? null : { start: lp.loopStart, end: lp.loopEnd } };
+    });
+    const per = names.map(n => { const lp = (m.layers && m.layers[n]) || m;
+      return `${names.length > 1 ? n + ": " : ""}${fmt(lp.duration)} · ${lp.bpm} BPM · ` +
+        (m.loop === false ? "spielt einmal" : `Schleife ${lp.loopStart.toFixed(2)}–${lp.loopEnd.toFixed(2)} s`); });
+    card.appendChild(el("div", "meta", `${m.key} · ${per.join(" | ")} · Takes ${Object.entries(m.takes || {}).map(([k, v]) => k + " " + v).join(", ")}` +
+      (m.synced === false ? " · Schichten getrennt eingespielt (synced: false)" : "")));
+    const row = el("div"); const pos = el("span", "pos");
+    let layer = "calm";
+    row.appendChild(button("▶ Anfang", b => play(layers, 0, b, pos, layer)));
+    if (m.loop !== false) row.appendChild(button("Naht", b => play(layers, m.loopEnd - 4, b, pos, layer)));
+    row.appendChild(button("■", () => stop()));
+    if (names.length > 1) {
+      row.appendChild(button("ruhig", () => { layer = "calm"; setLayer("calm"); }));
+      row.appendChild(button("eng", () => { layer = "tense"; setLayer("tense"); }));
+    }
+    row.appendChild(pos); card.appendChild(row);
+    if (info.pick_note) card.appendChild(el("div", "note", info.pick_note));
+    root.appendChild(card);
+  }
+  const troot = document.getElementById("takes");
+  for (const [id, p] of Object.entries(man.pieces || {})) {
+    if (!p.takes?.length) continue;
+    const card = el("div", "card");
+    card.appendChild(el("span", "id", id));
+    card.appendChild(el("span", "use", `${p.key}, ${p.bpm} BPM geplant · ${p.revision}` + (p.feedback?.length ? " · Rückmeldung: " + p.feedback.join(" / ") : "")));
+    for (const t of p.takes) {
+      const a = t.analysis || {};
+      const row = el("div", "take");
+      const pos = el("span", "pos");
+      row.appendChild(button("▶", b => play([{ name: "main", path: "/" + t.path, loop: null }], 0, b, pos)));
+      row.appendChild(button("■", () => stop()));
+      const flags = [...(a.rejects || []).map(x => `<span class=bad>${x}</span>`), ...(a.advisories || [])].join("; ");
+      row.appendChild(el("span", t.picked ? "pick" : t.superseded ? "bad" : "",
+        `${t.take}${t.picked ? " ✓ geliefert" : ""}${t.superseded ? " (verworfen, alter Entwurf)" : ""}`));
+      row.appendChild(el("span", null, ` · ${t.seconds.toFixed(0)} s · ${a.tempo_bpm ?? "?"} BPM · Whisper ${a.whisper ?? "?"} · ` +
+        `CLAP Stimme ${a.clap_vocal_max ?? "?"} · Stil ${a.clap_fit ?? "?"} · ` +
+        `${a.instruments ? Object.keys(a.instruments).slice(0, 3).join(", ") : ""}${flags ? " · " + flags : ""}`));
+      row.appendChild(pos);
+      for (const [at, d] of Object.entries(t.descriptions || {})) row.appendChild(el("div", "desc", `@${at}s: ${d}`));
+      card.appendChild(row);
+    }
+    troot.appendChild(card);
+  }
+}).catch(e => { document.getElementById("err").textContent = "Cannot load: " + e.message; });
+</script>

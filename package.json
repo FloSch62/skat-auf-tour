@@ -1,0 +1,34 @@
+{
+  "name": "skat-auf-tour",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SKAT AUF TOUR — Die Enztal-Tour. Ein Skat-Roguelike mit Landkarte: mit dem Wohnmobil von Wirtshaus zu Wirtshaus.",
+  "author": "Florian Schwarz (https://flosch.me/)",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5191",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4191",
+    "test": "node --experimental-strip-types --no-warnings --test 'src/**/*.test.ts'",
+    "fonts": "tools/.venv/bin/python tools/build_fonts.py",
+    "sprites": "tools/.venv/bin/python tools/sprites/build.py",
+    "test:skat": "nice -n 15 node --experimental-strip-types --no-warnings tools/balance/skat-league.ts --out docs/balance-skat.md",
+    "test:tour": "nice -n 15 node --experimental-strip-types --no-warnings tools/balance/tour-runs.ts --out docs/balance-tour.md",
+    "test:e2e": "node tools/qa.mjs",
+    "test:readable": "node tools/readable-qa.mjs",
+    "test:assets": "node --experimental-strip-types --no-warnings tools/assets-audit.ts",
+    "test:media": "node tools/media-qa.mjs",
+    "test:narrative": "node tools/narrative-qa.mjs",
+    "test:soak": "node tools/soak.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,228 @@
+{
+ "stammtisch": {
+  "files": {
+   "calm": "audio/music/stammtisch-calm.ogg",
+   "tense": "audio/music/stammtisch-tense.ogg"
+  },
+  "loop": true,
+  "loopStart": 27.822104167,
+  "loopEnd": 138.595604167,
+  "bpm": 104.0,
+  "bars": 62,
+  "key": "Dm",
+  "duration": 142.838667,
+  "gainDb": -5.74,
+  "takes": {
+   "calm": "t1",
+   "tense": "t2"
+  },
+  "synced": false,
+  "layers": {
+   "calm": {
+    "loopStart": 27.822104167,
+    "loopEnd": 138.595604167,
+    "duration": 142.838667,
+    "bpm": 104.0
+   },
+   "tense": {
+    "loopStart": 27.425770833,
+    "loopEnd": 136.293270833,
+    "duration": 141.078667,
+    "bpm": 105.81
+   }
+  }
+ },
+ "daheim": {
+  "files": {
+   "main": "audio/music/daheim.ogg"
+  },
+  "loop": true,
+  "loopStart": 30.170854167,
+  "loopEnd": 150.148041667,
+  "bpm": 96.01,
+  "bars": 62,
+  "key": "F",
+  "duration": 154.558667,
+  "gainDb": -5.45,
+  "takes": {
+   "main": "t3"
+  }
+ },
+ "enztal": {
+  "files": {
+   "main": "audio/music/enztal.ogg"
+  },
+  "loop": true,
+  "loopStart": 26.820479167,
+  "loopEnd": 133.487166667,
+  "bpm": 108.0,
+  "bars": 62,
+  "key": "D",
+  "duration": 137.398667,
+  "gainDb": -4.84,
+  "takes": {
+   "main": "t1"
+  }
+ },
+ "stromberg": {
+  "files": {
+   "main": "audio/music/stromberg.ogg"
+  },
+  "loop": true,
+  "loopStart": 37.348333333,
+  "loopEnd": 131.710520833,
+  "bpm": 102.2,
+  "bars": 62,
+  "key": "F",
+  "duration": 146.638667,
+  "gainDb": -6.95,
+  "takes": {
+   "main": "t1"
+  }
+ },
+ "schwarzwald": {
+  "files": {
+   "main": "audio/music/schwarzwald.ogg"
+  },
+  "loop": true,
+  "loopStart": 37.843270833,
+  "loopEnd": 137.603666667,
+  "bpm": 76.92,
+  "bars": 46,
+  "key": "Bb",
+  "duration": 144.838667,
+  "gainDb": -4.77,
+  "takes": {
+   "main": "t2"
+  }
+ },
+ "stuttgart": {
+  "files": {
+   "main": "audio/music/stuttgart.ogg"
+  },
+  "loop": true,
+  "loopStart": 24.9980625,
+  "loopEnd": 124.284958333,
+  "bpm": 116.01,
+  "bars": 62,
+  "key": "C",
+  "duration": 128.278667,
+  "gainDb": 0.19,
+  "takes": {
+   "main": "t2"
+  }
+ },
+ "raetsel": {
+  "files": {
+   "main": "audio/music/raetsel.ogg"
+  },
+  "loop": true,
+  "loopStart": 36.846354167,
+  "loopEnd": 143.514354167,
+  "bpm": 72.0,
+  "bars": 46,
+  "key": "C",
+  "duration": 154.158667,
+  "gainDb": -3.34,
+  "takes": {
+   "main": "t1"
+  }
+ },
+ "stellplatz": {
+  "files": {
+   "main": "audio/music/stellplatz.ogg"
+  },
+  "loop": true,
+  "loopStart": 34.441791667,
+  "loopEnd": 171.584583333,
+  "bpm": 84.0,
+  "bars": 62,
+  "key": "A",
+  "duration": 177.318667,
+  "gainDb": -6.45,
+  "takes": {
+   "main": "t2"
+  }
+ },
+ "preisskat": {
+  "files": {
+   "calm": "audio/music/preisskat-calm.ogg",
+   "tense": "audio/music/preisskat-tense.ogg"
+  },
+  "loop": true,
+  "loopStart": 20.102208333,
+  "loopEnd": 116.101416667,
+  "bpm": 120.0,
+  "bars": 62,
+  "key": "Gm",
+  "duration": 123.958667,
+  "gainDb": -6.17,
+  "takes": {
+   "calm": "t2",
+   "tense": "t2"
+  },
+  "synced": false,
+  "layers": {
+   "calm": {
+    "loopStart": 20.102208333,
+    "loopEnd": 116.101416667,
+    "duration": 123.958667,
+    "bpm": 120.0
+   },
+   "tense": {
+    "loopStart": 24.029458333,
+    "loopEnd": 120.010645833,
+    "duration": 123.998667,
+    "bpm": 120.01
+   }
+  }
+ },
+ "motorradtreff": {
+  "files": {
+   "main": "audio/music/motorradtreff.ogg"
+  },
+  "loop": true,
+  "loopStart": 40.2238125,
+  "loopEnd": 130.256520833,
+  "bpm": 95.96,
+  "bars": 54,
+  "key": "E",
+  "duration": 135.238667,
+  "gainDb": -4.32,
+  "takes": {
+   "main": "t2"
+  }
+ },
+ "pokal": {
+  "files": {
+   "main": "audio/music/pokal.ogg"
+  },
+  "loop": false,
+  "loopStart": 0.0,
+  "loopEnd": 46.398666667,
+  "bpm": 113.47,
+  "bars": 22,
+  "key": "Bb",
+  "duration": 46.398667,
+  "gainDb": -3.33,
+  "takes": {
+   "main": "t2"
+  }
+ },
+ "heimfahrt": {
+  "files": {
+   "main": "audio/music/heimfahrt.ogg"
+  },
+  "loop": false,
+  "loopStart": 0.0,
+  "loopEnd": 84.718666667,
+  "bpm": 85.29,
+  "bars": 30,
+  "key": "F",
+  "duration": 84.718667,
+  "gainDb": -3.56,
+  "takes": {
+   "main": "t2"
+  }
+ }
+}

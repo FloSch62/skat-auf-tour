@@ -1,0 +1,31 @@
+# Dependencies, builds, and local work
+node_modules/
+/dist/
+/.work/
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+
+# Personal profile: imported into the browser, never published (contract §16.7)
+/private/
+
+# Generated review evidence and art/audio intermediates
+/tools/shots/
+/art-src/cand/
+/art-src/comfy/
+/art-src/logs/
+/art-src/queue/
+/audio-src/logs/
+/audio-src/**/*.wav
+/tools/chess-src/
+
+# YuE2 raw takes and lossless masters (provenance stays in audio-src/music/manifest.json)
+/audio-src/music/takes/
+/audio-src/music/masters/
+/audio-src/music/work/
+
+# Krea reference images and init sketches (large; kept locally for future renders)
+/art-src/refs/
+/art-src/init/

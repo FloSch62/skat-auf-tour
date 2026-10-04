@@ -1,0 +1,23 @@
+{
+ "about": "Style study picks (contract §9). One candidate per motif and variant goes to public/art/_study/<variant>/ (review copies, never shipped). Variants: a = adv (1990s adventure: gouache + dark ink), b = comic (European comic album: bold brush ink, flat colours), c = film (1980s animated feature: painterly gouache, thin coloured lines). Background versions ending in L used the code-painted inns/village as a blurred layout init (denoise 0.85).",
+ "variants": {
+  "a": {
+   "inns/village": {"cand": "village-adv-1856761737.png", "note": "t2i; the layout-init twin drew two felt mats"},
+   "portraits/maurer": {"cand": "maurer-adv-442869971.png"},
+   "dogs/shepherd": {"cand": "shepherd-adv-119251606.png"},
+   "van/van": {"cand": "van-adv-224330797.png"}
+  },
+  "b": {
+   "inns/village": {"cand": "village-comicL-1682281420.png", "note": "layout init; the t2i twin cut a lamp at the top and is busier"},
+   "portraits/maurer": {"cand": "maurer-comic-1247427361.png"},
+   "dogs/shepherd": {"cand": "shepherd-comic-1277989826.png"},
+   "van/van": {"cand": "van-comic-1739557484.png"}
+  },
+  "c": {
+   "inns/village": {"cand": "village-filmL-1430072753.png", "note": "layout init; calm dark top corners for the portraits"},
+   "portraits/maurer": {"cand": "maurer-film-195177105.png"},
+   "dogs/shepherd": {"cand": "shepherd-film-953363496.png"},
+   "van/van": {"cand": "van-film-1732809205.png"}
+  }
+ }
+}
